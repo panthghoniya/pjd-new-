@@ -11,21 +11,39 @@ const Manufacturer = () => {
     const sections = [
         {
             id: 1,
-            title: "Premium Salt Extraction",
-            description: "Advanced extraction techniques ensuring 99.9% purity and natural mineral preservation.",
-            image: manprocessing
+            title: "Massive Production Capacity",
+            description: "Built to handle bulk export requirements with consistent quality and uninterrupted supply.",
+            image: manprocessing,
+            highlights: [
+                "1000+ MT Daily Output",
+                "Automated Processing",
+                "High Volume Dispatch",
+                "Continuous Operations"
+            ]
         },
         {
             id: 2,
-            title: "Global Export Network",
-            description: "Seamless logistics connecting our Indian facilities to major ports in 50+ countries.",
-            image: manwithsalt
+            title: "Modern Refining Process",
+            description: "Our advanced processing system ensures purity, free-flowing texture, and export-grade quality.",
+            image: manwithsalt,
+            highlights: [
+                "Multi-Stage Refining",
+                "Uniform Grain Size",
+                "Moisture Control",
+                "Quality Monitoring"
+            ]
         },
         {
             id: 3,
-            title: "Industrial Grade Quality",
-            description: "Meeting rigorous international standards for food grade and industrial salt requirements.",
-            image: manpurify
+            title: "Export Ready Infrastructure",
+            description: "Efficient packaging and logistics infrastructure for timely global deliveries.",
+            image: manpurify,
+            highlights: [
+                "Bulk Packaging Solutions",
+                "Container Loading Facility",
+                "Fast Order Fulfillment",
+                "Worldwide Export Support"
+            ]
         }
     ];
 
@@ -77,13 +95,21 @@ const Manufacturer = () => {
                     </div>
 
                     {sections.map((item) => (
-                        <div key={item.id} className="relative h-[60vh] w-full">
+                        <div key={item.id} className="relative h-[65vh] w-full">
                             <img src={item.image} alt={item.title} className="absolute inset-0 w-full h-full object-cover" />
-                            <div className="absolute inset-0 bg-black/60" />
-                            <div className="absolute bottom-0 left-0 p-8 w-full">
-                                <span className="text-brand-accent font-bold mb-2 block">0{item.id}</span>
-                                <h3 className="text-3xl font-heading font-bold text-white mb-2">{item.title}</h3>
-                                <p className="text-white/80 text-sm leading-relaxed">{item.description}</p>
+                            <div className="absolute inset-0 bg-black/70" />
+                            <div className="absolute bottom-0 left-0 p-8 w-full bg-gradient-to-t from-black via-black/80 to-transparent">
+                                <span className="text-brand-accent font-bold mb-1 block">0{item.id}</span>
+                                <h3 className="text-2xl font-heading font-bold text-white mb-2">{item.title}</h3>
+                                <p className="text-white/80 text-xs leading-relaxed mb-4">{item.description}</p>
+                                <div className="grid grid-cols-2 gap-2">
+                                    {item.highlights.map(pt => (
+                                        <div key={pt} className="flex items-center gap-1.5 text-white/95 text-[10px] font-jakarta font-semibold">
+                                            <span className="w-1 h-1 rounded-full bg-brand-accent flex-shrink-0"></span>
+                                            <span>{pt}</span>
+                                        </div>
+                                    ))}
+                                </div>
                             </div>
                         </div>
                     ))}
@@ -120,14 +146,24 @@ const Manufacturer = () => {
                                     alt={item.title}
                                     className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                                 />
-                                <div className="absolute inset-0 bg-black/50 group-hover:bg-black/30 transition-colors duration-500" />
+                                <div className="absolute inset-0 bg-black/60 group-hover:bg-black/45 transition-colors duration-500" />
                             </div>
 
-                            <div className="absolute bottom-0 left-0 p-24 w-full bg-gradient-to-t from-black/90 via-black/50 to-transparent pt-40">
+                            <div className="absolute bottom-0 left-0 p-24 w-full bg-gradient-to-t from-black/95 via-black/50 to-transparent pt-40">
                                 <div className="border-l-4 border-brand-accent pl-8">
                                     <span className="text-brand-accent font-bold tracking-[0.2em] text-lg uppercase mb-2 block">0{item.id}</span>
                                     <h3 className="text-6xl font-heading font-bold text-white mb-6 uppercase tracking-tight">{item.title}</h3>
-                                    <p className="text-white/90 text-xl max-w-2xl leading-relaxed">{item.description}</p>
+                                    <p className="text-white/90 text-xl max-w-2xl leading-relaxed mb-8">{item.description}</p>
+                                    <div className="grid grid-cols-2 gap-x-8 gap-y-4 max-w-2xl">
+                                        {item.highlights.map(pt => (
+                                            <div key={pt} className="flex items-center gap-3 text-white text-lg font-jakarta font-bold">
+                                                <div className="w-6 h-6 rounded-full bg-brand-accent/25 text-brand-accent flex items-center justify-center flex-shrink-0 text-xs font-black">
+                                                    ✓
+                                                </div>
+                                                <span>{pt}</span>
+                                            </div>
+                                        ))}
+                                    </div>
                                 </div>
                             </div>
                         </div>

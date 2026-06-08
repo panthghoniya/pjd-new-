@@ -40,7 +40,7 @@ const Testimonials = () => { // Kept name as Testimonials to avoid breaking impo
             <Award className="w-8 h-8 text-brand-accent" />
           </div> */}
           <h2 data-animate="fade-up" data-delay="100" className="text-4xl md:text-5xl lg:text-[3.5rem] font-heading font-bold text-brand-dark tracking-tight leading-tight mb-6">
-            Global <span className="text-brand-accent">Certifications</span>
+            Licenses & <span className="text-brand-accent">Certifications</span>
           </h2>
           <p data-animate="fade-up" data-delay="200" className="text-lg text-brand-dark/60 leading-relaxed font-jarkarta">
             Our commitment to unmatched quality and absolute safety is backed by globally recognized certifications and strict international compliance standards.

@@ -1,29 +1,13 @@
 [
   {
     "id": 1,
-    "name": "Premium Pink Salt",
+    "name": "Triple Refined Free Flow Iodized Salt",
     "category": "Edible Salt",
-    "badge": "-20%",
-    "sku": "SKU-PS-001",
-    "rating": 4.8,
-    "reviews": 245,
-    "description": "Our Premium Pink Himalayan Salt is extracted from the pristine foothills of the Himalayas. Rich in trace minerals, it offers unmatched purity, making it ideal for culinary, therapeutic, and industrial applications.",
-    "images": [
-      "https://i.pinimg.com/1200x/b2/9d/ec/b29dec41a37c99340bfc5513f78f0a2f.jpg",
-      "https://i.pinimg.com/736x/ed/a0/2c/eda02c75a15492762b1e304d811ba276.jpg",
-      "https://i.pinimg.com/736x/b4/bd/eb/b4bdebff1fa4748cc11b911bd13a6039.jpg",
-      "https://i.pinimg.com/736x/97/b4/be/97b4beecea19f8d9e51bbb84254decd1.jpg"
-    ]
-  },
-  {
-    "id": 2,
-    "name": "Refined Sea Salt",
-    "category": "Edible Salt",
-    "badge": null,
-    "sku": "SKU-SS-002",
+    "badge": "Premium",
+    "sku": "SKU-TR-FFIS",
     "rating": 4.9,
-    "reviews": 182,
-    "description": "High-grade refined sea salt, perfect for bulk industrial use or mass culinary production. Guaranteed 99.9% purity with uniform granulation for consistent dissolving rates.",
+    "reviews": 120,
+    "description": "High-purity triple refined iodized salt with uniform grain size, ensuring easy free-flow delivery and perfect dietary fortification for global consumer markets.",
     "images": [
       "https://i.pinimg.com/736x/21/80/47/218047f27fb25401044ecee15b701034.jpg",
       "https://i.pinimg.com/1200x/cd/40/e5/cd40e5e93951d7443dfa8c3c098445d0.jpg",
@@ -32,14 +16,30 @@
     ]
   },
   {
+    "id": 2,
+    "name": "Coarse Salt",
+    "category": "Edible Salt",
+    "badge": "Best Seller",
+    "sku": "SKU-CS-002",
+    "rating": 4.8,
+    "reviews": 95,
+    "description": "Premium quality coarse salt crystals perfect for cooking, pickling, and industrial processes requiring slower dissolution rates.",
+    "images": [
+      "https://i.pinimg.com/736x/d5/63/c0/d563c0b03ba755a852af2ced90c826d7.jpg",
+      "https://i.pinimg.com/736x/97/b4/be/97b4beecea19f8d9e51bbb84254decd1.jpg",
+      "https://i.pinimg.com/736x/e5/76/8b/e5768bd15123d75f32b1ee5280f7a1b8.jpg",
+      "https://i.pinimg.com/736x/ed/a0/2c/eda02c75a15492762b1e304d811ba276.jpg"
+    ]
+  },
+  {
     "id": 3,
-    "name": "Industrial Salt",
+    "name": "Tablet Salt",
     "category": "Industrial Salt",
-    "badge": null,
-    "sku": "SKU-IS-003",
-    "rating": 4.7,
-    "reviews": 156,
-    "description": "Premium industrial grade salt for manufacturing, water softening, and de-icing. Sourced and processed to meet strict industrial standards.",
+    "badge": "High Purity",
+    "sku": "SKU-TS-003",
+    "rating": 4.9,
+    "reviews": 150,
+    "description": "Highly compacted salt tablets designed for water softening systems, industrial boilers, and water treatment processes. Dissolves evenly without leaving residue.",
     "images": [
       "https://i.pinimg.com/1200x/16/c1/da/16c1daf5e8c88b14221b7f700060c27d.jpg",
       "https://i.pinimg.com/1200x/cd/40/e5/cd40e5e93951d7443dfa8c3c098445d0.jpg",
@@ -49,50 +49,82 @@
   },
   {
     "id": 4,
-    "name": "Himalayan Bath Salt",
-    "category": "Bath & Spa",
-    "badge": "-15%",
-    "sku": "SKU-BS-004",
-    "rating": 5.0,
-    "reviews": 89,
-    "description": "Luxurious Himalayan bath salt crystals designed to rejuvenate your skin and relax your muscles. Infused with natural minerals for the ultimate spa experience.",
+    "name": "Super Fine Salt",
+    "category": "Edible Salt",
+    "badge": "Micro Grain",
+    "sku": "SKU-SFS-004",
+    "rating": 4.7,
+    "reviews": 85,
+    "description": "Ultra-fine salt crystals engineered for quick dissolution and perfect blending. Ideal for snack seasoning, baking, and specialty food manufacturing.",
     "images": [
-      "https://i.pinimg.com/736x/f7/57/cc/f757cc26833d373cd7cbfda79231167c.jpg",
-      "https://i.pinimg.com/736x/78/03/7f/78037f19196fc6e98c7fda730145a3bc.jpg",
-      "https://i.pinimg.com/736x/e5/76/8b/e5768bd15123d75f32b1ee5280f7a1b8.jpg",
-      "https://i.pinimg.com/1200x/cd/40/e5/cd40e5e93951d7443dfa8c3c098445d0.jpg"
+      "https://i.pinimg.com/1200x/cd/40/e5/cd40e5e93951d7443dfa8c3c098445d0.jpg",
+      "https://i.pinimg.com/736x/21/80/47/218047f27fb25401044ecee15b701034.jpg",
+      "https://i.pinimg.com/736x/b4/bd/eb/b4bdebff1fa4748cc11b911bd13a6039.jpg",
+      "https://i.pinimg.com/736x/97/b4/be/97b4beecea19f8d9e51bbb84254decd1.jpg"
     ]
   },
   {
     "id": 5,
-    "name": "Coarse Cooking Salt",
+    "name": "Low Sodium Salt",
     "category": "Edible Salt",
-    "badge": null,
-    "sku": "SKU-CS-005",
+    "badge": "Healthy Choice",
+    "sku": "SKU-LSS-005",
     "rating": 4.8,
-    "reviews": 112,
-    "description": "High-quality coarse cooking salt, perfect for grilling, roasting, and finishing dishes. Its large crystals provide a satisfying crunch and burst of flavor.",
+    "reviews": 64,
+    "description": "A health-focused salt alternative offering authentic salty flavor with reduced sodium content, blended carefully with potassium minerals.",
     "images": [
-      "https://i.pinimg.com/736x/d5/63/c0/d563c0b03ba755a852af2ced90c826d7.jpg",
+      "https://i.pinimg.com/736x/ed/a0/2c/eda02c75a15492762b1e304d811ba276.jpg",
       "https://i.pinimg.com/736x/97/b4/be/97b4beecea19f8d9e51bbb84254decd1.jpg",
       "https://i.pinimg.com/736x/e5/76/8b/e5768bd15123d75f32b1ee5280f7a1b8.jpg",
-      "https://i.pinimg.com/736x/ed/a0/2c/eda02c75a15492762b1e304d811ba276.jpg"
+      "https://i.pinimg.com/736x/d5/63/c0/d563c0b03ba755a852af2ced90c826d7.jpg"
     ]
   },
   {
     "id": 6,
-    "name": "Crystal Salt Lamp",
-    "category": "Salt Lamps",
-    "badge": "New",
-    "sku": "SKU-SL-006",
+    "name": "Non – Iodine Non-Silica Free Flow Salt",
+    "category": "Industrial Salt",
+    "badge": "Additive Free",
+    "sku": "SKU-NINF-006",
     "rating": 4.9,
-    "reviews": 310,
-    "description": "Beautifully hand-carved crystal salt lamps that emit a warm, soothing glow. Known for their air-purifying properties and ability to create a relaxing ambiance.",
+    "reviews": 110,
+    "description": "Pure salt completely free of iodine and silica anticaking agents, featuring high mechanical flowability. Highly sought-after for specific industrial and food processing applications.",
     "images": [
-      "https://i.pinimg.com/736x/30/ba/5c/30ba5c9546a706b52cf3977310efc52b.jpg",
-      "https://i.pinimg.com/736x/78/03/7f/78037f19196fc6e98c7fda730145a3bc.jpg",
+      "https://i.pinimg.com/736x/b4/bd/eb/b4bdebff1fa4748cc11b911bd13a6039.jpg",
       "https://i.pinimg.com/736x/97/b4/be/97b4beecea19f8d9e51bbb84254decd1.jpg",
-      "https://i.pinimg.com/1200x/cd/40/e5/cd40e5e93951d7443dfa8c3c098445d0.jpg"
+      "https://i.pinimg.com/1200x/cd/40/e5/cd40e5e93951d7443dfa8c3c098445d0.jpg",
+      "https://i.pinimg.com/736x/ed/a0/2c/eda02c75a15492762b1e304d811ba276.jpg"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Low Hardness Pure Salt",
+    "category": "Industrial Salt",
+    "badge": "Water Treatment",
+    "sku": "SKU-LHPS-007",
+    "rating": 4.8,
+    "reviews": 78,
+    "description": "Premium industrial grade salt with exceptionally low hardness levels. Perfect for dye houses, chemical processing, and other specialized industrial systems.",
+    "images": [
+      "https://i.pinimg.com/736x/97/b4/be/97b4beecea19f8d9e51bbb84254decd1.jpg",
+      "https://i.pinimg.com/736x/b4/bd/eb/b4bdebff1fa4748cc11b911bd13a6039.jpg",
+      "https://i.pinimg.com/1200x/cd/40/e5/cd40e5e93951d7443dfa8c3c098445d0.jpg",
+      "https://i.pinimg.com/736x/ed/a0/2c/eda02c75a15492762b1e304d811ba276.jpg"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Low Hardness Iodized Edible Salt",
+    "category": "Edible Salt",
+    "badge": "New Quality",
+    "sku": "SKU-LHIES-008",
+    "rating": 4.9,
+    "reviews": 88,
+    "description": "Double-refined edible salt combining precise iodization with low hardness properties, customized for specific food preparation and hydration manufacturing processes.",
+    "images": [
+      "https://i.pinimg.com/1200x/b2/9d/ec/b29dec41a37c99340bfc5513f78f0a2f.jpg",
+      "https://i.pinimg.com/736x/21/80/47/218047f27fb25401044ecee15b701034.jpg",
+      "https://i.pinimg.com/736x/ed/a0/2c/eda02c75a15492762b1e304d811ba276.jpg",
+      "https://i.pinimg.com/736x/b4/bd/eb/b4bdebff1fa4748cc11b911bd13a6039.jpg"
     ]
   }
 ]

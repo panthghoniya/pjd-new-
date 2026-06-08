@@ -21,8 +21,8 @@ const OEM_LOGO_IMG = logo; // Example: "https://your-domain.com/logo.png"
 const items = [
   { icon: Settings, title: 'Grain Size', desc: 'Fine powder to coarse crystals — any mesh size as per your requirement.' },
   { icon: Droplet,  title: 'Purity Grade', desc: 'Food, pharma & industrial grades available with lab certification.' },
-  { icon: Package,  title: 'Packaging', desc: 'From 1kg retail bags to 1-ton FIBC jumbo bags with custom branding.' },
-  { icon: Scale,    title: 'Additives', desc: 'Iodized, anti-caking & mineral fortification as per your specs.' },
+  { icon: Package,  title: 'Packaging', desc: 'From 500g retail packs to 1.4 MT jumbo bags with custom branding.' },
+  { icon: Scale,    title: 'Additives', desc: 'Iodization (15-100 ppm), anti-caking & mineral fortification as per your specs.' },
 ];
 
 const Customization = () => {
@@ -168,7 +168,7 @@ const Customization = () => {
                     Enhance your salt with necessary additives based on your regional, dietary, or industrial requirements.
                   </p>
                   <ul className="space-y-3">
-                    {['Iodization (15-50 ppm)', 'Anti-Caking Agent (PFC)', 'Free-Flowing Agents', 'Mineral Fortification'].map(t => (
+                    {['Iodization (15-100 ppm)', 'Anti-Caking Agent (PFC)', 'Free-Flowing Agents', 'Mineral Fortification'].map(t => (
                       <li key={t} className="flex items-start gap-3 text-sm text-brand-dark/80 font-medium">
                         <CheckCircle2 className="w-5 h-5 text-brand-dark flex-shrink-0" /> 
                         <span>{t}</span>
@@ -191,7 +191,7 @@ const Customization = () => {
                     <div className="max-w-3xl flex-1 min-w-0">
                       <h3 className="text-xl sm:text-2xl md:text-4xl font-heading font-bold mb-2 md:mb-4 text-white leading-tight break-words">Custom Packaging Solutions</h3>
                       <p className="text-white/70 text-[13px] md:text-lg leading-relaxed">
-                        We provide diverse packaging options tailored to your market needs. From retail-ready branded bags to industrial bulk shipments, every detail including your company logo, design, and barcode can be customized perfectly.
+                        Safe, hygienic, and export-ready packaging tailored to your requirements. We offer high-quality PP woven bags with inner liner, jumbo bags, canisters, plastic bottles, and retail packs with custom branding, logo, artwork and barcode options to meet global market standards.
                       </p>
                     </div>
                     <div className="flex-shrink-0 self-start md:self-auto">
@@ -204,63 +204,87 @@ const Customization = () => {
                   {/* Packaging Types Grid - Image Top, Details Below */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-8 md:mb-10">
                     
-                    {/* Pack 1 */}
+                    {/* Pack 1 - Bulk Packaging */}
+                    <div className="group flex flex-col bg-brand-black/40 rounded-[2rem] overflow-hidden border border-white/10 hover:border-brand-accent/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-brand-accent/20">
+                      
+                      {/* Image */}
+                      <div className="w-full h-48 sm:h-56 md:h-72 relative overflow-hidden bg-white/5">
+                        <img src={WOVEN_BAGS_IMG} alt="Bulk Packaging" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                        <div className="absolute top-3 right-3 md:top-4 md:right-4 bg-brand-black/60 backdrop-blur-md px-3 py-1 md:px-4 md:py-1.5 rounded-full border border-white/10">
+                          <span className="text-brand-accent text-[10px] md:text-xs font-bold uppercase tracking-wider">Bulk Packaging</span>
+                        </div>
+                      </div>
+
+                      {/* Details Below Image */}
+                      <div className="p-6 md:p-8 flex flex-col flex-grow">
+                        <h3 className="font-heading font-bold text-white text-2xl tracking-wide mb-3 group-hover:text-brand-accent transition-colors">Bulk Packaging</h3>
+                        <p className="text-white/70 text-sm leading-relaxed mb-4">
+                          Multiple bulk packing options available based on customer requirements.
+                        </p>
+                        <ul className="space-y-1.5 mt-auto">
+                          {['20 KG Bags', '25 KG Bags', '40 KG Bags', '50 KG Bags', '1.4 MT Jumbo Bags'].map(item => (
+                            <li key={item} className="flex items-center gap-2 text-white/80 text-xs md:text-sm font-semibold">
+                              <span className="w-1.5 h-1.5 rounded-full bg-brand-accent"></span>
+                              {item}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                    
+                    {/* Pack 2 - Retail Packaging */}
                     <div className="group flex flex-col bg-brand-black/40 rounded-[2rem] overflow-hidden border border-white/10 hover:border-brand-accent/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-brand-accent/20">
                       
                       {/* Image */}
                       <div className="w-full h-48 sm:h-56 md:h-72 relative overflow-hidden bg-white/5">
                         <img src={RETAIL_PACK_IMG} alt="Retail Packaging" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                         <div className="absolute top-3 right-3 md:top-4 md:right-4 bg-brand-black/60 backdrop-blur-md px-3 py-1 md:px-4 md:py-1.5 rounded-full border border-white/10">
-                          <span className="text-brand-accent text-[10px] md:text-xs font-bold uppercase tracking-wider">1kg - 5kg Bags</span>
+                          <span className="text-brand-accent text-[10px] md:text-xs font-bold uppercase tracking-wider">Retail Packaging</span>
                         </div>
                       </div>
 
                       {/* Details Below Image */}
                       <div className="p-6 md:p-8 flex flex-col flex-grow">
-                        <h3 className="font-heading font-bold text-white text-2xl tracking-wide mb-3 group-hover:text-brand-accent transition-colors">Retail Pouches</h3>
-                        <p className="text-white/70 text-sm leading-relaxed flex-grow">
-                          High-quality LDPE/PP stand-up pouches, beautifully printed and retail-ready for supermarket shelves. Available with ziplock closures for extended freshness.
+                        <h3 className="font-heading font-bold text-white text-2xl tracking-wide mb-3 group-hover:text-brand-accent transition-colors">Retail Packaging</h3>
+                        <p className="text-white/70 text-sm leading-relaxed mb-4">
+                          Consumer-ready retail packaging solutions for domestic and international markets.
                         </p>
+                        <ul className="space-y-1.5 mt-auto">
+                          {['500 Gram Packs', '1 KG Packs', 'Standard Canister Packing', 'Plastic Bottle Packing'].map(item => (
+                            <li key={item} className="flex items-center gap-2 text-white/80 text-xs md:text-sm font-semibold">
+                              <span className="w-1.5 h-1.5 rounded-full bg-brand-accent"></span>
+                              {item}
+                            </li>
+                          ))}
+                        </ul>
                       </div>
                     </div>
-                    
-                    {/* Pack 2 */}
+
+                    {/* Pack 3 - Custom Branding */}
                     <div className="group flex flex-col bg-brand-black/40 rounded-[2rem] overflow-hidden border border-white/10 hover:border-brand-accent/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-brand-accent/20">
                       
                       {/* Image */}
                       <div className="w-full h-48 sm:h-56 md:h-72 relative overflow-hidden bg-white/5">
-                        <img src={WOVEN_BAGS_IMG} alt="PP Woven Bags" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                        <img src={FIBC_JUMBO_IMG} alt="Custom Branding" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                         <div className="absolute top-3 right-3 md:top-4 md:right-4 bg-brand-black/60 backdrop-blur-md px-3 py-1 md:px-4 md:py-1.5 rounded-full border border-white/10">
-                          <span className="text-brand-accent text-[10px] md:text-xs font-bold uppercase tracking-wider">25kg - 50kg Bags</span>
+                          <span className="text-brand-accent text-[10px] md:text-xs font-bold uppercase tracking-wider">Custom Branding</span>
                         </div>
                       </div>
 
                       {/* Details Below Image */}
                       <div className="p-6 md:p-8 flex flex-col flex-grow">
-                        <h3 className="font-heading font-bold text-white text-2xl tracking-wide mb-3 group-hover:text-brand-accent transition-colors">PP Woven Bags</h3>
-                        <p className="text-white/70 text-sm leading-relaxed flex-grow">
-                          Highly durable woven bags with inner moisture-proof PE liners, perfectly designed for wholesale, bakeries, and heavy restaurant supply chains.
+                        <h3 className="font-heading font-bold text-white text-2xl tracking-wide mb-3 group-hover:text-brand-accent transition-colors">Custom Branding</h3>
+                        <p className="text-white/70 text-sm leading-relaxed mb-4">
+                          We provide customized packaging with your artwork, branding, design, and private labels as per market requirements.
                         </p>
-                      </div>
-                    </div>
-
-                    {/* Pack 3 */}
-                    <div className="group flex flex-col bg-brand-black/40 rounded-[2rem] overflow-hidden border border-white/10 hover:border-brand-accent/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-brand-accent/20">
-                      
-                      {/* Image */}
-                      <div className="w-full h-48 sm:h-56 md:h-72 relative overflow-hidden bg-white/5">
-                        <img src={FIBC_JUMBO_IMG} alt="FIBC Jumbo Bags" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-                        <div className="absolute top-3 right-3 md:top-4 md:right-4 bg-brand-black/60 backdrop-blur-md px-3 py-1 md:px-4 md:py-1.5 rounded-full border border-white/10">
-                          <span className="text-brand-accent text-[10px] md:text-xs font-bold uppercase tracking-wider">1 Ton - 1.5 Ton</span>
-                        </div>
-                      </div>
-
-                      {/* Details Below Image */}
-                      <div className="p-6 md:p-8 flex flex-col flex-grow">
-                        <h3 className="font-heading font-bold text-white text-2xl tracking-wide mb-3 group-hover:text-brand-accent transition-colors">FIBC Jumbo</h3>
-                        <p className="text-white/70 text-sm leading-relaxed flex-grow">
-                          Heavy-duty jumbo bags designed for large-scale industrial shipping, safe long-term storage, and highly efficient factory operations globally.
-                        </p>
+                        <ul className="space-y-1.5 mt-auto">
+                          {['Custom Artwork', 'Private Label', 'Brand Printing', 'Export Ready Packaging'].map(item => (
+                            <li key={item} className="flex items-center gap-2 text-white/80 text-xs md:text-sm font-semibold">
+                              <span className="w-1.5 h-1.5 rounded-full bg-brand-accent"></span>
+                              {item}
+                            </li>
+                          ))}
+                        </ul>
                       </div>
                     </div>
                   </div>

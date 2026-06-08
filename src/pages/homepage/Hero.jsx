@@ -79,7 +79,7 @@ const Hero = () => {
         <div className="flex items-center justify-start gap-4 mb-6 md:mb-8 animate-in fade-in slide-in-from-left-8 duration-700 w-full">
           <div className="h-[2px] w-8 md:w-12 bg-brand-accent"></div>
           <span className="text-brand-accent font-jakarta font-semibold tracking-[0.2em] uppercase text-sm md:text-lg">
-            WELCOME TO
+            WELCOME TO PDJ TRADE CONNECT
           </span>
           <div className="h-[2px] w-8 md:w-12 bg-brand-accent"></div>
         </div>
@@ -87,15 +87,15 @@ const Hero = () => {
         {/* Main Title */}
         <h1
           className="w-full text-left tracking-[0.02em] md:tracking-[0.02em] text-white font-clash font-bold mb-6 md:mb-8 animate-in fade-in slide-in-from-left-12 duration-1000"
-          style={{ fontSize: 'clamp(2.5rem, 9vw, 8rem)', lineHeight: 0.9 }}
+          style={{ fontSize: 'clamp(2.2rem, 6vw, 5.5rem)', lineHeight: 1.0 }}
         >
-          PDJ TRADE <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-brand-teal">CONNECT</span>
+          MANUFACTURER AND EXPORTER <br />
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-brand-teal">OF EDIBLE AND INDUSTRIAL SALT</span>
         </h1>
 
         {/* Description */}
         <p className="w-full text-left text-brand-light/90 text-base sm:text-lg md:text-xl lg:text-2xl max-w-2xl font-manrope font-light mb-8 md:mb-12 leading-tight animate-in fade-in slide-in-from-left-12 duration-1000 delay-300">
-          Manufacturer and Exporter of Edible and Industrial Salts
+          Delivering premium salt solutions with customized packaging and global supply networks.
         </p>
 
         {/* CTA Button */}

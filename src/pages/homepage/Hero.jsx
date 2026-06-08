@@ -86,8 +86,8 @@ const Hero = () => {
 
         {/* Main Title */}
         <h1
-          className="w-full text-left tracking-[0.02em] md:tracking-[0.02em] text-white font-clash font-bold mb-6 md:mb-8 animate-in fade-in slide-in-from-left-12 duration-1000"
-          style={{ fontSize: 'clamp(2.2rem, 6vw, 5.5rem)', lineHeight: 1.0 }}
+          className="w-full text-left tracking-[1.5em] md:tracking-[0.02em] text-white font-clash font-bold mb-6 md:mb-8 animate-in fade-in slide-in-from-left-12 duration-1000"
+          style={{ fontSize: 'clamp(1rem, 3vw, 3.9rem)', lineHeight: 1.0 }}
         >
           MANUFACTURER AND EXPORTER <br />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-brand-teal">OF EDIBLE AND INDUSTRIAL SALT</span>

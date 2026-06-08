@@ -152,7 +152,7 @@ const Manufacturer = () => {
                             <div className="absolute bottom-0 left-0 p-24 w-full bg-gradient-to-t from-black/95 via-black/50 to-transparent pt-40">
                                 <div className="border-l-4 border-brand-accent pl-8">
                                     <span className="text-brand-accent font-bold tracking-[0.2em] text-lg uppercase mb-2 block">0{item.id}</span>
-                                    <h3 className="text-6xl font-heading font-bold text-white mb-6 uppercase tracking-tight">{item.title}</h3>
+                                    <h3 className="text-6xl font-heading font-bold text-white mb-6 uppercase tracking-[0.2rem]">{item.title}</h3>
                                     <p className="text-white/90 text-xl max-w-2xl leading-relaxed mb-8">{item.description}</p>
                                     <div className="grid grid-cols-2 gap-x-8 gap-y-4 max-w-2xl">
                                         {item.highlights.map(pt => (

@@ -91,7 +91,7 @@ const Fourth = () => {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-brand-black/90 via-brand-black/30 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500"></div>
                     <div className="absolute bottom-0 left-0 w-full p-6 lg:p-8 transform transition-transform duration-500 translate-y-2 group-hover:translate-y-0">
-                      <h3 className="text-white text-xl lg:text-2xl font-bold mb-1 tracking-tight">{slide.title}</h3>
+                      <h3 className="text-white text-xl lg:text-2xl mb-1 tracking-[1px]">{slide.title}</h3>
                       <p className="text-white/70 text-sm font-medium">{slide.subtitle}</p>
                     </div>
                   </Link>

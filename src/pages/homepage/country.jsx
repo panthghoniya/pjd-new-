@@ -4,18 +4,14 @@ import useScrollAnimation from '../../hooks/useScrollAnimation';
 // Uses flagcdn.com — free, no API key, always works
 // Format: https://flagcdn.com/w80/ae.png  (ae = ISO 2-letter code, lowercase)
 const countriesData = [
-  { id: 1,  name: 'UAE',          code: 'ae', bg: 'bg-white',      text: 'text-brand-dark' },
-  { id: 2,  name: 'Saudi Arabia', code: 'sa', bg: 'bg-white',      text: 'text-brand-accent' },
-  { id: 3,  name: 'Vietnam',      code: 'vn', bg: 'bg-white',      text: 'text-brand-dark' },
-  { id: 4,  name: 'Oman',         code: 'om', bg: 'bg-white',      text: 'text-brand-accent' },
-  { id: 5,  name: 'Qatar',        code: 'qa', bg: 'bg-brand-dark', text: 'text-brand-light' },
-  { id: 6,  name: 'South Africa', code: 'za', bg: 'bg-white',      text: 'text-brand-dark' },
-  { id: 7,  name: 'Kenya',        code: 'ke', bg: 'bg-white',      text: 'text-brand-accent' },
-  { id: 8,  name: 'Tanzania',     code: 'tz', bg: 'bg-white',      text: 'text-brand-dark' },
-  { id: 9,  name: 'Malaysia',     code: 'my', bg: 'bg-white',      text: 'text-brand-dark' },
-  { id: 10, name: 'Indonesia',    code: 'id', bg: 'bg-white',      text: 'text-brand-accent' },
-  { id: 11, name: 'Bangladesh',   code: 'bd', bg: 'bg-white',      text: 'text-brand-dark' },
-  { id: 12, name: 'Sri Lanka',    code: 'lk', bg: 'bg-white',      text: 'text-brand-accent' },
+  { id: 1,  name: 'Vietnam',      code: 'vn', bg: 'bg-white',      text: 'text-brand-dark' },
+  { id: 2,  name: 'Malaysia',     code: 'my', bg: 'bg-white',      text: 'text-brand-accent' },
+  { id: 3,  name: 'UAE',          code: 'ae', bg: 'bg-white',      text: 'text-brand-dark' },
+  { id: 4,  name: 'Mozambique',   code: 'mz', bg: 'bg-white',      text: 'text-brand-accent' },
+  { id: 5,  name: 'Malawi',       code: 'mw', bg: 'bg-brand-dark', text: 'text-brand-light' },
+  { id: 6,  name: 'Sierra Leone', code: 'sl', bg: 'bg-white',      text: 'text-brand-dark' },
+  { id: 7,  name: 'Qatar',        code: 'qa', bg: 'bg-white',      text: 'text-brand-accent' },
+  { id: 8,  name: 'Bahrain',      code: 'bh', bg: 'bg-white',      text: 'text-brand-dark' },
 ];
 
 // Triple the list for seamless marquee loop

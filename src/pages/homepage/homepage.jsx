@@ -8,6 +8,7 @@ import Fifth from './5th';
 import LogoSection from './country';
 import Testimonials from './certificate';
 import FAQ from './FAQ';
+import IndustryWeServe from './industryweserve';
 import Footer from '../../common components/layout/footer';
 
 const Homepage = () => {
@@ -29,6 +30,7 @@ const Homepage = () => {
             <Customization />
             <Fourth />
             <Fifth />
+             <IndustryWeServe />
             <LogoSection />
             <Testimonials />
             <FAQ />

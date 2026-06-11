@@ -102,7 +102,7 @@ const Manufacturer = () => {
                                 <span className="text-brand-accent font-bold mb-1 block">0{item.id}</span>
                                 <h3 className="text-2xl font-heading font-bold text-white mb-2">{item.title}</h3>
                                 <p className="text-white/80 text-xs leading-relaxed mb-4">{item.description}</p>
-                                <div className="grid grid-cols-2 gap-2">
+                                <div className="flex flex-row flex-wrap gap-x-4 gap-y-2">
                                     {item.highlights.map(pt => (
                                         <div key={pt} className="flex items-center gap-1.5 text-white/95 text-[10px] font-jakarta font-semibold">
                                             <span className="w-1 h-1 rounded-full bg-brand-accent flex-shrink-0"></span>
@@ -154,9 +154,9 @@ const Manufacturer = () => {
                                     <span className="text-brand-accent font-bold tracking-[0.2em] text-lg uppercase mb-2 block">0{item.id}</span>
                                     <h3 className="text-6xl font-heading font-bold text-white mb-6 uppercase tracking-[0.2rem]">{item.title}</h3>
                                     <p className="text-white/90 text-xl max-w-2xl leading-relaxed mb-8">{item.description}</p>
-                                    <div className="grid grid-cols-2 gap-x-8 gap-y-4 max-w-2xl">
+                                    <div className="flex flex-row flex-nowrap gap-x-4 lg:gap-x-8 gap-y-4 w-full">
                                         {item.highlights.map(pt => (
-                                            <div key={pt} className="flex items-center gap-3 text-white text-lg font-jakarta font-bold">
+                                            <div key={pt} className="flex items-center gap-3 text-white text-base lg:text-lg font-jakarta font-bold whitespace-nowrap">
                                                 <div className="w-6 h-6 rounded-full bg-brand-accent/25 text-brand-accent flex items-center justify-center flex-shrink-0 text-xs font-black">
                                                     ✓
                                                 </div>

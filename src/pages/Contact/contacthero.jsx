@@ -16,23 +16,23 @@ const ContactHero = () => {
       <div className="absolute inset-0 bg-brand-dark/40 z-0"></div>
       
       {/* Seamless Transition Gradients */}
-      <div className="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-brand-background to-transparent z-0 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-background z-0 pointer-events-none" />
       
       {/* Content */}
       <div className="max-w-[110rem] mx-auto px-6 md:px-10 relative z-20 text-center flex flex-col items-center mt-20">
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-heading mb-6 tracking-tight animate-in fade-in slide-in-from-bottom-8 duration-700">
+        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold font-heading mb-6 tracking-tight animate-in fade-in slide-in-from-bottom-8 duration-700">
           <span className="text-white">Contact</span> <span className="text-brand-dark">Us</span>
         </h1>
-        <p className="text-lg md:text-xl text-white/80 max-w-2xl font-light mb-10 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-100">
+        {/* <p className="text-lg md:text-xl text-white/80 max-w-2xl font-light mb-10 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-100">
           Connect with our experts. Whether it's premium salt supply, global distribution, or a strategic partnership, we are ready to elevate your business.
-        </p>
+        </p> */}
 
         {/* Breadcrumb */}
-        <div className="flex items-center gap-3 text-sm md:text-base font-medium animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200">
+        {/* <div className="flex items-center gap-3 text-sm md:text-base font-medium animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200">
           <Link to="/" className="text-white/60 hover:text-brand-accent transition-colors">Home</Link>
           <ChevronRight className="w-4 h-4 text-white/40" />
           <span className="text-brand-dark">Contact</span>
-        </div>
+        </div> */}
       </div>
     </div>
   );

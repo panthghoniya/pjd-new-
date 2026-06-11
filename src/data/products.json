@@ -9,10 +9,10 @@
     "reviews": 120,
     "description": "High-purity triple refined iodized salt with uniform grain size, ensuring easy free-flow delivery and perfect dietary fortification for global consumer markets.",
     "images": [
-      "https://i.pinimg.com/736x/21/80/47/218047f27fb25401044ecee15b701034.jpg",
-      "https://i.pinimg.com/1200x/cd/40/e5/cd40e5e93951d7443dfa8c3c098445d0.jpg",
-      "https://i.pinimg.com/736x/b4/bd/eb/b4bdebff1fa4748cc11b911bd13a6039.jpg",
-      "https://i.pinimg.com/736x/97/b4/be/97b4beecea19f8d9e51bbb84254decd1.jpg"
+      "/images/products/salt_mint.jpg",
+      "/images/products/salt_scoop.jpg",
+      "/images/products/salt_dark_bowl.jpg",
+      "/images/products/salt_spa.jpg"
     ]
   },
   {
@@ -25,10 +25,10 @@
     "reviews": 95,
     "description": "Premium quality coarse salt crystals perfect for cooking, pickling, and industrial processes requiring slower dissolution rates.",
     "images": [
-      "https://i.pinimg.com/736x/d5/63/c0/d563c0b03ba755a852af2ced90c826d7.jpg",
-      "https://i.pinimg.com/736x/97/b4/be/97b4beecea19f8d9e51bbb84254decd1.jpg",
-      "https://i.pinimg.com/736x/e5/76/8b/e5768bd15123d75f32b1ee5280f7a1b8.jpg",
-      "https://i.pinimg.com/736x/ed/a0/2c/eda02c75a15492762b1e304d811ba276.jpg"
+      "/images/products/salt_scoop.jpg",
+      "/images/products/salt_mint.jpg",
+      "/images/products/salt_dark_bowl.jpg",
+      "/images/products/salt_spa.jpg"
     ]
   },
   {
@@ -42,9 +42,9 @@
     "description": "Highly compacted salt tablets designed for water softening systems, industrial boilers, and water treatment processes. Dissolves evenly without leaving residue.",
     "images": [
       "https://i.pinimg.com/1200x/16/c1/da/16c1daf5e8c88b14221b7f700060c27d.jpg",
-      "https://i.pinimg.com/1200x/cd/40/e5/cd40e5e93951d7443dfa8c3c098445d0.jpg",
-      "https://i.pinimg.com/736x/ed/a0/2c/eda02c75a15492762b1e304d811ba276.jpg",
-      "https://i.pinimg.com/736x/97/b4/be/97b4beecea19f8d9e51bbb84254decd1.jpg"
+      "/images/products/salt_dark_bowl.jpg",
+      "/images/products/salt_mint.jpg",
+      "/images/products/salt_scoop.jpg"
     ]
   },
   {
@@ -57,10 +57,10 @@
     "reviews": 85,
     "description": "Ultra-fine salt crystals engineered for quick dissolution and perfect blending. Ideal for snack seasoning, baking, and specialty food manufacturing.",
     "images": [
-      "https://i.pinimg.com/1200x/cd/40/e5/cd40e5e93951d7443dfa8c3c098445d0.jpg",
-      "https://i.pinimg.com/736x/21/80/47/218047f27fb25401044ecee15b701034.jpg",
-      "https://i.pinimg.com/736x/b4/bd/eb/b4bdebff1fa4748cc11b911bd13a6039.jpg",
-      "https://i.pinimg.com/736x/97/b4/be/97b4beecea19f8d9e51bbb84254decd1.jpg"
+      "/images/products/salt_dark_bowl.jpg",
+      "/images/products/salt_mint.jpg",
+      "/images/products/salt_scoop.jpg",
+      "/images/products/salt_spa.jpg"
     ]
   },
   {
@@ -73,10 +73,10 @@
     "reviews": 64,
     "description": "A health-focused salt alternative offering authentic salty flavor with reduced sodium content, blended carefully with potassium minerals.",
     "images": [
-      "https://i.pinimg.com/736x/ed/a0/2c/eda02c75a15492762b1e304d811ba276.jpg",
-      "https://i.pinimg.com/736x/97/b4/be/97b4beecea19f8d9e51bbb84254decd1.jpg",
-      "https://i.pinimg.com/736x/e5/76/8b/e5768bd15123d75f32b1ee5280f7a1b8.jpg",
-      "https://i.pinimg.com/736x/d5/63/c0/d563c0b03ba755a852af2ced90c826d7.jpg"
+      "/images/products/salt_spa.jpg",
+      "/images/products/salt_mint.jpg",
+      "/images/products/salt_scoop.jpg",
+      "/images/products/salt_dark_bowl.jpg"
     ]
   },
   {
@@ -89,10 +89,10 @@
     "reviews": 110,
     "description": "Pure salt completely free of iodine and silica anticaking agents, featuring high mechanical flowability. Highly sought-after for specific industrial and food processing applications.",
     "images": [
-      "https://i.pinimg.com/736x/b4/bd/eb/b4bdebff1fa4748cc11b911bd13a6039.jpg",
-      "https://i.pinimg.com/736x/97/b4/be/97b4beecea19f8d9e51bbb84254decd1.jpg",
-      "https://i.pinimg.com/1200x/cd/40/e5/cd40e5e93951d7443dfa8c3c098445d0.jpg",
-      "https://i.pinimg.com/736x/ed/a0/2c/eda02c75a15492762b1e304d811ba276.jpg"
+      "/images/products/salt_mint.jpg",
+      "/images/products/salt_dark_bowl.jpg",
+      "/images/products/salt_scoop.jpg",
+      "/images/products/salt_spa.jpg"
     ]
   },
   {
@@ -105,10 +105,10 @@
     "reviews": 78,
     "description": "Premium industrial grade salt with exceptionally low hardness levels. Perfect for dye houses, chemical processing, and other specialized industrial systems.",
     "images": [
-      "https://i.pinimg.com/736x/97/b4/be/97b4beecea19f8d9e51bbb84254decd1.jpg",
-      "https://i.pinimg.com/736x/b4/bd/eb/b4bdebff1fa4748cc11b911bd13a6039.jpg",
-      "https://i.pinimg.com/1200x/cd/40/e5/cd40e5e93951d7443dfa8c3c098445d0.jpg",
-      "https://i.pinimg.com/736x/ed/a0/2c/eda02c75a15492762b1e304d811ba276.jpg"
+      "/images/products/salt_dark_bowl.jpg",
+      "/images/products/salt_scoop.jpg",
+      "/images/products/salt_mint.jpg",
+      "/images/products/salt_spa.jpg"
     ]
   },
   {
@@ -121,10 +121,10 @@
     "reviews": 88,
     "description": "Double-refined edible salt combining precise iodization with low hardness properties, customized for specific food preparation and hydration manufacturing processes.",
     "images": [
-      "https://i.pinimg.com/1200x/b2/9d/ec/b29dec41a37c99340bfc5513f78f0a2f.jpg",
-      "https://i.pinimg.com/736x/21/80/47/218047f27fb25401044ecee15b701034.jpg",
-      "https://i.pinimg.com/736x/ed/a0/2c/eda02c75a15492762b1e304d811ba276.jpg",
-      "https://i.pinimg.com/736x/b4/bd/eb/b4bdebff1fa4748cc11b911bd13a6039.jpg"
+      "/images/products/salt_mint.jpg",
+      "/images/products/salt_spa.jpg",
+      "/images/products/salt_dark_bowl.jpg",
+      "/images/products/salt_scoop.jpg"
     ]
   }
 ]

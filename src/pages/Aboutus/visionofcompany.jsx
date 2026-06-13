@@ -50,8 +50,8 @@ export default function VisionOfCompany() {
                   <Target size={28} className="text-[#2D4F44] group-hover:text-[#FDFCF7] transition-colors" />
                 </div>
                 <h3 className="text-xl font-bold text-[#2D4F44] mb-3">Our Mission</h3>
-                <p className="text-[#2D4F44]/70 text-sm leading-relaxed max-w-xs">
-                  To deliver the highest quality edible and industrial salts to global markets with unparalleled efficiency and reliability.
+                <p className="text-[#2D4F44]/70 text-sm leading-relaxed max-w-sm">
+                  To deliver high-quality salt products to global markets through consistent quality standards, customized solutions, reliable supply, and customer-focused service. We aim to build long-term partnerships by providing export-ready products that meet the evolving needs of international industries and consumers.
                 </p>
               </div>
 
@@ -61,19 +61,19 @@ export default function VisionOfCompany() {
                   <Eye size={28} className="text-[#2D4F44] group-hover:text-[#FDFCF7] transition-colors" />
                 </div>
                 <h3 className="text-xl font-bold text-[#2D4F44] mb-3">Our Vision</h3>
-                <p className="text-[#2D4F44]/70 text-sm leading-relaxed max-w-xs">
-                  To be the world's most trusted partner in the salt trade, setting global benchmarks in purity, safety, and sustainability.
+                <p className="text-[#2D4F44]/70 text-sm leading-relaxed max-w-sm">
+                  To become a globally trusted name in the salt export industry by continuously enhancing product quality, expanding international reach, and delivering value-driven solutions with professionalism, integrity, and excellence.
                 </p>
               </div>
 
-              {/* Value */}
+              {/* Values */}
               <div className="flex flex-col items-center lg:items-start text-center lg:text-left group sm:col-span-2 md:col-span-1 sm:mx-auto md:mx-0">
                 <div className="w-16 h-16 rounded-full bg-[#2D4F44]/5 flex items-center justify-center mb-6 group-hover:bg-[#2D4F44] transition-colors duration-300">
                   <Diamond size={28} className="text-[#2D4F44] group-hover:text-[#FDFCF7] transition-colors" />
                 </div>
-                <h3 className="text-xl font-bold text-[#2D4F44] mb-3">Our Value</h3>
-                <p className="text-[#2D4F44]/70 text-sm leading-relaxed max-w-xs">
-                  Excellence, integrity, and a commitment to continuous improvement in every grain of salt we process and export.
+                <h3 className="text-xl font-bold text-[#2D4F44] mb-3">Our Values</h3>
+                <p className="text-[#2D4F44]/70 text-sm leading-relaxed max-w-sm">
+                  We believe that lasting business relationships are built on quality, integrity, reliability, and customer satisfaction. Every product we manufacture and export reflects our commitment to international standards, transparent business practices, customized solutions, and timely deliveries. By consistently creating value for our customers, we strive to be a trusted partner in the global salt industry.
                 </p>
               </div>
 

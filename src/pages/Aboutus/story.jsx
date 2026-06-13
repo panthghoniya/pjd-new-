@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from 'react';
-import { Sparkles, UserCheck, Zap, ShieldCheck } from 'lucide-react';
 import { manWithSalt as saltImg } from '../../assets/images';
 
 export default function Story() {
@@ -33,63 +32,27 @@ export default function Story() {
                 Our Story
               </span>
               {/* Reduced heading font size to keep it on ~2 lines */}
-              <h3 className="text-[#2D4F44] font-heading text-[clamp(2rem,3.5vw,3.25rem)] font-black leading-[1.15] tracking-tight max-w-[18ch]">
-                Pure Salt, Perfected For Every Industry.
+              <h3 className="text-[#2D4F44] font-heading text-[clamp(2rem,3.5vw,3.25rem)] font-black leading-[1.15] tracking-tight max-w-[20ch]">
+                From India's Salt Heartland to Global Markets
               </h3>
             </div>
 
-            <div className="flex flex-col gap-6 lg:gap-8 flex-grow justify-between">
-              {/* Feature 1 */}
-              <div className="flex items-start gap-5 group cursor-default">
-                <div className="w-14 h-14 rounded-2xl bg-[#2D4F44]/10 flex items-center justify-center shrink-0 border border-[#2D4F44]/20 group-hover:bg-[#2D4F44] group-hover:scale-110 transition-all duration-300 shadow-sm">
-                  <Sparkles className="w-6 h-6 text-[#2D4F44] group-hover:text-[#FDFCF7] transition-colors" />
-                </div>
-                <div className="pt-1">
-                  <h3 className="text-[#2D4F44] text-xl font-bold mb-1 tracking-wide">Personalized Solutions</h3>
-                  <p className="text-[#2D4F44]/70 font-medium leading-relaxed max-w-md">
-                    We provide tailored salt processing for your specific industrial and culinary needs.
-                  </p>
-                </div>
-              </div>
-
-              {/* Feature 2 */}
-              <div className="flex items-start gap-5 group cursor-default">
-                <div className="w-14 h-14 rounded-2xl bg-[#2D4F44]/10 flex items-center justify-center shrink-0 border border-[#2D4F44]/20 group-hover:bg-[#2D4F44] group-hover:scale-110 transition-all duration-300 shadow-sm">
-                  <UserCheck className="w-6 h-6 text-[#2D4F44] group-hover:text-[#FDFCF7] transition-colors" />
-                </div>
-                <div className="pt-1">
-                  <h3 className="text-[#2D4F44] text-xl font-bold mb-1 tracking-wide">Global Export Experts</h3>
-                  <p className="text-[#2D4F44]/70 font-medium leading-relaxed max-w-md">
-                    Consult with our experienced team for reliable, world-class shipping and logistics.
-                  </p>
-                </div>
-              </div>
-
-              {/* Feature 3 */}
-              <div className="flex items-start gap-5 group cursor-default">
-                <div className="w-14 h-14 rounded-2xl bg-[#2D4F44]/10 flex items-center justify-center shrink-0 border border-[#2D4F44]/20 group-hover:bg-[#2D4F44] group-hover:scale-110 transition-all duration-300 shadow-sm">
-                  <Zap className="w-6 h-6 text-[#2D4F44] group-hover:text-[#FDFCF7] transition-colors" />
-                </div>
-                <div className="pt-1">
-                  <h3 className="text-[#2D4F44] text-xl font-bold mb-1 tracking-wide">Advanced Refining</h3>
-                  <p className="text-[#2D4F44]/70 font-medium leading-relaxed max-w-md">
-                    Utilizing the latest processing and refinement equipment for unmatched 99.9% purity.
-                  </p>
-                </div>
-              </div>
-
-              {/* Feature 4 */}
-              <div className="flex items-start gap-5 group cursor-default">
-                <div className="w-14 h-14 rounded-2xl bg-[#2D4F44]/10 flex items-center justify-center shrink-0 border border-[#2D4F44]/20 group-hover:bg-[#2D4F44] group-hover:scale-110 transition-all duration-300 shadow-sm">
-                  <ShieldCheck className="w-6 h-6 text-[#2D4F44] group-hover:text-[#FDFCF7] transition-colors" />
-                </div>
-                <div className="pt-1">
-                  <h3 className="text-[#2D4F44] text-xl font-bold mb-1 tracking-wide">Holistic Supply Chain</h3>
-                  <p className="text-[#2D4F44]/70 font-medium leading-relaxed max-w-md">
-                    We manage the complete end-to-end process ensuring continuous operations for your business.
-                  </p>
-                </div>
-              </div>
+            <div className="flex flex-col gap-6 text-[#2D4F44]/80 font-medium leading-relaxed text-sm md:text-base">
+              <p>
+                Founded with a vision to deliver high-quality Indian salt to global markets, PDJ Trade Connect has grown into a trusted exporter of premium refined free-flowing iodized and industrial salts.
+              </p>
+              <p>
+                With deep roots in the salt industry and access to one of the world’s largest salt-producing regions in Gujarat, India, we are committed to supplying products that meet international quality standards and customer-specific requirements.
+              </p>
+              <p>
+                What started as a focused trading initiative has evolved into a customer-driven export business serving clients across multiple industries and international markets. Over the years, we have built our reputation through consistent quality, reliable supply, customized packaging solutions, and timely deliveries.
+              </p>
+              <p>
+                Our strength lies in understanding the unique needs of every customer, from grain size customization and purity specifications to retail and bulk packaging solutions. Whether serving food manufacturers, industrial buyers, wholesalers, or private-label brands, we aim to create long-term partnerships based on trust, transparency, and performance.
+              </p>
+              <p>
+                Today, PDJ Trade Connect continues to expand its global presence while staying committed to quality, customer satisfaction, and sustainable business practices.
+              </p>
             </div>
           </div>
 
@@ -122,16 +85,6 @@ export default function Story() {
                     className="absolute inset-0 w-full h-full object-cover object-center filter brightness-[0.95] group-hover:brightness-100 group-hover:scale-105 transition-all duration-700"
                   />
 
-                  {/* Floating badge */}
-                  <div className="absolute bottom-6 left-6 right-6 bg-[#FDFCF7]/95 backdrop-blur-md border border-[#2D4F44]/10 rounded-2xl p-4 flex items-center gap-4 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 delay-100 shadow-xl">
-                    <div className="w-12 h-12 rounded-full bg-[#2D4F44] flex items-center justify-center shrink-0">
-                      <span className="text-[#FDFCF7] font-black text-xl">100%</span>
-                    </div>
-                    <div>
-                      <h4 className="text-[#2D4F44] font-bold text-sm">Pure Quality</h4>
-                      <p className="text-[#2D4F44]/70 text-xs">Certified Export Grade</p>
-                    </div>
-                  </div>
                 </div>
 
               </div>

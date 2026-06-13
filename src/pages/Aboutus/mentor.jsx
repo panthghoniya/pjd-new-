@@ -1,6 +1,6 @@
 import React from 'react';
 import useScrollAnimation from '../../hooks/useScrollAnimation';
-import { mentor1 } from '../../assets/images';
+import { GraduationCap, Landmark, Compass, Target, Quote } from 'lucide-react';
 
 const FacebookIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
@@ -22,12 +22,6 @@ const LinkedinIcon = () => (
   </svg>
 );
 
-const CheckIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
-    <polyline points="20 6 9 17 4 12"></polyline>
-  </svg>
-);
-
 const Mentor = () => {
   const ref = useScrollAnimation();
 
@@ -36,104 +30,185 @@ const Mentor = () => {
       ref={ref}
       className="relative z-40 bg-[#FDFCF7] py-20 md:py-32 border-t border-[#2D4F44]/5 overflow-hidden"
     >
-      <div className="max-w-[85rem] mx-auto px-6 md:px-10 relative z-10">
-        
+      {/* Background ambient light */}
+      <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-brand-accent/5 rounded-full blur-[140px] pointer-events-none"></div>
+
+      <div className="w-full max-w-none px-6 md:px-16 lg:px-24 xl:px-32 relative z-10">
+
         {/* Section Header */}
-        <div className="text-center mb-14 md:mb-20">
+        <div className="text-center mb-16 md:mb-24">
           <div
             data-animate="fade-up"
-            className="inline-flex items-center justify-center px-5 py-1.5 rounded-full  text-[#2D4F44] text-xs font-bold tracking-[0.2em] uppercase mb-5"
+            className="inline-flex items-center justify-center px-5 py-1.5 rounded-full bg-[#2D4F44]/5 border border-[#2D4F44]/10 text-[#2D4F44] text-xs font-bold tracking-[0.2em] uppercase mb-5 animate-in fade-in"
           >
             Meet the Founder
           </div>
           <h2
             data-animate="fade-up"
             data-delay="100"
-            className="text-4xl md:text-5xl font-heading font-black text-[#2D4F44] leading-tight tracking-tight"
+            className="text-4xl md:text-5xl font-heading font-black text-[#2D4F44] leading-tight tracking-tight max-w-2xl mx-auto"
           >
-            The Vision Behind <span className="text-[#5BA298]">PDJ Traders</span>
+            The Mind Behind the Mission
           </h2>
         </div>
 
         {/* Two-Column Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-stretch">
 
-          {/* LEFT — Image */}
-          <div data-animate="fade-right" className="relative w-full aspect-square md:aspect-[4/5] lg:aspect-square bg-[#E5EFEF] rounded-lg overflow-hidden">
-            {/* Badge */}
-            <div className="absolute top-6 left-6 bg-white px-5 py-2.5 rounded shadow-sm z-10">
-              <span className="text-xs font-bold text-[#2D4F44] tracking-wide">CEO & Founder</span>
+          {/* LEFT — Profile Highlights Stack (No photo required, clean premium card items) */}
+          <div className="w-full lg:col-span-5 flex flex-col justify-between gap-6 lg:gap-0 lg:h-full lg:sticky lg:top-28">
+
+            {/* Highlights Header */}
+            <div className="mb-2">
+              <span className="text-[#5BA298] text-xs font-black tracking-widest uppercase block mb-1">
+                Founder Credentials
+              </span>
+              <h4 className="text-xl font-bold text-[#2D4F44] tracking-tight">
+                Key Pillars of Leadership
+              </h4>
             </div>
-            
-            <img
-              src={mentor1}
-              alt="Rajesh D. Joshi — CEO & Founder, PDJ Traders"
-              className="w-full h-full object-cover object-bottom"
-            />
+
+            {/* Card 1: Education */}
+            <div
+              data-animate="fade-right"
+              className="bg-white border-l-4 border-[#5BA298] rounded-r-2xl p-6 shadow-[0_4px_20px_rgba(45,79,68,0.02)] border border-[#2D4F44]/5 hover:shadow-[0_10px_30px_rgba(45,79,68,0.06)] hover:-translate-y-1 transition-all duration-300"
+            >
+              <div className="flex items-center gap-4 mb-2">
+                <div className="w-10 h-10 rounded-xl bg-[#5BA298]/10 flex items-center justify-center text-[#5BA298]">
+                  <GraduationCap className="w-5.5 h-5.5" />
+                </div>
+                <h5 className="font-bold text-[#2D4F44] text-base">Academic Foundation</h5>
+              </div>
+              <p className="text-[#2D4F44]/70 text-sm leading-relaxed">
+                MBA from Nirma University, specializing in Global Markets, Supply Chains, and Strategic International Management.
+              </p>
+            </div>
+
+            {/* Card 2: Legacy */}
+            <div
+              data-animate="fade-right"
+              data-delay="50"
+              className="bg-white border-l-4 border-[#5BA298] rounded-r-2xl p-6 shadow-[0_4px_20px_rgba(45,79,68,0.02)] border border-[#2D4F44]/5 hover:shadow-[0_10px_30px_rgba(45,79,68,0.06)] hover:-translate-y-1 transition-all duration-300"
+            >
+              <div className="flex items-center gap-4 mb-2">
+                <div className="w-10 h-10 rounded-xl bg-[#5BA298]/10 flex items-center justify-center text-[#5BA298]">
+                  <Landmark className="w-5.5 h-5.5" />
+                </div>
+                <h5 className="font-bold text-[#2D4F44] text-base">Industrial Heritage</h5>
+              </div>
+              <p className="text-[#2D4F44]/70 text-sm leading-relaxed">
+                Deep-rooted connection to salt manufacturing, spending early years learning traditional processing from the ground up.
+              </p>
+            </div>
+
+            {/* Card 3: Advantage */}
+            <div
+              data-animate="fade-right"
+              data-delay="100"
+              className="bg-white border-l-4 border-[#5BA298] rounded-r-2xl p-6 shadow-[0_4px_20px_rgba(45,79,68,0.02)] border border-[#2D4F44]/5 hover:shadow-[0_10px_30px_rgba(45,79,68,0.06)] hover:-translate-y-1 transition-all duration-300"
+            >
+              <div className="flex items-center gap-4 mb-2">
+                <div className="w-10 h-10 rounded-xl bg-[#5BA298]/10 flex items-center justify-center text-[#5BA298]">
+                  <Compass className="w-5.5 h-5.5" />
+                </div>
+                <h5 className="font-bold text-[#2D4F44] text-base">Strategic Logistics</h5>
+              </div>
+              <p className="text-[#2D4F44]/70 text-sm leading-relaxed">
+                Raised near Mundra & Kandla ports, developing a native understanding of port logistics and global supply corridors.
+              </p>
+            </div>
+
+            {/* Card 4: Vision */}
+            <div
+              data-animate="fade-right"
+              data-delay="150"
+              className="bg-white border-l-4 border-[#5BA298] rounded-r-2xl p-6 shadow-[0_4px_20px_rgba(45,79,68,0.02)] border border-[#2D4F44]/5 hover:shadow-[0_10px_30px_rgba(45,79,68,0.06)] hover:-translate-y-1 transition-all duration-300"
+            >
+              <div className="flex items-center gap-4 mb-2">
+                <div className="w-10 h-10 rounded-xl bg-[#5BA298]/10 flex items-center justify-center text-[#5BA298]">
+                  <Target className="w-5.5 h-5.5" />
+                </div>
+                <h5 className="font-bold text-[#2D4F44] text-base">Global Trade Mission</h5>
+              </div>
+              <p className="text-[#2D4F44]/70 text-sm leading-relaxed">
+                Connecting Kutch salt fields directly to international shores through transparent, quality-first export standards.
+              </p>
+            </div>
+
           </div>
 
-          {/* RIGHT — Content */}
-          <div data-animate="fade-left" data-delay="150" className="flex flex-col">
-            
-            {/* Name & Intro */}
-            <h3 className="text-3xl md:text-4xl font-heading font-bold text-[#2D4F44] mb-6">
-              Aayush Jain
+          {/* RIGHT — Content (Full biography, styled elegantly) */}
+          <div data-animate="fade-left" data-delay="150" className="flex flex-col lg:col-span-7 lg:pl-6">
+
+            <span className="text-[#5BA298] text-xs font-black tracking-[0.2em] uppercase mb-2 block">
+              Founder & Director
+            </span>
+            <h3 className="text-4xl md:text-5xl font-heading font-black text-[#2D4F44] mb-8 leading-tight">
+              Mr. Aayush Jain
             </h3>
-            
-            <p className="text-[#2D4F44]/65 text-base md:text-lg leading-relaxed font-jakarta mb-8">
-              Aayush Jain is a young and dynamic entrepreneur who has brought a fresh perspective to the salt export industry. With a focus on innovation and sustainability, he has expanded PDJ Traders' reach to new markets while maintaining our commitment to quality and excellence.
-            </p>
-            
-            {/* Social Icons */}
-            <div className="flex items-center gap-4 mb-10">
-              <a href="#" className="w-10 h-10 border border-[#2D4F44]/20 rounded flex items-center justify-center text-[#2D4F44]/70 hover:bg-[#2D4F44] hover:text-white transition-colors">
-                <FacebookIcon />
-              </a>
-              <a href="#" className="w-10 h-10 border border-[#2D4F44]/20 rounded flex items-center justify-center text-[#2D4F44]/70 hover:bg-[#2D4F44] hover:text-white transition-colors">
-                <TwitterIcon />
-              </a>
-              <a href="#" className="w-10 h-10 border border-[#2D4F44]/20 rounded flex items-center justify-center text-[#2D4F44]/70 hover:bg-[#2D4F44] hover:text-white transition-colors">
-                <LinkedinIcon />
-              </a>
+
+            <div className="flex flex-col gap-8 text-[#2D4F44]/80 text-[15px] md:text-base leading-relaxed font-jakarta">
+
+              {/* Leader Highlight Quote */}
+              <div className="relative pl-6 border-l-4 border-[#2D4F44]/20 py-2 my-2 bg-[#2D4F44]/2 p-4 rounded-r-xl">
+                <Quote className="absolute -left-2.5 -top-3 w-8 h-8 text-[#5BA298]/15 rotate-180" />
+                <p className="font-semibold text-lg text-[#2D4F44] leading-snug">
+                  Every great enterprise begins with a story—and ours begins in the salt-rich landscape of Kutch, Gujarat.
+                </p>
+              </div>
+
+              {/* Sub-section 1 */}
+              <div>
+                <h5 className="font-bold text-[#2D4F44] text-lg mb-2">Roots in Kutch & Port Logistics</h5>
+                <p>
+                  Raised near Mundra and Kandla, two of India's most important gateways for global trade, Mr. Aayush Jain witnessed how the region's vast salt fields fuel industries and economies across the world. Kutch is not only one of India's largest salt-producing regions, but it has also long been at the centre of the country's salt export ecosystem, connecting local producers with international markets through its world-class ports.
+                </p>
+                <p className="mt-4">
+                  While many viewed salts as a commodity, he recognized a story of hard work, heritage, and untapped global potential.
+                </p>
+              </div>
+
+              {/* Sub-section 2 */}
+              <div>
+                <h5 className="font-bold text-[#2D4F44] text-lg mb-2"> Decades of Industry Heritage</h5>
+                <p>
+                  Belonging to a family deeply connected to salt manufacturing, he spent his early years understanding the industry from the ground up, learning how nature, precision, and perseverance come together to create a product that reaches millions of people and industries worldwide. These experiences shaped his appreciation for quality, reliability, and long-term relationships.
+                </p>
+                <p className="mt-4">
+                  Driven by a desire to combine traditional industry knowledge with modern business thinking, he pursued his MBA from Nirma University. There, he developed a deeper understanding of global markets, supply chains, and international business strategy. The experience broadened his perspective and strengthened his belief that Indian manufacturers could compete and thrive on the world stage.
+                </p>
+              </div>
+
+              {/* Sub-section 3 */}
+              <div>
+                <h5 className="font-bold text-[#2D4F44] text-lg mb-2">Decades of Manufacturing to Global Markets</h5>
+                <p>
+                  Today, as a young entrepreneur, he is leading the next chapter of the family's journey, transforming decades of manufacturing expertise into a globally focused enterprise. His vision is simple yet ambitious: to deliver premium-quality salt from the heart of Kutch to customers across the world while building lasting partnerships based on trust, consistency, and excellence.
+                </p>
+                <p className="mt-4">
+                  For him, exporting salt is more than a business expansion. It is about carrying the legacy of Kutch, the spirit of Indian manufacturing, and the values of integrity and quality to international shores.
+                </p>
+              </div>
             </div>
-            
-            {/* Divider */}
-            <div className="w-full h-px bg-[#2D4F44]/10 mb-10"></div>
-            
-            {/* Experience Section */}
-            <h4 className="text-2xl md:text-3xl font-heading font-bold text-[#2D4F44] mb-6">
-              Aayush Jain's Experience
-            </h4>
-            
-            <p className="text-[#2D4F44]/65 text-base md:text-lg leading-relaxed font-jakarta mb-8">
-              Aayush has been instrumental in modernizing PDJ Traders' operations, introducing advanced technologies and sustainable practices that have set new industry benchmarks. His forward-thinking approach ensures that the company remains at the forefront of the global salt export market.
-            </p>
-            
-            {/* Bullet Points */}
-            <div className="flex flex-col gap-5">
-              <div className="flex items-start gap-4">
-                <div className="mt-1 flex-shrink-0 w-6 h-6 rounded-full bg-[#2D4F44] flex items-center justify-center">
-                  <span className="text-white"><CheckIcon /></span>
-                </div>
-                <p className="text-[#2D4F44]/70 font-jakarta text-base">
-                  Over 20 years of experience in the global salt export industry
-                </p>
+
+            {/* Social Icons & Signature Footer */}
+            <div className="flex items-center justify-between border-t border-[#2D4F44]/10 pt-8 mt-10">
+              <div className="flex items-center gap-4">
+                <a href="#" className="w-10 h-10 border border-[#2D4F44]/20 rounded-full flex items-center justify-center text-[#2D4F44]/70 hover:bg-[#2D4F44] hover:text-[#FDFCF7] hover:scale-105 transition-all duration-300 shadow-sm">
+                  <FacebookIcon />
+                </a>
+                <a href="#" className="w-10 h-10 border border-[#2D4F44]/20 rounded-full flex items-center justify-center text-[#2D4F44]/70 hover:bg-[#2D4F44] hover:text-[#FDFCF7] hover:scale-105 transition-all duration-300 shadow-sm">
+                  <TwitterIcon />
+                </a>
+                <a href="#" className="w-10 h-10 border border-[#2D4F44]/20 rounded-full flex items-center justify-center text-[#2D4F44]/70 hover:bg-[#2D4F44] hover:text-[#FDFCF7] hover:scale-105 transition-all duration-300 shadow-sm">
+                  <LinkedinIcon />
+                </a>
               </div>
-              <div className="flex items-start gap-4">
-                <div className="mt-1 flex-shrink-0 w-6 h-6 rounded-full bg-[#2D4F44] flex items-center justify-center">
-                  <span className="text-white"><CheckIcon /></span>
-                </div>
-                <p className="text-[#2D4F44]/70 font-jakarta text-base">
-                 Has successfully expanded PDJ traders reach to new international markets 
-                </p>
-              </div>
-              <div className="flex items-start gap-4">
-                <div className="mt-1 flex-shrink-0 w-6 h-6 rounded-full bg-[#2D4F44] flex items-center justify-center">
-                  <span className="text-white"><CheckIcon /></span>
-                </div>
-                <p className="text-[#2D4F44]/70 font-jakarta text-base">
-                  Holds multiple strategic partnerships with international refineries
-                </p>
+
+              {/* Styled name signature */}
+              <div className="text-right">
+                <span className="font-bold text-[#2D4F44] text-base block font-heading tracking-wide">Aayush Jain</span>
+                <span className="text-xs text-[#2D4F44]/50 font-bold uppercase tracking-wider block">PDJ Trade Connect</span>
               </div>
             </div>
 

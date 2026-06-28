@@ -8,7 +8,7 @@ const Footer = () => {
 
   return (
     <>
-      <footer ref={ref} className="relative bg-brand-black text-brand-light overflow-hidden z-[999] pt-24 md:pt-32 flex flex-col justify-between">
+      <footer ref={ref} className="relative bg-brand-black text-brand-light overflow-hidden pt-24 md:pt-32 flex flex-col justify-between">
 
         {/* Low Opacity Background Image */}
         <div className="absolute inset-0 bg-[url('https://i.pinimg.com/1200x/39/86/1d/39861de219c6529fe752746a2d019fb6.jpg')] bg-cover bg-center bg-no-repeat opacity-25 mix-blend-overlay pointer-events-none"></div>

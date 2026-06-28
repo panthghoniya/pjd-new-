@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useParams, Link, useNavigate } from 'react-router-dom';
-import { Heart, Share2, Check } from 'lucide-react';
+import { Share2, Check, Package, CheckCircle2, Layers } from 'lucide-react';
 import Navbar from '../../common components/layout/Navbar';
 import Footer from '../../common components/layout/footer';
 import productsArray from '../../data/products.json';
@@ -35,7 +35,6 @@ const Innerproduct = () => {
       return;
     }
 
-    // Navigate to contact page with product info as query params
     const params = new URLSearchParams({
       product: product.name,
       weight: finalWeight || selectedWeight,
@@ -57,6 +56,12 @@ const Innerproduct = () => {
     setActiveImage(product.images[0]);
     setActiveTab("description");
   }, [id]);
+
+  // Parse packaging options string into array
+  const parsePackagingOptions = (str) => {
+    if (!str) return [];
+    return str.split('|').map(s => s.trim()).filter(Boolean);
+  };
 
   return (
     <>
@@ -100,7 +105,9 @@ const Innerproduct = () => {
             <div className="flex items-center justify-center gap-2 text-xs md:text-sm text-brand-dark/60 font-medium">
               <Link to="/" className="hover:text-brand-accent transition-colors">Home</Link>
               <span>/</span>
-              <span className="text-brand-dark">Product Details</span>
+              <Link to="/product" className="hover:text-brand-accent transition-colors">Products</Link>
+              <span>/</span>
+              <span className="text-brand-dark">{product.name}</span>
             </div>
           </div>
 
@@ -109,8 +116,12 @@ const Innerproduct = () => {
 
             {/* Left: Images */}
             <div className="flex flex-col gap-4 animate-in fade-in slide-in-from-left-8 duration-700">
-              <div className="w-full aspect-[4/5] md:aspect-square rounded-[1.5rem] md:rounded-[2rem] overflow-hidden bg-white shadow-sm border border-brand-dark/10 relative group">
-                <img src={activeImage} alt={product.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              <div className="w-full aspect-[4/5] md:aspect-square rounded-[1.5rem] md:rounded-[2rem] bg-white shadow-sm border border-brand-dark/10 overflow-hidden">
+                <img
+                  src={activeImage}
+                  alt={product.name}
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div className="grid grid-cols-4 gap-3 md:gap-4">
                 {product.images.map((img, idx) => (
@@ -133,17 +144,18 @@ const Innerproduct = () => {
                 <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-heading text-brand-black leading-tight">{product.name}</h2>
               </div>
 
-              <div className="flex items-center gap-2 mb-6 md:mb-8 text-brand-dark/60 font-medium text-sm md:text-base">
+              <div className="flex items-center gap-2 mb-4 text-brand-dark/60 font-medium text-sm md:text-base">
                 <span className="uppercase tracking-widest text-xs font-bold text-brand-dark">SKU:</span>
                 <span>{product.sku}</span>
               </div>
 
-              <p className="text-brand-dark/70 leading-relaxed mb-8 md:mb-10 text-sm sm:text-base md:text-lg">
-                {product.description}
+              {/* Tagline */}
+              <p className="text-brand-dark/70 leading-relaxed mb-6 md:mb-8 text-sm sm:text-base md:text-lg">
+                {product.tagline}
               </p>
 
               {/* Weight Options */}
-              <div className="mb-8 md:mb-10">
+              <div className="mb-6 md:mb-8">
                 <h4 className="text-xs md:text-sm font-bold text-brand-black mb-3 md:mb-4 uppercase tracking-widest">Weight / Packaging</h4>
                 <div className="flex flex-wrap gap-2 md:gap-3 mb-4">
                   {weights.map(weight => (
@@ -203,8 +215,6 @@ const Innerproduct = () => {
                 </button>
               </div>
 
-
-
             </div>
           </div>
 
@@ -227,52 +237,152 @@ const Innerproduct = () => {
             </div>
 
             <div className="text-brand-dark/70 leading-relaxed text-left text-sm sm:text-base md:text-lg">
+
+              {/* Description Tab */}
               {activeTab === 'description' && (
                 <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
-                  <p className="mb-6 md:mb-8">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  <p className="mb-6 md:mb-8 text-brand-dark/70 leading-relaxed">
+                    {product.description}
                   </p>
-                  <p className="mb-8 md:mb-10">
-                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-                  </p>
-                  <ul className="text-left max-w-3xl mx-0 space-y-3 md:space-y-4 text-brand-dark/70">
-                    <li className="flex items-start gap-3 md:gap-4">
-                      <div className="w-5 h-5 md:w-6 md:h-6 rounded-full bg-brand-accent/10 text-brand-dark flex items-center justify-center flex-shrink-0 mt-0.5 text-xs md:text-sm font-bold">✓</div>
-                      100% Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                    </li>
-                    <li className="flex items-start gap-3 md:gap-4">
-                      <div className="w-5 h-5 md:w-6 md:h-6 rounded-full bg-brand-accent/10 text-brand-dark flex items-center justify-center flex-shrink-0 mt-0.5 text-xs md:text-sm font-bold">✓</div>
-                      Ut at nunc vel nisi gravida dictum.
-                    </li>
-                    <li className="flex items-start gap-3 md:gap-4">
-                      <div className="w-5 h-5 md:w-6 md:h-6 rounded-full bg-brand-accent/10 text-brand-dark flex items-center justify-center flex-shrink-0 mt-0.5 text-xs md:text-sm font-bold">✓</div>
-                      Donec non velit sed risus tincidunt suscipit.
-                    </li>
-                    <li className="flex items-start gap-3 md:gap-4">
-                      <div className="w-5 h-5 md:w-6 md:h-6 rounded-full bg-brand-accent/10 text-brand-dark flex items-center justify-center flex-shrink-0 mt-0.5 text-xs md:text-sm font-bold">✓</div>
-                      Cras laoreet lacus in dui posuere fringilla.
-                    </li>
-                  </ul>
+
+                  {/* Key Features in Description */}
+                  {product.keyFeatures && product.keyFeatures.length > 0 && (
+                    <div className="mb-6">
+                      <h3 className="font-bold text-brand-dark text-base md:text-lg mb-4 flex items-center gap-2">
+                        <CheckCircle2 className="w-5 h-5 text-brand-accent" />
+                        Key Features
+                      </h3>
+                      <ul className="text-left space-y-3 md:space-y-4 text-brand-dark/70">
+                        {product.keyFeatures.map((feature, idx) => (
+                          <li key={idx} className="flex items-start gap-3 md:gap-4">
+                            <div className="w-5 h-5 md:w-6 md:h-6 rounded-full bg-brand-accent/10 text-brand-dark flex items-center justify-center flex-shrink-0 mt-0.5 text-xs md:text-sm font-bold">✓</div>
+                            <span>{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+
+                  {/* Applications */}
+                  {product.applications && product.applications.length > 0 && (
+                    <div className="mt-8">
+                      <h3 className="font-bold text-brand-dark text-base md:text-lg mb-4 flex items-center gap-2">
+                        <Layers className="w-5 h-5 text-brand-accent" />
+                        Applications
+                      </h3>
+                      <div className="flex flex-wrap gap-2">
+                        {product.applications.map((app, idx) => (
+                          <span key={idx} className="px-4 py-2 bg-brand-dark/5 rounded-full text-sm font-medium text-brand-dark border border-brand-dark/10">
+                            {app}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  )}
                 </div>
               )}
+
+              {/* Additional Information Tab */}
               {activeTab === 'additional information' && (
                 <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
-                  <p className="mb-4"><strong>Weight options:</strong> 500g, 1kg, 5kg, 25kg, Bulk.</p>
-                  <p className="mb-4"><strong>Purity:</strong> 99.9% certified.</p>
-                  <p className="mb-4"><strong>Packaging:</strong> Moisture-proof PP bags.</p>
+                  {product.additionalInfo ? (
+                    <div className="space-y-6">
+
+                      {/* Purity */}
+                      {product.additionalInfo.Purity && (
+                        <div className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-6 py-4 border-b border-brand-dark/8">
+                          <span className="font-bold text-brand-dark text-sm md:text-base min-w-[160px]">Purity</span>
+                          <span className="text-brand-dark/70 text-sm md:text-base">{product.additionalInfo.Purity}</span>
+                        </div>
+                      )}
+
+                      {/* Grain Size */}
+                      {product.additionalInfo['Grain Size'] && (
+                        <div className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-6 py-4 border-b border-brand-dark/8">
+                          <span className="font-bold text-brand-dark text-sm md:text-base min-w-[160px]">Grain Size</span>
+                          <span className="text-brand-dark/70 text-sm md:text-base">{product.additionalInfo['Grain Size']}</span>
+                        </div>
+                      )}
+
+                      {/* Iodine Content */}
+                      {product.additionalInfo['Iodine Content'] && (
+                        <div className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-6 py-4 border-b border-brand-dark/8">
+                          <span className="font-bold text-brand-dark text-sm md:text-base min-w-[160px]">Iodine Content</span>
+                          <div className="text-brand-dark/70 text-sm md:text-base">
+                            {product.additionalInfo['Iodine Content'].split('|').map((s, i) => (
+                              <p key={i} className={i > 0 ? 'mt-1' : ''}>{s.trim()}</p>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+
+                      {/* Packaging Options */}
+                      {product.additionalInfo['Packaging Options'] && (
+                        <div className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-6 py-4 border-b border-brand-dark/8">
+                          <span className="font-bold text-brand-dark text-sm md:text-base min-w-[160px] flex items-center gap-2">
+                            <Package className="w-4 h-4 text-brand-accent" />
+                            Packaging Options
+                          </span>
+                          <div className="flex flex-wrap gap-2">
+                            {parsePackagingOptions(product.additionalInfo['Packaging Options']).map((pkg, idx) => (
+                              <span key={idx} className="px-3 py-1.5 bg-brand-accent/8 border border-brand-accent/20 rounded-full text-xs md:text-sm font-medium text-brand-dark">
+                                {pkg}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+
+                      {/* Applications */}
+                      {product.applications && product.applications.length > 0 && (
+                        <div className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-6 py-4">
+                          <span className="font-bold text-brand-dark text-sm md:text-base min-w-[160px] flex items-center gap-2">
+                            <Layers className="w-4 h-4 text-brand-accent" />
+                            Applications
+                          </span>
+                          <div className="flex flex-wrap gap-2">
+                            {product.applications.map((app, idx) => (
+                              <span key={idx} className="px-3 py-1.5 bg-brand-dark/5 border border-brand-dark/10 rounded-full text-xs md:text-sm font-medium text-brand-dark">
+                                {app}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+
+                    </div>
+                  ) : (
+                    <p className="text-brand-dark/50 italic">No additional information available for this product.</p>
+                  )}
                 </div>
               )}
             </div>
           </div>
 
           {/* Related Products */}
-          <div className="py-8 md:py-10 max-w-7xl mx-auto animate-in fade-in duration-1000 delay-500">
-            <div className="text-center mb-10 md:mb-16">
-              <p className="text-brand-accent font-bold tracking-[0.2em] uppercase mb-2 md:mb-4 text-xs md:text-sm">Related Products</p>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-black font-heading text-brand-dark">Explore <span className="text-brand-accent">Related Products</span></h2>
+          <div className="py-12 md:py-16 max-w-7xl mx-auto animate-in fade-in duration-1000 delay-500">
+
+            {/* Section Header */}
+            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10 md:mb-14">
+              <div>
+                <p className="text-brand-accent font-bold tracking-[0.2em] uppercase mb-2 text-xs md:text-sm">Explore More</p>
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-black font-heading text-brand-dark leading-tight">
+                  Related <span className="text-brand-accent">Products</span>
+                </h2>
+              </div>
+              <Link
+                to="/product"
+                className="inline-flex items-center gap-2 text-sm font-bold text-brand-dark/60 hover:text-brand-accent transition-colors whitespace-nowrap group"
+              >
+                View All Products
+                <span className="w-7 h-7 rounded-full border border-brand-dark/20 flex items-center justify-center group-hover:bg-brand-accent group-hover:border-brand-accent transition-all duration-300">
+                  <svg className="w-3.5 h-3.5 group-hover:text-white transition-colors" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7"/></svg>
+                </span>
+              </Link>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+            {/* Cards Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
               {Object.values(productsData)
                 .filter(p => p.id !== Number(id))
                 .slice(0, 4)
@@ -280,16 +390,42 @@ const Innerproduct = () => {
                   <Link
                     key={relatedProduct.id}
                     to={`/product/${relatedProduct.id}`}
-                    className="bg-white rounded-[2rem] p-4 shadow-sm hover:shadow-xl transition-all duration-500 border border-brand-dark/10 group cursor-pointer hover:-translate-y-2 block"
+                    className="group flex flex-col bg-white rounded-[1.75rem] border border-brand-dark/8 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 p-3"
                   >
-                    <div className="relative w-full aspect-[4/5] rounded-2xl overflow-hidden mb-6 bg-brand-background">
-                      <img src={relatedProduct.images[0]} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt={relatedProduct.name} />
-                    </div>
-                    <div className="px-3 pb-3 md:pb-4">
-                      <p className="text-brand-dark/50 text-xs md:text-sm mb-1.5 md:mb-2 font-medium">{relatedProduct.category}</p>
-                      <div className="flex justify-between items-start mb-2 md:mb-3 gap-2">
-                        <h3 className="font-bold text-brand-dark text-base md:text-lg leading-tight group-hover:text-brand-accent transition-colors">{relatedProduct.name}</h3>
+                    {/* Image — own overflow-hidden + rounded */}
+                    <div className="relative w-full aspect-[4/5] rounded-[1.25rem] overflow-hidden bg-brand-background mb-4">
+                      <img
+                        src={relatedProduct.images[0]}
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        alt={relatedProduct.name}
+                      />
+                      {/* Dark gradient on hover */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-[1.25rem]" />
+
+                      {/* Badge */}
+                      {relatedProduct.badge && (
+                        <div className="absolute top-3 left-3 px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-xs font-bold text-brand-dark shadow-sm">
+                          {relatedProduct.badge}
+                        </div>
+                      )}
+
+                      {/* View Details pill on hover */}
+                      <div className="absolute bottom-3 left-0 right-0 flex justify-center opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+                        <span className="flex items-center gap-1.5 px-4 py-1.5 bg-white rounded-full text-xs font-bold text-brand-dark shadow-md">
+                          View Details
+                          <svg className="w-3 h-3" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7"/></svg>
+                        </span>
                       </div>
+                    </div>
+
+                    {/* Info */}
+                    <div className="px-2 pb-2 flex flex-col gap-1">
+                      <p className="text-brand-accent text-[10px] font-bold uppercase tracking-[0.15em]">
+                        {relatedProduct.category}
+                      </p>
+                      <h3 className="font-bold text-brand-dark text-base leading-snug group-hover:text-brand-accent transition-colors duration-300">
+                        {relatedProduct.name}
+                      </h3>
                     </div>
                   </Link>
                 ))}

@@ -1,13 +1,30 @@
 [
   {
     "id": 1,
-    "name": "Triple Refined Free Flow Iodized Salt",
-    "category": "Edible Salt",
+    "name": "Iodized Crystal Salt",
+    "category": "Food Grade Salt",
     "badge": "Premium",
-    "sku": "SKU-TR-FFIS",
+    "sku": "SKU-ICS-001",
     "rating": 4.9,
     "reviews": 120,
-    "description": "High-purity triple refined iodized salt with uniform grain size, ensuring easy free-flow delivery and perfect dietary fortification for global consumer markets.",
+    "tagline": "Naturally crystalline and enriched with iodine, our iodized crystal salt delivers purity, taste, and nutritional value in every grain. Ideal for food processing, retail consumption, and everyday culinary applications.",
+    "description": "Our Iodized Crystal Salt is specially processed for food consumption applications and manufactured under strict quality standards to ensure purity and hygiene. The product is enriched with iodine and is suitable for food processing, wholesale distribution, and export markets. We offer customized iodine levels and packaging solutions based on customer and market requirements.",
+    "keyFeatures": [
+      "Suitable for Food Consumption",
+      "Hygienically Processed",
+      "Customized Iodine Levels Available",
+      "Export-Quality Packaging Solutions"
+    ],
+    "additionalInfo": {
+      "Grain Size": "1 mm – 6 mm",
+      "Iodine Content": "15 – 30 PPM Standard | Higher Iodine Levels Available as per Customer Requirement",
+      "Packaging Options": "20 Kg PP Woven Bags with Inner Liner | 25 Kg PP Woven Bags with Inner Liner | 40 Kg PP Woven Bags with Inner Liner | 50 Kg PP Woven Bags with Inner Liner | 1.4 MT Jumbo Bags / FIBC Bags"
+    },
+    "applications": [
+      "Food Consumption",
+      "Food Processing Industry",
+      "Wholesale & Export Supply"
+    ],
     "images": [
       "/images/products/salt_mint.jpg",
       "/images/products/salt_scoop.jpg",
@@ -17,13 +34,30 @@
   },
   {
     "id": 2,
-    "name": "Coarse Salt",
-    "category": "Edible Salt",
-    "badge": "Best Seller",
-    "sku": "SKU-CS-002",
-    "rating": 4.8,
+    "name": "Triple Refined Free Flow Iodized Salt",
+    "category": "Food Grade Salt",
+    "badge": "Top Quality",
+    "sku": "SKU-TR-FFIS-002",
+    "rating": 4.9,
     "reviews": 95,
-    "description": "Premium quality coarse salt crystals perfect for cooking, pickling, and industrial processes requiring slower dissolution rates.",
+    "tagline": "Premium white salt refined through advanced triple-refining technology for outstanding purity and free-flowing performance. Enriched with iodine and crafted to meet the highest standards of quality, consistency, and taste.",
+    "description": "Our Triple Refined Free Flow Salt is manufactured using advanced refining processes to ensure high purity, excellent whiteness, and smooth free-flowing properties. Suitable for food consumption and food processing applications, the product is processed under strict quality and hygiene standards to meet international market requirements. We also offer customized packaging and iodine specifications as per customer requirements.",
+    "keyFeatures": [
+      "High Purity Refined Salt",
+      "Excellent Free-Flowing Properties",
+      "Hygienically Processed",
+      "Suitable for Food Applications"
+    ],
+    "additionalInfo": {
+      "Purity": "NaCl: Greater than 99%",
+      "Iodine Content": "15 – 30 PPM Standard | Customized Iodine Levels Available as per Customer Requirement",
+      "Packaging Options": "20 Kg PP Woven Bags with Inner Liner | 25 Kg PP Woven Bags with Inner Liner | 40 Kg PP Woven Bags with Inner Liner | 50 Kg PP Woven Bags with Inner Liner | 1.4 MT Jumbo Bags / FIBC Bags | Retail Packing Available"
+    },
+    "applications": [
+      "Food Consumption",
+      "Food Processing Industry",
+      "Retail & Wholesale Supply"
+    ],
     "images": [
       "/images/products/salt_scoop.jpg",
       "/images/products/salt_mint.jpg",
@@ -33,45 +67,63 @@
   },
   {
     "id": 3,
-    "name": "Tablet Salt",
-    "category": "Industrial Salt",
-    "badge": "High Purity",
-    "sku": "SKU-TS-003",
+    "name": "Low Hardness Iodized Edible Salt",
+    "category": "Food Grade Salt",
+    "badge": "New Quality",
+    "sku": "SKU-LHIES-003",
     "rating": 4.9,
-    "reviews": 150,
-    "description": "Highly compacted salt tablets designed for water softening systems, industrial boilers, and water treatment processes. Dissolves evenly without leaving residue.",
+    "reviews": 88,
+    "tagline": "Premium-grade iodized edible salt with low calcium and magnesium content, ensuring reduced hardness, superior purity, and consistent quality. Its excellent solubility, bright white appearance, and free-flowing nature make it ideal for food processing, seasoning, and premium consumer applications.",
+    "description": "Our Low Hardness Iodized Edible Salt is specially processed to maintain low calcium and magnesium content, making it suitable for food consumption and various food processing applications. Manufactured under strict hygiene and quality standards, the product offers high purity and consistent quality to meet international market requirements. We also provide customized iodine levels and packaging solutions based on customer specifications.",
+    "keyFeatures": [
+      "Low Hardness Salt",
+      "Suitable for Food Consumption",
+      "Hygienically Processed",
+      "Customized Packaging Solutions"
+    ],
+    "additionalInfo": {
+      "Purity": "NaCl: Greater than 99.5%",
+      "Iodine Content": "15 – 30 PPM Standard | Higher Iodine Levels Available as per Customer Requirement",
+      "Packaging Options": "20 Kg PP Woven Bags | 25 Kg PP Woven Bags | 40 Kg PP Woven Bags | 50 Kg PP Woven Bags | 1.4 MT Jumbo Bags / FIBC Bags | Retail Packing Available"
+    },
+    "applications": [
+      "Food Consumption",
+      "Food Processing Industry",
+      "Snack & Seasoning Industry",
+      "Wholesale & Export Supply"
+    ],
     "images": [
-      "https://i.pinimg.com/1200x/16/c1/da/16c1daf5e8c88b14221b7f700060c27d.jpg",
-      "/images/products/salt_dark_bowl.jpg",
       "/images/products/salt_mint.jpg",
+      "/images/products/salt_spa.jpg",
+      "/images/products/salt_dark_bowl.jpg",
       "/images/products/salt_scoop.jpg"
     ]
   },
   {
     "id": 4,
-    "name": "Super Fine Salt",
-    "category": "Edible Salt",
-    "badge": "Micro Grain",
-    "sku": "SKU-SFS-004",
-    "rating": 4.7,
-    "reviews": 85,
-    "description": "Ultra-fine salt crystals engineered for quick dissolution and perfect blending. Ideal for snack seasoning, baking, and specialty food manufacturing.",
-    "images": [
-      "/images/products/salt_dark_bowl.jpg",
-      "/images/products/salt_mint.jpg",
-      "/images/products/salt_scoop.jpg",
-      "/images/products/salt_spa.jpg"
-    ]
-  },
-  {
-    "id": 5,
     "name": "Low Sodium Salt",
-    "category": "Edible Salt",
+    "category": "Food Grade Salt",
     "badge": "Healthy Choice",
-    "sku": "SKU-LSS-005",
+    "sku": "SKU-LSS-004",
     "rating": 4.8,
     "reviews": 64,
-    "description": "A health-focused salt alternative offering authentic salty flavor with reduced sodium content, blended carefully with potassium minerals.",
+    "tagline": "A healthier alternative to regular salt, specially formulated with reduced sodium content to support balanced dietary needs without compromising taste. Ideal for health-conscious consumers, food manufacturers, and wellness-focused product formulations.",
+    "description": "Our Low Sodium Salt is specially formulated for reduced sodium consumption while maintaining the desired taste and quality for food applications. Processed under strict hygiene and quality standards, the product is suitable for health-conscious consumers and food processing industries. We also provide customized packaging and product specifications based on customer requirements.",
+    "keyFeatures": [
+      "Reduced Sodium Content",
+      "Suitable for Food Applications",
+      "Hygienically Processed",
+      "Customized Packaging Solutions"
+    ],
+    "additionalInfo": {
+      "Packaging Options": "20 Kg PP Woven Bags | 25 Kg PP Woven Bags | 40 Kg PP Woven Bags | 50 Kg PP Woven Bags | 1.4 MT Jumbo Bags"
+    },
+    "applications": [
+      "Food Consumption",
+      "Health & Wellness Products",
+      "Food Processing Industry",
+      "Wholesale & Export Supply"
+    ],
     "images": [
       "/images/products/salt_spa.jpg",
       "/images/products/salt_mint.jpg",
@@ -80,14 +132,64 @@
     ]
   },
   {
+    "id": 5,
+    "name": "Coarse Salt",
+    "category": "Industrial Grade Salt",
+    "badge": "Best Seller",
+    "sku": "SKU-CS-005",
+    "rating": 4.8,
+    "reviews": 95,
+    "tagline": "Naturally harvested sea salt with high purity and excellent mineral balance, suitable for industrial processing, water treatment, and chemical applications. Sourced from the salt-rich regions of Gujarat and produced to deliver consistent quality and reliable performance.",
+    "description": "Our Coarse Salt is specially processed for industrial applications requiring larger crystal size and consistent quality standards. The product is widely used across water treatment, chemical processing, textile, and other industrial sectors. We provide reliable bulk supply and customized packaging solutions based on customer and export market requirements.",
+    "keyFeatures": [
+      "Larger Crystal Size",
+      "Suitable for Industrial Applications",
+      "Consistent Quality Standards",
+      "Reliable Bulk Supply"
+    ],
+    "additionalInfo": {
+      "Grain Size": "1 mm – 6 mm",
+      "Packaging Options": "20 Kg PP Woven Bags | 25 Kg PP Woven Bags | 40 Kg PP Woven Bags | 50 Kg PP Woven Bags | 1.4 MT Jumbo Bags"
+    },
+    "applications": [
+      "Water Treatment",
+      "Chemical Industry",
+      "Textile Industry",
+      "Industrial Processing & Manufacturing"
+    ],
+    "images": [
+      "/images/products/salt_dark_bowl.jpg",
+      "/images/products/salt_scoop.jpg",
+      "/images/products/salt_mint.jpg",
+      "/images/products/salt_spa.jpg"
+    ]
+  },
+  {
     "id": 6,
-    "name": "Non – Iodine Non-Silica Free Flow Salt",
-    "category": "Industrial Salt",
+    "name": "Non-Iodine Non-Silica Free Flow Salt",
+    "category": "Industrial Grade Salt",
     "badge": "Additive Free",
     "sku": "SKU-NINF-006",
     "rating": 4.9,
     "reviews": 110,
-    "description": "Pure salt completely free of iodine and silica anticaking agents, featuring high mechanical flowability. Highly sought-after for specific industrial and food processing applications.",
+    "tagline": "High-purity industrial salt manufactured without iodine and silica additives, ensuring a clean and consistent composition for specialized industrial applications. Its excellent free-flow characteristics and reliable quality make it suitable for chemical processing, textiles, dyes, detergents, and other industrial uses.",
+    "description": "Our Non-Iodine Non-Silica Free Flow Salt is specially processed for industrial applications requiring free-flowing properties without the addition of iodine or silica-based anti-caking agents. Manufactured under strict quality standards, the product offers consistent quality and is suitable for various industrial and processing applications. We provide customized packaging and bulk supply solutions based on customer requirements.",
+    "keyFeatures": [
+      "Free-Flowing Quality",
+      "Consistent Quality Standards",
+      "Suitable for Industrial Applications",
+      "No Iodine or Silica Additives"
+    ],
+    "additionalInfo": {
+      "Purity": "NaCl: More than 98.7%",
+      "Packaging Options": "20 Kg PP Woven Bags | 25 Kg PP Woven Bags | 40 Kg PP Woven Bags | 50 Kg PP Woven Bags | 1.4 MT Jumbo Bags / FIBC Bags"
+    },
+    "applications": [
+      "Chemical Industry",
+      "Industrial Processing",
+      "Textile Industry",
+      "Water Treatment"
+    ],
     "images": [
       "/images/products/salt_mint.jpg",
       "/images/products/salt_dark_bowl.jpg",
@@ -97,13 +199,63 @@
   },
   {
     "id": 7,
+    "name": "Super Fine Salt",
+    "category": "Industrial Grade Salt",
+    "badge": "Micro Grain",
+    "sku": "SKU-SFS-007",
+    "rating": 4.7,
+    "reviews": 85,
+    "tagline": "Premium ultra-fine salt manufactured for applications requiring smooth texture, rapid dissolution, and consistent performance. Produced to high purity standards, it is widely used in chemical, detergent, textile, and specialty industrial applications.",
+    "description": "Our Super Fine Salt is a highly refined, powdery salt with grains much smaller than regular table salt, making it suitable for various industrial and processing applications requiring fine texture and consistent quality. Manufactured under strict quality standards, the product offers smooth flow characteristics and reliable performance for bulk industrial usage. We provide customized packaging and bulk supply solutions based on customer requirements.",
+    "keyFeatures": [
+      "Fine & Powdery Texture",
+      "Smooth Flow Characteristics",
+      "Consistent Quality Standards",
+      "Suitable for Industrial Applications"
+    ],
+    "additionalInfo": {
+      "Packaging Options": "20 Kg PP Woven Bags | 25 Kg PP Woven Bags | 40 Kg PP Woven Bags | 50 Kg PP Woven Bags | 1.4 MT Jumbo Bags / FIBC Bags"
+    },
+    "applications": [
+      "Chemical Industry",
+      "Detergent Industry",
+      "Textile Industry",
+      "Dyeing & Processing Applications",
+      "Industrial Processing"
+    ],
+    "images": [
+      "/images/products/salt_scoop.jpg",
+      "/images/products/salt_dark_bowl.jpg",
+      "/images/products/salt_mint.jpg",
+      "/images/products/salt_spa.jpg"
+    ]
+  },
+  {
+    "id": 8,
     "name": "Low Hardness Pure Salt",
-    "category": "Industrial Salt",
+    "category": "Industrial Grade Salt",
     "badge": "Water Treatment",
-    "sku": "SKU-LHPS-007",
+    "sku": "SKU-LHPS-008",
     "rating": 4.8,
     "reviews": 78,
-    "description": "Premium industrial grade salt with exceptionally low hardness levels. Perfect for dye houses, chemical processing, and other specialized industrial systems.",
+    "tagline": "High-purity salt with low calcium and magnesium content, specially processed to reduce hardness and enhance performance in industrial applications. Designed to deliver consistent quality, improved efficiency, and reliable results across a wide range of manufacturing processes.",
+    "description": "Our Low Hardness Pure Salt is specially processed to maintain low calcium and magnesium content, making it suitable for industrial applications requiring controlled hardness levels and consistent quality. Manufactured under strict quality standards, the product is widely used in textile, chemical, detergent, and processing industries. We provide reliable bulk supply and customized packaging solutions based on customer requirements.",
+    "keyFeatures": [
+      "Low Hardness Salt",
+      "Consistent Quality Standards",
+      "Smooth Flow Characteristics",
+      "Suitable for Industrial Applications"
+    ],
+    "additionalInfo": {
+      "Purity": "NaCl: More than 99.6%",
+      "Packaging Options": "20 Kg PP Woven Bags | 25 Kg PP Woven Bags | 40 Kg PP Woven Bags | 50 Kg PP Woven Bags | 1.4 MT Jumbo Bags / FIBC Bags"
+    },
+    "applications": [
+      "Textile Industry",
+      "Chemical Industry",
+      "Detergent Industry",
+      "Industrial Processing"
+    ],
     "images": [
       "/images/products/salt_dark_bowl.jpg",
       "/images/products/salt_scoop.jpg",
@@ -112,18 +264,34 @@
     ]
   },
   {
-    "id": 8,
-    "name": "Low Hardness Iodized Edible Salt",
-    "category": "Edible Salt",
-    "badge": "New Quality",
-    "sku": "SKU-LHIES-008",
+    "id": 9,
+    "name": "Tablet Salt",
+    "category": "Tablet Salt",
+    "badge": "High Purity",
+    "sku": "SKU-TS-009",
     "rating": 4.9,
-    "reviews": 88,
-    "description": "Double-refined edible salt combining precise iodization with low hardness properties, customized for specific food preparation and hydration manufacturing processes.",
+    "reviews": 150,
+    "tagline": "Premium-grade salt tablets produced from high-purity refined salt for superior performance in water softeners and industrial water treatment applications. Designed for consistent dissolution, reduced maintenance, and enhanced operational efficiency.",
+    "description": "Our Tablet Salt is specially manufactured for water softening and industrial treatment applications requiring uniform tablet shape, controlled dissolution, and consistent performance. Processed under strict quality standards, the product is designed to provide efficient regeneration and reliable usage across various industrial and commercial systems. We offer customized packaging and reliable bulk supply solutions based on customer requirements.",
+    "keyFeatures": [
+      "Uniform Tablet Shape",
+      "Controlled Dissolution",
+      "Consistent Quality Standards",
+      "Suitable for Industrial Applications"
+    ],
+    "additionalInfo": {
+      "Packaging Options": "20 Kg PP Woven Bags | 25 Kg PP Woven Bags | 40 Kg PP Woven Bags | 50 Kg PP Woven Bags | 1.4 MT Jumbo Bags / FIBC Bags"
+    },
+    "applications": [
+      "Water Softening Systems",
+      "Water Treatment Plants",
+      "Industrial Water Treatment",
+      "Commercial Water Purification Systems"
+    ],
     "images": [
-      "/images/products/salt_mint.jpg",
       "/images/products/salt_spa.jpg",
       "/images/products/salt_dark_bowl.jpg",
+      "/images/products/salt_mint.jpg",
       "/images/products/salt_scoop.jpg"
     ]
   }

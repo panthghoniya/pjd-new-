@@ -39,7 +39,7 @@ export default function WhyChooseUs() {
             Why choose
           </span>
           <h2 className="text-[#2D4F44] font-heading text-[clamp(2rem,4vw,3.5rem)] font-black leading-tight">
-            PDJ TRADE CONNECT?
+            PDJ TRADE CONNECT
           </h2>
         </div>
 

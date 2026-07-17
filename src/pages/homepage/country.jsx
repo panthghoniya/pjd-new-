@@ -8,9 +8,9 @@ const countriesData = [
   { id: 2,  name: 'Malaysia',     code: 'my', bg: 'bg-white',      text: 'text-brand-accent' },
   { id: 3,  name: 'UAE',          code: 'ae', bg: 'bg-white',      text: 'text-brand-dark' },
   { id: 4,  name: 'Mozambique',   code: 'mz', bg: 'bg-white',      text: 'text-brand-accent' },
-  { id: 5,  name: 'Malawi',       code: 'mw', bg: 'bg-brand-dark', text: 'text-brand-light' },
-  { id: 6,  name: 'Sierra Leone', code: 'sl', bg: 'bg-white',      text: 'text-brand-dark' },
+  { id: 5,  name: 'Malawi',       code: 'mw', bg: 'bg-white',      text: 'text-brand-dark' },
   { id: 7,  name: 'Qatar',        code: 'qa', bg: 'bg-white',      text: 'text-brand-accent' },
+  { id: 6,  name: 'Sierra Leone', code: 'sl', bg: 'bg-white',      text: 'text-brand-dark' },
   { id: 8,  name: 'Bahrain',      code: 'bh', bg: 'bg-white',      text: 'text-brand-dark' },
 ];
 

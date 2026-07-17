@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useParams, Link, useNavigate } from 'react-router-dom';
-import { Share2, Check, Package, CheckCircle2, Layers } from 'lucide-react';
+import { Share2, Check, Package, CheckCircle2, Layers, Ruler, Beaker } from 'lucide-react';
 import Navbar from '../../common components/layout/Navbar';
 import Footer from '../../common components/layout/footer';
 import productsArray from '../../data/products.json';
@@ -20,7 +20,7 @@ const Innerproduct = () => {
   const [activeImage, setActiveImage] = useState(product.images[0]);
   const [selectedWeight, setSelectedWeight] = useState("1 kg");
   const [customWeight, setCustomWeight] = useState("");
-  const [activeTab, setActiveTab] = useState("description");
+  const [activeTab, setActiveTab] = useState("Overview");
   const [copied, setCopied] = useState(false);
 
   const weights = ["500 g", "1 kg", "5 kg", "25 kg", "Custom Bulk"];
@@ -54,7 +54,7 @@ const Innerproduct = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
     setActiveImage(product.images[0]);
-    setActiveTab("description");
+    setActiveTab("Overview");
   }, [id]);
 
   // Parse packaging options string into array
@@ -221,7 +221,7 @@ const Innerproduct = () => {
           {/* Bottom Section: Tabs */}
           <div className="py-8 md:py-10 max-w-5xl mx-auto animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-300">
             <div className="flex items-center justify-start md:justify-center gap-4 md:gap-16 border-b-2 border-brand-dark/10 mb-8 md:mb-12 overflow-x-auto overflow-y-hidden whitespace-nowrap no-scrollbar pb-1">
-              {['description', 'additional information'].map(tab => (
+              {['Overview', 'Product Specifications'].map(tab => (
                 <button
                   key={tab}
                   onClick={() => setActiveTab(tab)}
@@ -239,10 +239,10 @@ const Innerproduct = () => {
             <div className="text-brand-dark/70 leading-relaxed text-left text-sm sm:text-base md:text-lg">
 
               {/* Description Tab */}
-              {activeTab === 'description' && (
+              {activeTab === 'Overview' && (
                 <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
                   <p className="mb-6 md:mb-8 text-brand-dark/70 leading-relaxed">
-                    {product.description}
+                    {product.Overview}
                   </p>
 
                   {/* Key Features in Description */}
@@ -283,76 +283,57 @@ const Innerproduct = () => {
               )}
 
               {/* Additional Information Tab */}
-              {activeTab === 'additional information' && (
+              {activeTab === 'Product Specifications' && (
                 <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
-                  {product.additionalInfo ? (
-                    <div className="space-y-6">
-
-                      {/* Purity */}
-                      {product.additionalInfo.Purity && (
-                        <div className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-6 py-4 border-b border-brand-dark/8">
-                          <span className="font-bold text-brand-dark text-sm md:text-base min-w-[160px]">Purity</span>
-                          <span className="text-brand-dark/70 text-sm md:text-base">{product.additionalInfo.Purity}</span>
-                        </div>
-                      )}
-
-                      {/* Grain Size */}
-                      {product.additionalInfo['Grain Size'] && (
-                        <div className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-6 py-4 border-b border-brand-dark/8">
-                          <span className="font-bold text-brand-dark text-sm md:text-base min-w-[160px]">Grain Size</span>
-                          <span className="text-brand-dark/70 text-sm md:text-base">{product.additionalInfo['Grain Size']}</span>
-                        </div>
-                      )}
-
-                      {/* Iodine Content */}
-                      {product.additionalInfo['Iodine Content'] && (
-                        <div className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-6 py-4 border-b border-brand-dark/8">
-                          <span className="font-bold text-brand-dark text-sm md:text-base min-w-[160px]">Iodine Content</span>
-                          <div className="text-brand-dark/70 text-sm md:text-base">
-                            {product.additionalInfo['Iodine Content'].split('|').map((s, i) => (
-                              <p key={i} className={i > 0 ? 'mt-1' : ''}>{s.trim()}</p>
-                            ))}
-                          </div>
-                        </div>
-                      )}
-
-                      {/* Packaging Options */}
-                      {product.additionalInfo['Packaging Options'] && (
-                        <div className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-6 py-4 border-b border-brand-dark/8">
-                          <span className="font-bold text-brand-dark text-sm md:text-base min-w-[160px] flex items-center gap-2">
-                            <Package className="w-4 h-4 text-brand-accent" />
-                            Packaging Options
-                          </span>
-                          <div className="flex flex-wrap gap-2">
-                            {parsePackagingOptions(product.additionalInfo['Packaging Options']).map((pkg, idx) => (
-                              <span key={idx} className="px-3 py-1.5 bg-brand-accent/8 border border-brand-accent/20 rounded-full text-xs md:text-sm font-medium text-brand-dark">
-                                {pkg}
-                              </span>
-                            ))}
-                          </div>
-                        </div>
-                      )}
-
-                      {/* Applications */}
-                      {product.applications && product.applications.length > 0 && (
-                        <div className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-6 py-4">
-                          <span className="font-bold text-brand-dark text-sm md:text-base min-w-[160px] flex items-center gap-2">
-                            <Layers className="w-4 h-4 text-brand-accent" />
-                            Applications
-                          </span>
-                          <div className="flex flex-wrap gap-2">
-                            {product.applications.map((app, idx) => (
-                              <span key={idx} className="px-3 py-1.5 bg-brand-dark/5 border border-brand-dark/10 rounded-full text-xs md:text-sm font-medium text-brand-dark">
-                                {app}
-                              </span>
-                            ))}
-                          </div>
-                        </div>
-                      )}
-
+                  {product.additionalInfo && Object.keys(product.additionalInfo).length > 0 ? (
+                    <div className="bg-white rounded-2xl border border-brand-dark/10 shadow-sm overflow-hidden">
+                      <table className="w-full text-left border-collapse">
+                        <tbody>
+                          {Object.entries(product.additionalInfo).map(([key, value], idx) => (
+                            <tr key={key} className={`border-b border-brand-dark/5 hover:bg-brand-background/50 transition-colors ${idx % 2 === 0 ? 'bg-white' : 'bg-brand-background/30'}`}>
+                              <th className="py-4 md:py-5 px-6 font-bold text-brand-dark text-sm md:text-base w-1/3 md:w-1/4 align-top border-r border-brand-dark/10">
+                                {key}
+                              </th>
+                              <td className="py-4 md:py-5 px-6 text-brand-dark/80 text-sm md:text-base align-top font-medium">
+                                {typeof value === 'string' && value.includes('|') ? (
+                                  <ul className="space-y-1.5">
+                                    {value.split('|').map((item, i) => (
+                                      <li key={i} className="flex items-start gap-2">
+                                        <span className="text-brand-accent mt-0.5">•</span>
+                                        {item.trim()}
+                                      </li>
+                                    ))}
+                                  </ul>
+                                ) : (
+                                  value
+                                )}
+                              </td>
+                            </tr>
+                          ))}
+                          {/* Applications Row */}
+                          {product.applications && product.applications.length > 0 && (
+                            <tr className={`hover:bg-brand-background/50 transition-colors ${Object.keys(product.additionalInfo).length % 2 === 0 ? 'bg-white' : 'bg-brand-background/30'}`}>
+                              <th className="py-4 md:py-5 px-6 font-bold text-brand-dark text-sm md:text-base w-1/3 md:w-1/4 align-top border-r border-brand-dark/10">
+                                Applications
+                              </th>
+                              <td className="py-4 md:py-5 px-6 align-top">
+                                <div className="flex flex-wrap gap-2">
+                                  {product.applications.map((app, idx) => (
+                                    <span key={idx} className="px-3 py-1.5 bg-brand-dark/5 border border-brand-dark/10 rounded-lg text-xs md:text-sm font-semibold text-brand-dark">
+                                      {app}
+                                    </span>
+                                  ))}
+                                </div>
+                              </td>
+                            </tr>
+                          )}
+                        </tbody>
+                      </table>
                     </div>
                   ) : (
-                    <p className="text-brand-dark/50 italic">No additional information available for this product.</p>
+                    <div className="bg-white rounded-2xl p-10 border border-brand-dark/5 text-center">
+                      <p className="text-brand-dark/50 italic text-lg font-medium">No additional information available for this product.</p>
+                    </div>
                   )}
                 </div>
               )}

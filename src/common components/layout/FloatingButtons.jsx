@@ -12,7 +12,7 @@ const FloatingButtons = () => {
 
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 
-  const waNumber = '919876543210'; // Replace with your WhatsApp number (country code + number)
+  const waNumber = '919687474747'; // Replace with your WhatsApp number (country code + number)
   const waMessage = encodeURIComponent('Hello! I am interested in your salt products. Please provide more details.');
   const waUrl = `https://wa.me/${waNumber}?text=${waMessage}`;
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import useScrollAnimation from '../../hooks/useScrollAnimation';
-import { GraduationCap, Landmark, Compass, Target, Quote } from 'lucide-react';
+import { Quote, MapPin, Mail, Navigation } from 'lucide-react';
 
 const FacebookIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
@@ -26,195 +26,136 @@ const Mentor = () => {
   const ref = useScrollAnimation();
 
   return (
-    <section
-      ref={ref}
-      className="relative z-40 bg-[#FDFCF7] py-20 md:py-32 border-t border-[#2D4F44]/5 overflow-hidden"
-    >
-      {/* Background ambient light */}
-      <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-brand-accent/5 rounded-full blur-[140px] pointer-events-none"></div>
-
-      <div className="w-full max-w-none px-6 md:px-16 lg:px-24 xl:px-32 relative z-10">
-
-        {/* Section Header */}
-        <div className="text-center mb-16 md:mb-24">
-          <div
-            data-animate="fade-up"
-            className="inline-flex items-center justify-center px-5 py-1.5 rounded-full bg-[#2D4F44]/5 border border-[#2D4F44]/10 text-[#2D4F44] text-xs font-bold tracking-[0.2em] uppercase mb-5 animate-in fade-in"
-          >
-            Meet the Founder
-          </div>
-          <h2
-            data-animate="fade-up"
-            data-delay="100"
-            className="text-4xl md:text-5xl font-heading font-black text-[#2D4F44] leading-tight tracking-tight max-w-2xl mx-auto"
-          >
-            The Mind Behind the Mission
-          </h2>
+    <section ref={ref} className="w-full bg-[#FDFCF7] overflow-hidden">
+      
+      {/* --- Smaller Profile Banner Header --- */}
+      <div className="w-full bg-[#2D4F44] relative py-12 md:py-20 border-b-[6px] border-[#5BA298]">
+        {/* Subtle background pattern/glow in banner */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-white/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/4"></div>
+          <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#5BA298]/10 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/4"></div>
         </div>
 
-        {/* Two-Column Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-stretch">
-
-          {/* LEFT — Profile Highlights Stack (No photo required, clean premium card items) */}
-          <div className="w-full lg:col-span-5 flex flex-col justify-between gap-6 lg:gap-0 lg:h-full lg:sticky lg:top-28">
-
-            {/* Highlights Header */}
-            <div className="mb-2">
-              <span className="text-[#5BA298] text-xs font-black tracking-widest uppercase block mb-1">
-                Founder Credentials
-              </span>
-              <h4 className="text-xl font-bold text-[#2D4F44] tracking-tight">
-                Key Pillars of Leadership
-              </h4>
-            </div>
-
-            {/* Card 1: Education */}
-            <div
-              data-animate="fade-right"
-              className="bg-white border-l-4 border-[#5BA298] rounded-r-2xl p-6 shadow-[0_4px_20px_rgba(45,79,68,0.02)] border border-[#2D4F44]/5 hover:shadow-[0_10px_30px_rgba(45,79,68,0.06)] hover:-translate-y-1 transition-all duration-300"
-            >
-              <div className="flex items-center gap-4 mb-2">
-                <div className="w-10 h-10 rounded-xl bg-[#5BA298]/10 flex items-center justify-center text-[#5BA298]">
-                  <GraduationCap className="w-5.5 h-5.5" />
-                </div>
-                <h5 className="font-bold text-[#2D4F44] text-base">Academic Foundation</h5>
-              </div>
-              <p className="text-[#2D4F44]/70 text-sm leading-relaxed">
-                MBA from Nirma University, specializing in Global Markets, Supply Chains, and Strategic International Management.
-              </p>
-            </div>
-
-            {/* Card 2: Legacy */}
-            <div
-              data-animate="fade-right"
-              data-delay="50"
-              className="bg-white border-l-4 border-[#5BA298] rounded-r-2xl p-6 shadow-[0_4px_20px_rgba(45,79,68,0.02)] border border-[#2D4F44]/5 hover:shadow-[0_10px_30px_rgba(45,79,68,0.06)] hover:-translate-y-1 transition-all duration-300"
-            >
-              <div className="flex items-center gap-4 mb-2">
-                <div className="w-10 h-10 rounded-xl bg-[#5BA298]/10 flex items-center justify-center text-[#5BA298]">
-                  <Landmark className="w-5.5 h-5.5" />
-                </div>
-                <h5 className="font-bold text-[#2D4F44] text-base">Industrial Heritage</h5>
-              </div>
-              <p className="text-[#2D4F44]/70 text-sm leading-relaxed">
-                Deep-rooted connection to salt manufacturing, spending early years learning traditional processing from the ground up.
-              </p>
-            </div>
-
-            {/* Card 3: Advantage */}
-            <div
-              data-animate="fade-right"
-              data-delay="100"
-              className="bg-white border-l-4 border-[#5BA298] rounded-r-2xl p-6 shadow-[0_4px_20px_rgba(45,79,68,0.02)] border border-[#2D4F44]/5 hover:shadow-[0_10px_30px_rgba(45,79,68,0.06)] hover:-translate-y-1 transition-all duration-300"
-            >
-              <div className="flex items-center gap-4 mb-2">
-                <div className="w-10 h-10 rounded-xl bg-[#5BA298]/10 flex items-center justify-center text-[#5BA298]">
-                  <Compass className="w-5.5 h-5.5" />
-                </div>
-                <h5 className="font-bold text-[#2D4F44] text-base">Strategic Logistics</h5>
-              </div>
-              <p className="text-[#2D4F44]/70 text-sm leading-relaxed">
-                Raised near Mundra & Kandla ports, developing a native understanding of port logistics and global supply corridors.
-              </p>
-            </div>
-
-            {/* Card 4: Vision */}
-            <div
-              data-animate="fade-right"
-              data-delay="150"
-              className="bg-white border-l-4 border-[#5BA298] rounded-r-2xl p-6 shadow-[0_4px_20px_rgba(45,79,68,0.02)] border border-[#2D4F44]/5 hover:shadow-[0_10px_30px_rgba(45,79,68,0.06)] hover:-translate-y-1 transition-all duration-300"
-            >
-              <div className="flex items-center gap-4 mb-2">
-                <div className="w-10 h-10 rounded-xl bg-[#5BA298]/10 flex items-center justify-center text-[#5BA298]">
-                  <Target className="w-5.5 h-5.5" />
-                </div>
-                <h5 className="font-bold text-[#2D4F44] text-base">Global Trade Mission</h5>
-              </div>
-              <p className="text-[#2D4F44]/70 text-sm leading-relaxed">
-                Connecting Kutch salt fields directly to international shores through transparent, quality-first export standards.
-              </p>
-            </div>
-
+        <div className="max-w-[1400px] mx-auto px-6 md:px-12 relative z-10 text-center">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 text-white text-xs font-bold tracking-[0.2em] uppercase mb-4 backdrop-blur-sm border border-white/20 shadow-sm">
+            <Navigation className="w-3.5 h-3.5 text-[#5BA298]" />
+            Leadership
           </div>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-black text-white leading-tight tracking-tight drop-shadow-md">
+            Meet the Founder
+          </h2>
+        </div>
+      </div>
 
-          {/* RIGHT — Content (Full biography, styled elegantly) */}
-          <div data-animate="fade-left" data-delay="150" className="flex flex-col lg:col-span-7 lg:pl-6">
+      {/* --- Main Profile Content (Unified Container for Text Wrap) --- */}
+      <div className="max-w-[1400px] mx-auto px-6 md:px-12 relative z-20 pb-24 md:pb-32 -mt-8 md:-mt-12">
+        
+        <div className="bg-white rounded-3xl p-6 md:p-10 lg:p-12 shadow-[0_20px_60px_rgba(45,79,68,0.06)] border border-[#2D4F44]/5 relative">
+          
+          <div className="clearfix">
+            {/* LEFT: Floated Profile Picture Card */}
+            <div className="w-full sm:w-[320px] md:w-[360px] lg:w-[400px] float-none sm:float-left mr-0 sm:mr-10 lg:mr-12 mb-8 sm:mb-6 shrink-0 relative z-30">
+              <div className="w-full aspect-[4/5] rounded-2xl overflow-hidden shadow-[0_15px_40px_rgba(0,0,0,0.15)] relative group border-4 border-white">
+                {/* Placeholder Image */}
+                <img 
+                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=800&h=1000" 
+                  alt="Mr. Aayush Jain"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+              </div>
 
-            <span className="text-[#5BA298] text-xs font-black tracking-[0.2em] uppercase mb-2 block">
-              Founder & Director
-            </span>
-            <h3 className="text-4xl md:text-5xl font-heading font-black text-[#2D4F44] mb-8 leading-tight">
-              Mr. Aayush Jain
-            </h3>
+              {/* Mobile Only Info under photo */}
+              <div className="sm:hidden mt-6 pb-2 text-center">
+                <div className="flex justify-center items-center gap-2 text-sm font-bold text-[#2D4F44] mb-4">
+                  <MapPin className="w-4 h-4 text-[#5BA298]" /> Kutch, Gujarat
+                </div>
+                <div className="flex justify-center items-center gap-4">
+                  <a href="#" className="w-10 h-10 rounded-full border-2 border-[#2D4F44]/10 flex items-center justify-center text-[#2D4F44] hover:bg-[#5BA298] hover:border-[#5BA298] hover:text-white transition-all"><FacebookIcon /></a>
+                  <a href="#" className="w-10 h-10 rounded-full border-2 border-[#2D4F44]/10 flex items-center justify-center text-[#2D4F44] hover:bg-[#5BA298] hover:border-[#5BA298] hover:text-white transition-all"><TwitterIcon /></a>
+                  <a href="#" className="w-10 h-10 rounded-full border-2 border-[#2D4F44]/10 flex items-center justify-center text-[#2D4F44] hover:bg-[#5BA298] hover:border-[#5BA298] hover:text-white transition-all"><LinkedinIcon /></a>
+                </div>
+              </div>
+            </div>
 
-            <div className="flex flex-col gap-8 text-[#2D4F44]/80 text-[15px] md:text-base leading-relaxed font-jakarta">
+            {/* RIGHT & BOTTOM: Wrapping Biography Text */}
+            <div className="text-[#2D4F44]/80 text-[15px] md:text-lg leading-relaxed font-jakarta">
+              
+              <h3 className="text-3xl md:text-4xl lg:text-5xl font-heading font-black text-[#2D4F44] mb-2 leading-tight mt-4 sm:mt-0">
+                Mr. Aayush Jain
+              </h3>
+              <p className="text-[#5BA298] font-bold tracking-[0.2em] uppercase text-sm mb-8 flex items-center gap-3">
+                Founder & Director 
+                <span className="hidden sm:inline-flex items-center gap-1 text-[#2D4F44]/60 text-xs normal-case tracking-normal">
+                  <MapPin className="w-3.5 h-3.5" /> Kutch, Gujarat
+                </span>
+              </p>
 
-              {/* Leader Highlight Quote */}
-              <div className="relative pl-6 border-l-4 border-[#2D4F44]/20 py-2 my-2 bg-[#2D4F44]/2 p-4 rounded-r-xl">
-                <Quote className="absolute -left-2.5 -top-3 w-8 h-8 text-[#5BA298]/15 rotate-180" />
-                <p className="font-semibold text-lg text-[#2D4F44] leading-snug">
-                  Every great enterprise begins with a story—and ours begins in the salt-rich landscape of Kutch, Gujarat.
+              {/* Highlight Quote */}
+              <div className="relative pl-6 md:pl-8 border-l-4 border-[#5BA298] py-2 mb-8 bg-[#5BA298]/[0.02]">
+                <Quote className="absolute -left-4 -top-3 w-8 h-8 text-[#5BA298]/20 rotate-180" />
+                <p className="font-medium text-xl md:text-2xl text-[#2D4F44] leading-snug font-heading italic">
+                  "Every great enterprise begins with a story—and ours begins in the salt-rich landscape of Kutch, Gujarat."
                 </p>
               </div>
 
-              {/* Sub-section 1 */}
-              <div>
-                <h5 className="font-bold text-[#2D4F44] text-lg mb-2">Roots in Kutch & Port Logistics</h5>
-                <p>
+              {/* Paragraph Blocks */}
+              <div className="mt-8">
+                <h5 className="font-bold text-[#2D4F44] text-xl md:text-2xl mb-3 font-heading">
+                  Roots in Kutch & Port Logistics
+                </h5>
+                <p className="mb-4">
                   Raised near Mundra and Kandla, two of India's most important gateways for global trade, Mr. Aayush Jain witnessed how the region's vast salt fields fuel industries and economies across the world. Kutch is not only one of India's largest salt-producing regions, but it has also long been at the centre of the country's salt export ecosystem, connecting local producers with international markets through its world-class ports.
                 </p>
-                <p className="mt-4">
+                <p className="mb-8">
                   While many viewed salts as a commodity, he recognized a story of hard work, heritage, and untapped global potential.
                 </p>
-              </div>
+                <br />
 
-              {/* Sub-section 2 */}
-              <div>
-                <h5 className="font-bold text-[#2D4F44] text-lg mb-2"> Decades of Industry Heritage</h5>
-                <p>
+                <h5 className="font-bold text-[#2D4F44] text-xl md:text-2xl mb-3 font-heading">
+                  Decades of Industry Heritage
+                </h5>
+                <p className="mb-4">
                   Belonging to a family deeply connected to salt manufacturing, he spent his early years understanding the industry from the ground up, learning how nature, precision, and perseverance come together to create a product that reaches millions of people and industries worldwide. These experiences shaped his appreciation for quality, reliability, and long-term relationships.
                 </p>
-                <p className="mt-4">
+                <p className="mb-8">
                   Driven by a desire to combine traditional industry knowledge with modern business thinking, he pursued his MBA from Nirma University. There, he developed a deeper understanding of global markets, supply chains, and international business strategy. The experience broadened his perspective and strengthened his belief that Indian manufacturers could compete and thrive on the world stage.
                 </p>
-              </div>
 
-              {/* Sub-section 3 */}
-              <div>
-                <h5 className="font-bold text-[#2D4F44] text-lg mb-2">Decades of Manufacturing to Global Markets</h5>
-                <p>
+                <h5 className="font-bold text-[#2D4F44] text-xl md:text-2xl mb-3 font-heading">
+                  Transforming Manufacturing to Global Markets
+                </h5>
+                <p className="mb-4">
                   Today, as a young entrepreneur, he is leading the next chapter of the family's journey, transforming decades of manufacturing expertise into a globally focused enterprise. His vision is simple yet ambitious: to deliver premium-quality salt from the heart of Kutch to customers across the world while building lasting partnerships based on trust, consistency, and excellence.
                 </p>
-                <p className="mt-4">
+                <p className="mb-8">
                   For him, exporting salt is more than a business expansion. It is about carrying the legacy of Kutch, the spirit of Indian manufacturing, and the values of integrity and quality to international shores.
                 </p>
               </div>
+
             </div>
-
-            {/* Social Icons & Signature Footer */}
-            <div className="flex items-center justify-between border-t border-[#2D4F44]/10 pt-8 mt-10">
-              <div className="flex items-center gap-4">
-                <a href="#" className="w-10 h-10 border border-[#2D4F44]/20 rounded-full flex items-center justify-center text-[#2D4F44]/70 hover:bg-[#2D4F44] hover:text-[#FDFCF7] hover:scale-105 transition-all duration-300 shadow-sm">
-                  <FacebookIcon />
-                </a>
-                <a href="#" className="w-10 h-10 border border-[#2D4F44]/20 rounded-full flex items-center justify-center text-[#2D4F44]/70 hover:bg-[#2D4F44] hover:text-[#FDFCF7] hover:scale-105 transition-all duration-300 shadow-sm">
-                  <TwitterIcon />
-                </a>
-                <a href="#" className="w-10 h-10 border border-[#2D4F44]/20 rounded-full flex items-center justify-center text-[#2D4F44]/70 hover:bg-[#2D4F44] hover:text-[#FDFCF7] hover:scale-105 transition-all duration-300 shadow-sm">
-                  <LinkedinIcon />
-                </a>
-              </div>
-
-              {/* Styled name signature */}
-              <div className="text-right">
-                <span className="font-bold text-[#2D4F44] text-base block font-heading tracking-wide">Aayush Jain</span>
-                <span className="text-xs text-[#2D4F44]/50 font-bold uppercase tracking-wider block">PDJ Trade Connect</span>
-              </div>
-            </div>
-
           </div>
-        </div>
 
+          {/* Signature Footer */}
+          <div className="clear-both mt-8 pt-8 border-t border-[#2D4F44]/10 flex flex-col md:flex-row justify-between items-start md:items-center">
+            
+            <div className="flex items-center gap-4 mb-6 md:mb-0">
+              <a href="#" className="w-10 h-10 rounded-full border-2 border-[#2D4F44]/10 flex items-center justify-center text-[#2D4F44] hover:bg-[#5BA298] hover:border-[#5BA298] hover:text-white transition-all"><FacebookIcon /></a>
+              <a href="#" className="w-10 h-10 rounded-full border-2 border-[#2D4F44]/10 flex items-center justify-center text-[#2D4F44] hover:bg-[#5BA298] hover:border-[#5BA298] hover:text-white transition-all"><TwitterIcon /></a>
+              <a href="#" className="w-10 h-10 rounded-full border-2 border-[#2D4F44]/10 flex items-center justify-center text-[#2D4F44] hover:bg-[#5BA298] hover:border-[#5BA298] hover:text-white transition-all"><LinkedinIcon /></a>
+            </div>
+
+            <div className="text-left md:text-right flex items-center gap-6">
+              <div>
+                <span className="font-black text-[#2D4F44] text-xl md:text-2xl block font-heading tracking-wide">Aayush Jain</span>
+                <span className="text-sm text-[#5BA298] font-bold uppercase tracking-[0.2em] block mt-1">PDJ Trade Connect</span>
+              </div>
+              <div className="hidden sm:flex items-center justify-center w-12 h-12 rounded-full bg-[#2D4F44] text-white hover:bg-[#5BA298] transition-colors cursor-pointer shadow-lg shadow-[#2D4F44]/20">
+                <Mail className="w-5 h-5" />
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
     </section>
   );

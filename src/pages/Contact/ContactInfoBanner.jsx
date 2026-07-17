@@ -30,9 +30,9 @@ const ContactInfoBanner = () => {
           <div className="p-3 bg-white/5 rounded-full flex-shrink-0">
             <Phone className="w-6 h-6 text-brand-accent" />
           </div>
-          <div className="flex flex-col mt-1">
-            <a href="tel:+1844560789" className="text-white hover:text-brand-accent transition-colors font-medium">+(084) 456-0789</a>
-            <a href="tel:+1844560790" className="text-white/60 hover:text-brand-accent transition-colors font-light text-sm mt-1">+(084) 456-0790</a>
+          <div className="flex flex-col">
+            <a href="tel:+919687474747" className="text-white hover:text-brand-accent transition-colors font-medium">+91 9687474747</a>
+            <a href="tel:+919687424747" className="text-white hover:text-brand-accent transition-colors font-medium">+91 9687424747</a>
           </div>
         </div>
 
@@ -42,8 +42,8 @@ const ContactInfoBanner = () => {
             <MapPin className="w-6 h-6 text-brand-accent" />
           </div>
           <div className="flex flex-col mt-1">
-            <span className="text-white font-medium">5609 E Sprague Ave,</span>
-            <span className="text-white/60 font-light text-sm mt-1">Spokane Valley, WA 99212, USA</span>
+            <span className="text-white font-medium">'PDJ Trade Connect' Plot NO. 129, Sector 12B,</span>
+            <span className="text-white/60 font-light text-sm mt-1">Gandhidham, Kachchh, Gujarat 370201</span>
           </div>
         </div>
 

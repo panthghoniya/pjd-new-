@@ -6,6 +6,8 @@ import Contact from './pages/Contact/contact';
 import Innerproduct from './pages/homepage/Innerproduct';
 import Gallery from './pages/Gallery/gallery';
 import ProductListing from './pages/Product/product';
+import PrivacyPolicy from './pages/PrivacyPolicy/PrivacyPolicy';
+import TermsConditions from './pages/TermsConditions/TermsConditions';
 import ScrollToTop from './common components/layout/ScrollToTop';
 import FloatingButtons from './common components/layout/FloatingButtons';
 
@@ -22,6 +24,8 @@ function App() {
           <Route path="/product" element={<ProductListing />} />
           <Route path="/product/:id" element={<Innerproduct />} />
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-conditions" element={<TermsConditions />} />
         </Routes>
       </div>
     </Router>

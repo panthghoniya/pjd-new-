@@ -63,10 +63,20 @@ const Customization = () => {
   React.useEffect(() => {
     if (isModalOpen) {
       document.body.style.overflow = 'hidden';
+      document.body.style.touchAction = 'none';
+      document.documentElement.style.overflow = 'hidden';
     } else {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = '';
+      document.body.style.touchAction = '';
+      document.documentElement.style.overflow = '';
     }
-    return () => { document.body.style.overflow = 'unset'; }
+    
+    // Cleanup on unmount
+    return () => { 
+      document.body.style.overflow = '';
+      document.body.style.touchAction = '';
+      document.documentElement.style.overflow = '';
+    };
   }, [isModalOpen]);
 
   return (
@@ -251,7 +261,7 @@ const Customization = () => {
                         <p className="text-white/70 text-sm leading-relaxed mb-4">
                           Multiple bulk packing options available based on customer requirements.
                         </p>
-                        <ul className="space-y-1.5 mt-auto">
+                        <ul className="space-y-1.5 mt-auto border-t border-white/10 pt-4">
                           {['20 KG Bags', '25 KG Bags', '40 KG Bags', '50 KG Bags', '1.4 MT Jumbo Bags'].map(item => (
                             <li key={item} className="flex items-center gap-2 text-white/80 text-xs md:text-sm font-semibold">
                               <span className="w-1.5 h-1.5 rounded-full bg-brand-accent"></span>
@@ -375,7 +385,7 @@ const Customization = () => {
                         <p className="text-white/70 text-sm leading-relaxed mb-4">
                           We provide customized packaging with your artwork, branding, design, and private labels as per market requirements.
                         </p>
-                        <ul className="space-y-1.5 mt-auto">
+                        <ul className="space-y-1.5 mt-auto border-t border-white/10 pt-4">
                           {['Custom Artwork', 'Private Label', 'Brand Printing', 'Export Ready Packaging'].map(item => (
                             <li key={item} className="flex items-center gap-2 text-white/80 text-xs md:text-sm font-semibold">
                               <span className="w-1.5 h-1.5 rounded-full bg-brand-accent"></span>
@@ -387,23 +397,7 @@ const Customization = () => {
                     </div>
                   </div>
 
-                  {/* OEM Full Width Banner */}
-                  <div className="w-full bg-brand-accent/10 border border-brand-accent/30 rounded-[1.5rem] md:rounded-[2rem] p-6 md:p-10 flex flex-col lg:flex-row items-center gap-6 md:gap-8 hover:bg-brand-accent/20 transition-colors">
-                    <div className="w-20 h-20 md:w-24 md:h-24 flex items-center justify-center flex-shrink-0">
-                      {OEM_LOGO_IMG ? (
-                        <img src={OEM_LOGO_IMG} alt="Your Logo" className="w-full h-full object-contain" />
-                      ) : (
-                        <Package className="w-8 h-8 md:w-10 md:h-10 text-brand-accent" />
-                      )}
-                    </div>
-                    <div className="text-center md:text-left">
-                      <h4 className="font-heading font-bold text-white text-xl md:text-2xl mb-2 md:mb-3">OEM / Private Label Solutions</h4>
-                      <p className="text-white/70 text-sm md:text-lg leading-relaxed max-w-4xl">
-                        Complete end-to-end private labeling for your brand. Provide us your design, logo, and brand guidelines, and we will deliver market-ready products directly to your warehouse.
-                      </p>
-                    </div>
-                  </div>
-
+                  {/* OEM Full Width Banner removed as requested */}
                 </div>
               </div>
 

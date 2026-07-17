@@ -244,12 +244,12 @@ const ContactForm = () => {
             <div className="absolute inset-0 bg-brand-accent/0 group-hover:bg-brand-accent/10 transition-colors duration-500 z-10 pointer-events-none"></div>
             
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d174391.13941457172!2d10.125134!3d51.109015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a4c7c88b3bb9b7%3A0xc392bd9840212f46!2sGermany!5e0!3m2!1sen!2sus!4v1689100000000!5m2!1sen!2sus" 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3670.7341263724934!2d70.13818290844334!3d23.07020703245771!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3950b9692da14dbd%3A0x1c7a03a7978b69c7!2sPDJ%20Trade%20Connect!5e0!3m2!1sen!2sin!4v1784183421306!5m2!1sen!2sin" 
               className="absolute inset-0 w-full h-full filter grayscale contrast-125 opacity-70 group-hover:filter-none group-hover:opacity-100 transition-all duration-700 ease-in-out" 
               style={{ border: 0 }} 
               allowFullScreen="" 
               loading="lazy" 
-              referrerPolicy="no-referrer-when-downgrade"
+              referrerPolicy="strict-origin-when-cross-origin"
               title="Google Map"
             ></iframe>
           </div>

@@ -123,7 +123,7 @@ const Footer = () => {
           <div className="w-full max-w-[110rem] mx-auto flex flex-col md:flex-row justify-between items-center px-6 md:px-10 mb-8 relative z-30">
             <div className="flex flex-col md:flex-row items-center gap-2 md:gap-8 mb-4 md:mb-0 text-center md:text-left">
               <p className="text-white/30 text-xs tracking-widest uppercase font-semibold">
-                © 2024 PDJ Trade Connect. All Rights Reserved.
+                © 2026 PDJ Trade Connect. All Rights Reserved.
               </p>
               <p className="text-xs tracking-widest uppercase font-bold cursor-pointer codeclovers-blink">
                 Made by Codeclovers

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Navbar from '../../common components/layout/Navbar';
 import { logo, factory } from '../../assets/images';
 import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
@@ -33,6 +34,7 @@ const slides = [
 ];
 
 const Hero = () => {
+  const navigate = useNavigate();
   const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
@@ -103,6 +105,7 @@ const Hero = () => {
 
           <button
             className="group flex items-center gap-4 md:gap-6 bg-brand-accent hover:bg-brand-teal text-white pl-8 md:pl-10 pr-2 md:pr-3 py-2.5 md:py-3.5 rounded-full transition-all duration-700 shadow-2xl hover:shadow-[0_0_30px_rgba(91,162,152,0.4)] hover:scale-105 flex-shrink-0"
+            onClick={() => navigate('/about')}
           >
             <span className="font-jakarta font-bold text-base md:text-xl tracking-wide">Know More</span>
             <div className="bg-white text-brand-dark p-2 md:p-3 rounded-full transition-transform duration-500 group-hover:translate-x-2">

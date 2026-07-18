@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Send, ChevronDown, Search } from 'lucide-react';
 import { useSearchParams } from 'react-router-dom';
 import useScrollAnimation from '../../hooks/useScrollAnimation';
+import { countryData } from '../../utils/countryCodes';
 
 
 const ContactForm = () => {
@@ -13,48 +14,19 @@ const ContactForm = () => {
   const weightFromUrl = searchParams.get('weight') || '';
   const skuFromUrl = searchParams.get('sku') || '';
 
-  const [isSubjectOpen, setIsSubjectOpen] = useState(false);
-  const [selectedSubject, setSelectedSubject] = useState(productFromUrl ? 'Inquiry' : '');
   const [isCountryOpen, setIsCountryOpen] = useState(false);
   const [countrySearchQuery, setCountrySearchQuery] = useState('');
-  const [selectedCountry, setSelectedCountry] = useState('');
+  const [selectedCountry, setSelectedCountry] = useState(countryData.find(c => c.name === 'India') || null);
   const [message, setMessage] = useState(
     productFromUrl
       ? `I am interested in the following product:\n\nProduct: ${productFromUrl}\nSKU: ${skuFromUrl}\nRequired Weight/Packaging: ${weightFromUrl}\n\nPlease provide a quote and further details.`
       : ''
   );
-  const subjectDropdownRef = useRef(null);
   const countryDropdownRef = useRef(null);
 
-  const countries = [
-    "Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua and Barbuda", "Argentina", "Armenia", "Australia", "Austria", "Azerbaijan",
-    "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bhutan", "Bolivia", "Bosnia and Herzegovina", "Botswana", "Brazil", "Brunei", "Bulgaria", "Burkina Faso", "Burundi",
-    "Cabo Verde", "Cambodia", "Cameroon", "Canada", "Central African Republic", "Chad", "Chile", "China", "Colombia", "Comoros", "Congo", "Costa Rica", "Croatia", "Cuba", "Cyprus", "Czech Republic",
-    "Denmark", "Djibouti", "Dominica", "Dominican Republic",
-    "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia", "Eswatini", "Ethiopia",
-    "Fiji", "Finland", "France",
-    "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Greece", "Grenada", "Guatemala", "Guinea", "Guinea-Bissau", "Guyana",
-    "Haiti", "Honduras", "Hungary",
-    "Iceland", "India", "Indonesia", "Iran", "Iraq", "Ireland", "Israel", "Italy",
-    "Jamaica", "Japan", "Jordan",
-    "Kazakhstan", "Kenya", "Kiribati", "Kuwait", "Kyrgyzstan",
-    "Laos", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg",
-    "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Marshall Islands", "Mauritania", "Mauritius", "Mexico", "Micronesia", "Moldova", "Monaco", "Mongolia", "Montenegro", "Morocco", "Mozambique", "Myanmar",
-    "Namibia", "Nauru", "Nepal", "Netherlands", "New Zealand", "Nicaragua", "Niger", "Nigeria", "North Korea", "North Macedonia", "Norway",
-    "Oman",
-    "Pakistan", "Palau", "Palestine", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Poland", "Portugal",
-    "Qatar",
-    "Romania", "Russia", "Rwanda",
-    "Saint Kitts and Nevis", "Saint Lucia", "Saint Vincent and the Grenadines", "Samoa", "San Marino", "Sao Tome and Principe", "Saudi Arabia", "Senegal", "Serbia", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "Solomon Islands", "Somalia", "South Africa", "South Korea", "South Sudan", "Spain", "Sri Lanka", "Sudan", "Suriname", "Sweden", "Switzerland", "Syria",
-    "Taiwan", "Tajikistan", "Tanzania", "Thailand", "Timor-Leste", "Togo", "Tonga", "Trinidad and Tobago", "Tunisia", "Turkey", "Turkmenistan", "Tuvalu",
-    "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States", "Uruguay", "Uzbekistan",
-    "Vanuatu", "Vatican City", "Venezuela", "Vietnam",
-    "Yemen",
-    "Zambia", "Zimbabwe"
-  ];
-
-  const filteredCountries = countries.filter(country => 
-    country.toLowerCase().includes(countrySearchQuery.toLowerCase())
+  const filteredCountries = countryData.filter(country => 
+    country.name.toLowerCase().includes(countrySearchQuery.toLowerCase()) ||
+    country.dialCode.includes(countrySearchQuery)
   );
 
   // Auto-scroll to form when arriving from product inquiry
@@ -71,9 +43,6 @@ const ContactForm = () => {
     const handleClickOutside = (event) => {
       if (countryDropdownRef.current && !countryDropdownRef.current.contains(event.target)) {
         setIsCountryOpen(false);
-      }
-      if (subjectDropdownRef.current && !subjectDropdownRef.current.contains(event.target)) {
-        setIsSubjectOpen(false);
       }
     };
     document.addEventListener('mousedown', handleClickOutside);
@@ -113,39 +82,69 @@ const ContactForm = () => {
                 />
               </div>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <input 
-                  type="tel" 
-                  placeholder="Your Number" 
-                  className="w-full bg-brand-dark/5 border border-brand-dark/20 rounded-xl px-6 py-4 text-brand-dark placeholder:text-brand-dark/50 focus:outline-none focus:border-brand-accent focus:bg-brand-dark/10 transition-all duration-300 font-light"
-                />
-                <div className="relative" ref={subjectDropdownRef}>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 relative">
+                
+                {/* Country Dropdown */}
+                <div className="relative" ref={countryDropdownRef}>
                   <div 
-                    onClick={() => setIsSubjectOpen(!isSubjectOpen)}
-                    className="w-full bg-brand-dark/5 border border-brand-dark/20 rounded-xl px-6 py-4 text-brand-dark flex justify-between items-center cursor-pointer hover:bg-brand-dark/10 transition-all duration-300"
+                    onClick={() => setIsCountryOpen(!isCountryOpen)}
+                    className="w-full bg-brand-dark/5 border border-brand-dark/20 rounded-xl px-6 py-4 text-brand-dark flex justify-between items-center cursor-pointer hover:bg-brand-dark/10 transition-all duration-300 h-full"
                   >
-                    <span className={selectedSubject ? "text-brand-dark" : "text-brand-dark/50 font-light"}>
-                      {selectedSubject || "Select Subject"}
+                    <span className={selectedCountry ? "text-brand-dark" : "text-brand-dark/50 font-light"}>
+                      {selectedCountry ? selectedCountry.name : "Select Country"}
                     </span>
-                    <ChevronDown className={`w-5 h-5 transition-transform duration-300 ${isSubjectOpen ? 'rotate-180' : ''}`} />
+                    <ChevronDown className={`w-5 h-5 transition-transform duration-300 ${isCountryOpen ? 'rotate-180' : ''}`} />
                   </div>
 
-                  {isSubjectOpen && (
+                  {isCountryOpen && (
                     <div className="absolute top-full left-0 w-full mt-2 bg-white border border-brand-dark/10 rounded-xl shadow-2xl z-50 overflow-hidden animate-in fade-in zoom-in-95 duration-200">
-                      {["Inquiry", "Customize Salt", "Others"].map((option) => (
-                        <div 
-                          key={option}
-                          onClick={() => {
-                            setSelectedSubject(option);
-                            setIsSubjectOpen(false);
-                          }}
-                          className="px-6 py-4 text-sm text-brand-dark hover:bg-brand-accent hover:text-white cursor-pointer transition-colors"
-                        >
-                          {option}
-                        </div>
-                      ))}
+                      <div className="p-3 border-b border-brand-dark/5 flex items-center gap-3">
+                        <Search className="w-4 h-4 text-brand-dark/40" />
+                        <input 
+                          type="text" 
+                          placeholder="Search countries..." 
+                          value={countrySearchQuery}
+                          onChange={(e) => setCountrySearchQuery(e.target.value)}
+                          className="w-full bg-transparent outline-none text-sm text-brand-dark placeholder:text-brand-dark/30"
+                          autoFocus
+                        />
+                      </div>
+                      <div className="max-h-60 overflow-y-auto custom-scrollbar">
+                        {filteredCountries.length > 0 ? (
+                          filteredCountries.map((country) => (
+                            <div 
+                              key={country.name}
+                              onClick={() => {
+                                setSelectedCountry(country);
+                                setIsCountryOpen(false);
+                                setCountrySearchQuery('');
+                              }}
+                              className="px-6 py-3 text-sm text-brand-dark hover:bg-brand-accent hover:text-white cursor-pointer transition-colors flex justify-between items-center"
+                            >
+                              <span>{country.name}</span>
+                              <span className="text-xs opacity-70">{country.dialCode}</span>
+                            </div>
+                          ))
+                        ) : (
+                          <div className="px-6 py-4 text-sm text-brand-dark/50 text-center font-light">
+                            No countries found
+                          </div>
+                        )}
+                      </div>
                     </div>
                   )}
+                </div>
+
+                {/* Number Input */}
+                <div className="w-full bg-brand-dark/5 border border-brand-dark/20 rounded-xl px-6 py-4 flex items-center gap-3 focus-within:border-brand-accent focus-within:bg-brand-dark/10 transition-all duration-300">
+                  {selectedCountry && (
+                    <span className="text-brand-dark font-medium border-r border-brand-dark/20 pr-3">{selectedCountry.dialCode}</span>
+                  )}
+                  <input 
+                    type="tel" 
+                    placeholder="Mobile Number" 
+                    className="bg-transparent border-none outline-none w-full text-brand-dark placeholder:text-brand-dark/50 font-light"
+                  />
                 </div>
               </div>
 
@@ -155,55 +154,6 @@ const ContactForm = () => {
                   placeholder="Email Address" 
                   className="w-full bg-brand-dark/5 border border-brand-dark/20 rounded-xl px-6 py-4 text-brand-dark placeholder:text-brand-dark/50 focus:outline-none focus:border-brand-accent focus:bg-brand-dark/10 transition-all duration-300 font-light"
                 />
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-1 gap-6 relative" ref={countryDropdownRef}>
-                <div 
-                  onClick={() => setIsCountryOpen(!isCountryOpen)}
-                  className="w-full bg-brand-dark/5 border border-brand-dark/20 rounded-xl px-6 py-4 text-brand-dark flex justify-between items-center cursor-pointer hover:bg-brand-dark/10 transition-all duration-300"
-                >
-                  <span className={selectedCountry ? "text-brand-dark" : "text-brand-dark/50 font-light"}>
-                    {selectedCountry || "Select Country"}
-                  </span>
-                  <ChevronDown className={`w-5 h-5 transition-transform duration-300 ${isCountryOpen ? 'rotate-180' : ''}`} />
-                </div>
-
-                {isCountryOpen && (
-                  <div className="absolute top-full left-0 w-full mt-2 bg-white border border-brand-dark/10 rounded-xl shadow-2xl z-50 overflow-hidden animate-in fade-in zoom-in-95 duration-200">
-                    <div className="p-3 border-b border-brand-dark/5 flex items-center gap-3">
-                      <Search className="w-4 h-4 text-brand-dark/40" />
-                      <input 
-                        type="text" 
-                        placeholder="Search countries..." 
-                        value={countrySearchQuery}
-                        onChange={(e) => setCountrySearchQuery(e.target.value)}
-                        className="w-full bg-transparent outline-none text-sm text-brand-dark placeholder:text-brand-dark/30"
-                        autoFocus
-                      />
-                    </div>
-                    <div className="max-h-60 overflow-y-auto custom-scrollbar">
-                      {filteredCountries.length > 0 ? (
-                        filteredCountries.map((country) => (
-                          <div 
-                            key={country}
-                            onClick={() => {
-                              setSelectedCountry(country);
-                              setIsCountryOpen(false);
-                              setCountrySearchQuery('');
-                            }}
-                            className="px-6 py-3 text-sm text-brand-dark hover:bg-brand-accent hover:text-white cursor-pointer transition-colors"
-                          >
-                            {country}
-                          </div>
-                        ))
-                      ) : (
-                        <div className="px-6 py-3 text-sm text-brand-dark/40 italic text-center">
-                          No countries found
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                )}
               </div>
 
               {/* Product Inquiry Field - only shown when coming from product page */}

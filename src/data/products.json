@@ -8,7 +8,7 @@
     "rating": 4.9,
     "reviews": 120,
     "tagline": "Naturally crystalline and enriched with iodine, our iodized crystal salt delivers purity, taste, and nutritional value in every grain. Ideal for food processing, retail consumption, and everyday culinary applications.",
-    "description": "Our Iodized Crystal Salt is specially processed for food consumption applications and manufactured under strict quality standards to ensure purity and hygiene. The product is enriched with iodine and is suitable for food processing, wholesale distribution, and export markets. We offer customized iodine levels and packaging solutions based on customer and market requirements.",
+    "description": "Our Iodized Low Hardness Crystal Salt is specially processed to maintain low calcium and magnesium content while ensuring high purity and hygiene. Enriched with iodine, it is ideal for food consumption and food processing applications that require superior quality and low hardness. We offer customized iodine levels, grain sizes, and packaging solutions to meet specific customer and market requirements.",
     "keyFeatures": [
       "Suitable for Food Consumption",
       "Hygienically Processed",
@@ -16,9 +16,12 @@
       "Export-Quality Packaging Solutions"
     ],
     "additionalInfo": {
+      "Product": "Iodized Crystal Salt",
+      "NaCl Purity": "≥ 99.5%",
       "Grain Size": "1 mm – 6 mm",
-      "Iodine Content": "15 – 30 PPM Standard | Higher Iodine Levels Available as per Customer Requirement",
-      "Packaging Options": "20 Kg PP Woven Bags with Inner Liner | 25 Kg PP Woven Bags with Inner Liner | 40 Kg PP Woven Bags with Inner Liner | 50 Kg PP Woven Bags with Inner Liner | 1.4 MT Jumbo Bags / FIBC Bags"
+      "Iodine Level": "15–30 PPM Standard (Customizable)",
+      "Color": "Natural White",
+      "Form": "Crystal"
     },
     "applications": [
       "Food Consumption",
@@ -49,14 +52,18 @@
       "Suitable for Food Applications"
     ],
     "additionalInfo": {
-      "Purity": "NaCl: Greater than 99%",
-      "Iodine Content": "15 – 30 PPM Standard | Customized Iodine Levels Available as per Customer Requirement",
-      "Packaging Options": "20 Kg PP Woven Bags with Inner Liner | 25 Kg PP Woven Bags with Inner Liner | 40 Kg PP Woven Bags with Inner Liner | 50 Kg PP Woven Bags with Inner Liner | 1.4 MT Jumbo Bags / FIBC Bags | Retail Packing Available"
+      "Product": "Triple Refined Free Flow Iodized Salt",
+      "NaCl Purity": "≥ 99.07%",
+      "Iodine Level": "15–30 PPM Standard (Higher iodine levels available as per customer requirements)",
+      "Color": "Pure White",
+      "Form": "Free Flow Salt"
     },
     "applications": [
       "Food Consumption",
       "Food Processing Industry",
-      "Retail & Wholesale Supply"
+      "Retail Supply",
+      "Wholesale Supply",
+      "Export Supply"
     ],
     "images": [
       "/images/products/salt_scoop.jpg",
@@ -67,14 +74,14 @@
   },
   {
     "id": 3,
-    "name": "Low Hardness Iodized Edible Salt",
+    "name": "Low Hardness Free Flow Iodized Edible Salt",
     "category": "Food Grade Salt",
     "badge": "New Quality",
     "sku": "SKU-LHIES-003",
     "rating": 4.9,
     "reviews": 88,
     "tagline": "Premium-grade iodized edible salt with low calcium and magnesium content, ensuring reduced hardness, superior purity, and consistent quality. Its excellent solubility, bright white appearance, and free-flowing nature make it ideal for food processing, seasoning, and premium consumer applications.",
-    "description": "Our Low Hardness Iodized Edible Salt is specially processed to maintain low calcium and magnesium content, making it suitable for food consumption and various food processing applications. Manufactured under strict hygiene and quality standards, the product offers high purity and consistent quality to meet international market requirements. We also provide customized iodine levels and packaging solutions based on customer specifications.",
+    "description": "Our Low Hardness Free Flow Iodized Edible Salt is specially processed to maintain low calcium and magnesium content, making it suitable for food consumption and various food processing applications. Manufactured under strict hygiene and quality standards, the product offers high purity and consistent quality to meet international market requirements. We also provide customized iodine levels and packaging solutions based on customer specifications.",
     "keyFeatures": [
       "Low Hardness Salt",
       "Suitable for Food Consumption",
@@ -82,9 +89,11 @@
       "Customized Packaging Solutions"
     ],
     "additionalInfo": {
-      "Purity": "NaCl: Greater than 99.5%",
-      "Iodine Content": "15 – 30 PPM Standard | Higher Iodine Levels Available as per Customer Requirement",
-      "Packaging Options": "20 Kg PP Woven Bags | 25 Kg PP Woven Bags | 40 Kg PP Woven Bags | 50 Kg PP Woven Bags | 1.4 MT Jumbo Bags / FIBC Bags | Retail Packing Available"
+      "Product": "Low Hardness Free Flow Iodized Edible Salt",
+      "NaCl Purity": "≥ 99.65%",
+      "Iodine Level": "15–30 PPM Standard (Higher iodine levels available as per customer requirements)",
+      "Color": "Pure White",
+      "Form": "Free Flow"
     },
     "applications": [
       "Food Consumption",
@@ -116,12 +125,19 @@
       "Customized Packaging Solutions"
     ],
     "additionalInfo": {
-      "Packaging Options": "20 Kg PP Woven Bags | 25 Kg PP Woven Bags | 40 Kg PP Woven Bags | 50 Kg PP Woven Bags | 1.4 MT Jumbo Bags"
+      "Product": "Low Sodium Salt",
+      "NaCl Purity": "≥ 85%",
+      "Potassium Chloride (KCl)": "15% (Approx.)",
+      "Iodine Level": "25–35 PPM Standard",
+      "Color": "White Crystalline",
+      "Form": "Free Flow",
+      "pH (10% Solution)": "6.5 – 8.0"
     },
     "applications": [
       "Food Consumption",
       "Health & Wellness Products",
       "Food Processing Industry",
+      "Retail Supply",
       "Wholesale & Export Supply"
     ],
     "images": [
@@ -148,8 +164,11 @@
       "Reliable Bulk Supply"
     ],
     "additionalInfo": {
+      "Product": "Coarse Salt",
+      "NaCl Purity": "≥ 99.5%",
       "Grain Size": "1 mm – 6 mm",
-      "Packaging Options": "20 Kg PP Woven Bags | 25 Kg PP Woven Bags | 40 Kg PP Woven Bags | 50 Kg PP Woven Bags | 1.4 MT Jumbo Bags"
+      "Color": "Natural White",
+      "Form": "Crystal"
     },
     "applications": [
       "Water Treatment",
@@ -177,18 +196,21 @@
     "keyFeatures": [
       "Free-Flowing Quality",
       "Consistent Quality Standards",
-      "Suitable for Industrial Applications",
-      "No Iodine or Silica Additives"
+      "Suitable for Industrial Applications"
     ],
     "additionalInfo": {
-      "Purity": "NaCl: More than 98.7%",
-      "Packaging Options": "20 Kg PP Woven Bags | 25 Kg PP Woven Bags | 40 Kg PP Woven Bags | 50 Kg PP Woven Bags | 1.4 MT Jumbo Bags / FIBC Bags"
+      "Product": "Non-Iodine Non-Silica Free Flow Salt",
+      "NaCl Purity": "≥ 98.80%",
+      "Color": "Pure White",
+      "Form": "Free Flow"
     },
     "applications": [
+      "Water Treatment",
       "Chemical Industry",
-      "Industrial Processing",
       "Textile Industry",
-      "Water Treatment"
+      "Detergent Industry",
+      "Industrial Processing & Manufacturing",
+      "Wholesale & Export Supply"
     ],
     "images": [
       "/images/products/salt_mint.jpg",
@@ -214,7 +236,10 @@
       "Suitable for Industrial Applications"
     ],
     "additionalInfo": {
-      "Packaging Options": "20 Kg PP Woven Bags | 25 Kg PP Woven Bags | 40 Kg PP Woven Bags | 50 Kg PP Woven Bags | 1.4 MT Jumbo Bags / FIBC Bags"
+      "Product": "Super Fine Salt",
+      "NaCl Purity": "≥ 97.80% (Dry Basis)",
+      "Color": "Pure White",
+      "Form": "Powder"
     },
     "applications": [
       "Chemical Industry",
@@ -247,8 +272,10 @@
       "Suitable for Industrial Applications"
     ],
     "additionalInfo": {
-      "Purity": "NaCl: More than 99.6%",
-      "Packaging Options": "20 Kg PP Woven Bags | 25 Kg PP Woven Bags | 40 Kg PP Woven Bags | 50 Kg PP Woven Bags | 1.4 MT Jumbo Bags / FIBC Bags"
+      "Product": "Low Hardness Pure Salt",
+      "NaCl Purity": "≥ 99.65%",
+      "Color": "Pure White",
+      "Form": "Free Flow"
     },
     "applications": [
       "Textile Industry",
@@ -280,13 +307,16 @@
       "Suitable for Industrial Applications"
     ],
     "additionalInfo": {
-      "Packaging Options": "20 Kg PP Woven Bags | 25 Kg PP Woven Bags | 40 Kg PP Woven Bags | 50 Kg PP Woven Bags | 1.4 MT Jumbo Bags / FIBC Bags"
+      "Product": "Tablet Salt",
+      "NaCl Purity": "≥ 99.50%",
+      "Color": "Pure White",
+      "Form": "Tablet"
     },
     "applications": [
       "Water Softening Systems",
       "Water Treatment Plants",
-      "Industrial Water Treatment",
-      "Commercial Water Purification Systems"
+      "Swimming Pool Water Treatment",
+      "Commercial & Industrial Water Softeners"
     ],
     "images": [
       "/images/products/salt_spa.jpg",

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useParams, Link, useNavigate } from 'react-router-dom';
-import { Share2, Check, Package, CheckCircle2, Layers, Ruler, Beaker } from 'lucide-react';
+import { Share2, Check, Package, CheckCircle2, Layers, Ruler, Beaker, FileText, Settings, Factory, Globe, Utensils, Scan, FlaskConical, CircleDot } from 'lucide-react';
 import Navbar from '../../common components/layout/Navbar';
 import Footer from '../../common components/layout/footer';
 import productsArray from '../../data/products.json';
@@ -16,6 +16,24 @@ const Innerproduct = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const product = productsData[id] || productsData[1];
+
+  // Helper for Spec Icons
+  const getSpecIcon = (key) => {
+    const k = key.toLowerCase();
+    if (k.includes('grain')) return <CircleDot className="w-5 h-5 text-brand-dark opacity-70" />;
+    if (k.includes('iodine') || k.includes('chemical')) return <FlaskConical className="w-5 h-5 text-brand-dark opacity-70" />;
+    if (k.includes('packag')) return <Package className="w-5 h-5 text-brand-dark opacity-70" />;
+    return <Settings className="w-5 h-5 text-brand-dark opacity-70" />;
+  };
+
+  // Helper for Application Icons
+  const getAppIcon = (app) => {
+    const a = app.toLowerCase();
+    if (a.includes('consumption') || a.includes('food')) return <Utensils className="w-4 h-4" />;
+    if (a.includes('industry') || a.includes('processing')) return <Factory className="w-4 h-4" />;
+    if (a.includes('export') || a.includes('wholesale')) return <Globe className="w-4 h-4" />;
+    return <Settings className="w-4 h-4" />;
+  };
 
   const [activeImage, setActiveImage] = useState(product.images[0]);
   const [selectedWeight, setSelectedWeight] = useState("1 kg");
@@ -69,7 +87,7 @@ const Innerproduct = () => {
       <Helmet>
         <title>{product.name} | PDJ Trade Connect — Salt Manufacturer India</title>
         <meta name="description" content={`Buy ${product.name} from PDJ Trade Connect — India's leading salt manufacturer and exporter. ${product.description?.slice(0, 120) || 'Premium quality, bulk export available worldwide.'}`} />
-        <meta name="keywords" content={`${product.name}, ${product.category} india, salt exporter india, buy ${product.name} bulk, PDJ trade connect`} />
+        <meta name="keywords" content={`${product.name}, ${product.category} india, salt exporter india, buy ${product.name} bulk, PDJ trade connect, Salt Exporter in India, Salt Manufacturer in India, Salt Supplier in India, Industrial Salt Exporter, Food Grade Salt Exporter, Salt Export Company in India, Salt Supplier Gujarat India, Low Sodium Salt, Coarse Salt Supplier, Tablet Salt Supplier, Water Softener Salt Tablets, Gujarat Salt Exporter, Indian Salt Supplier, Private Label Salt Packaging, Pure Dried Vacuum Salt, Pool Salt`} />
         <link rel="canonical" href={`https://pdjtrade.com/product/${product.id}`} />
         <meta property="og:title" content={`${product.name} | PDJ Trade Connect`} />
         <meta property="og:description" content={`${product.name} — premium quality salt from India. Bulk export available. ${product.description?.slice(0, 100) || ''}`} />
@@ -286,49 +304,68 @@ const Innerproduct = () => {
               {activeTab === 'Product Specifications' && (
                 <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
                   {product.additionalInfo && Object.keys(product.additionalInfo).length > 0 ? (
-                    <div className="bg-white rounded-2xl border border-brand-dark/10 shadow-sm overflow-hidden">
-                      <table className="w-full text-left border-collapse">
-                        <tbody>
-                          {Object.entries(product.additionalInfo).map(([key, value], idx) => (
-                            <tr key={key} className={`border-b border-brand-dark/5 hover:bg-brand-background/50 transition-colors ${idx % 2 === 0 ? 'bg-white' : 'bg-brand-background/30'}`}>
-                              <th className="py-4 md:py-5 px-6 font-bold text-brand-dark text-sm md:text-base w-1/3 md:w-1/4 align-top border-r border-brand-dark/10">
-                                {key}
-                              </th>
-                              <td className="py-4 md:py-5 px-6 text-brand-dark/80 text-sm md:text-base align-top font-medium">
-                                {typeof value === 'string' && value.includes('|') ? (
-                                  <ul className="space-y-1.5">
-                                    {value.split('|').map((item, i) => (
-                                      <li key={i} className="flex items-start gap-2">
-                                        <span className="text-brand-accent mt-0.5">•</span>
-                                        {item.trim()}
-                                      </li>
+                    <div className="mb-6">
+                      <div className="flex items-center gap-3 mb-4 pl-1">
+                        <FileText className="w-6 h-6 text-brand-dark opacity-80" />
+                        <h3 className="font-bold text-brand-dark uppercase tracking-[0.1em] text-[15px]">SPECIFICATIONS</h3>
+                      </div>
+                      <div className="bg-white rounded-xl border border-brand-dark/10 shadow-sm overflow-hidden">
+                        <table className="w-full text-left border-collapse">
+                          <thead>
+                            <tr className="bg-brand-black text-white">
+                              <th className="py-3 px-6 font-semibold text-[13px] tracking-widest uppercase w-1/3 md:w-1/4 border-r border-white/10">PARAMETER</th>
+                              <th className="py-3 px-6 font-semibold text-[13px] tracking-widest uppercase">DETAILS</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {Object.entries(product.additionalInfo).map(([key, value], idx) => (
+                              <tr key={key} className={`border-b border-brand-dark/10 hover:bg-brand-background/30 transition-colors ${idx % 2 === 0 ? 'bg-white' : 'bg-brand-background/10'}`}>
+                                <th className="py-5 px-6 font-bold text-brand-dark text-sm md:text-base align-top border-r border-brand-dark/10">
+                                  <div className="flex items-center gap-4">
+                                    {getSpecIcon(key)}
+                                    <span>{key}</span>
+                                  </div>
+                                </th>
+                                <td className="py-5 px-6 text-brand-dark/80 text-sm md:text-base align-middle font-medium">
+                                  {typeof value === 'string' && value.includes('|') ? (
+                                    <ul className="space-y-2">
+                                      {value.split('|').map((item, i) => (
+                                        <li key={i} className="flex items-start gap-2">
+                                          <span className="text-brand-dark/60 mt-1">•</span>
+                                          {item.trim()}
+                                        </li>
+                                      ))}
+                                    </ul>
+                                  ) : (
+                                    value
+                                  )}
+                                </td>
+                              </tr>
+                            ))}
+                            {/* Applications Row */}
+                            {product.applications && product.applications.length > 0 && (
+                              <tr className={`hover:bg-brand-background/30 transition-colors ${Object.keys(product.additionalInfo).length % 2 === 0 ? 'bg-white' : 'bg-brand-background/10'}`}>
+                                <th className="py-5 px-6 font-bold text-brand-dark text-sm md:text-base align-top border-r border-brand-dark/10">
+                                  <div className="flex items-center gap-4">
+                                    <Settings className="w-5 h-5 text-brand-dark opacity-70" />
+                                    <span>Applications</span>
+                                  </div>
+                                </th>
+                                <td className="py-5 px-6 align-middle">
+                                  <div className="flex flex-wrap gap-3">
+                                    {product.applications.map((app, idx) => (
+                                      <span key={idx} className="flex items-center gap-2 px-4 py-2 bg-brand-background/50 border border-brand-dark/15 rounded-lg text-xs md:text-sm font-semibold text-brand-dark">
+                                        {getAppIcon(app)}
+                                        {app}
+                                      </span>
                                     ))}
-                                  </ul>
-                                ) : (
-                                  value
-                                )}
-                              </td>
-                            </tr>
-                          ))}
-                          {/* Applications Row */}
-                          {product.applications && product.applications.length > 0 && (
-                            <tr className={`hover:bg-brand-background/50 transition-colors ${Object.keys(product.additionalInfo).length % 2 === 0 ? 'bg-white' : 'bg-brand-background/30'}`}>
-                              <th className="py-4 md:py-5 px-6 font-bold text-brand-dark text-sm md:text-base w-1/3 md:w-1/4 align-top border-r border-brand-dark/10">
-                                Applications
-                              </th>
-                              <td className="py-4 md:py-5 px-6 align-top">
-                                <div className="flex flex-wrap gap-2">
-                                  {product.applications.map((app, idx) => (
-                                    <span key={idx} className="px-3 py-1.5 bg-brand-dark/5 border border-brand-dark/10 rounded-lg text-xs md:text-sm font-semibold text-brand-dark">
-                                      {app}
-                                    </span>
-                                  ))}
-                                </div>
-                              </td>
-                            </tr>
-                          )}
-                        </tbody>
-                      </table>
+                                  </div>
+                                </td>
+                              </tr>
+                            )}
+                          </tbody>
+                        </table>
+                      </div>
                     </div>
                   ) : (
                     <div className="bg-white rounded-2xl p-10 border border-brand-dark/5 text-center">

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  ShieldCheck, FlaskConical, Globe, Handshake, 
-  ChevronRight, Phone, Mail, MapPin, 
+import {
+  ShieldCheck, FlaskConical, Globe, Handshake,
+  ChevronRight, Phone, Mail, MapPin,
   Send, Shield
 } from 'lucide-react';
 import useScrollAnimation from '../../hooks/useScrollAnimation';
@@ -48,7 +48,7 @@ const Footer = () => {
               Our association with Western India Sea Brines Pvt. Ltd. strengthens our commitment to consistent quality and reliable supply.
             </p>
 
-            <div className="grid grid-cols-4 gap-4 text-center items-start">
+            {/* <div className="grid grid-cols-4 gap-4 text-center items-start">
               <div className="flex flex-col items-center gap-3">
                 <ShieldCheck className="w-9 h-9 text-[#10b981]" strokeWidth={1.5} />
                 <span className="text-[13px] text-white/80 leading-tight">Premium<br/>Quality</span>
@@ -66,7 +66,7 @@ const Footer = () => {
                 <span className="text-[13px] text-white/80 leading-tight">Trusted<br/>Partnership</span>
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* Quick Links */}
           <div className="xl:col-span-2 xl:pl-4">
@@ -82,8 +82,7 @@ const Footer = () => {
                 { label: 'Contact Us', to: '/contact' }
               ].map((link) => (
                 <li key={link.label}>
-                  <Link to={link.to} className="text-white/70 hover:text-white transition-colors duration-300 font-light text-[15px] flex items-center gap-2 group">
-                    <ChevronRight className="w-4 h-4 text-[#10b981] group-hover:translate-x-1 transition-transform" />
+                  <Link to={link.to} className="text-white/70 hover:text-white hover:translate-x-1 inline-block transition-all duration-300 font-light text-[15px]">
                     {link.label}
                   </Link>
                 </li>
@@ -104,8 +103,7 @@ const Footer = () => {
                 { label: 'Support', to: '/contact' }
               ].map((link) => (
                 <li key={link.label}>
-                  <Link to={link.to} className="text-white/70 hover:text-white transition-colors duration-300 font-light text-[15px] flex items-center gap-2 group">
-                    <ChevronRight className="w-4 h-4 text-[#10b981] group-hover:translate-x-1 transition-transform" />
+                  <Link to={link.to} className="text-white/70 hover:text-white hover:translate-x-1 inline-block transition-all duration-300 font-light text-[15px]">
                     {link.label}
                   </Link>
                 </li>
@@ -169,15 +167,19 @@ const Footer = () => {
 
       <div className="w-full h-px bg-white/10 mb-8 max-w-[110rem] mx-auto opacity-50"></div>
 
-      {/* Bottom Certifications & Subscribe */}
+      {/* Bottom Certifications & Subscribe */ }
       <div className="max-w-[110rem] mx-auto px-6 md:px-10 relative z-20 w-full mb-8">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-10">
           
           {/* Logo & Description */}
           <div className="flex items-center gap-6">
-            <div className="flex flex-col">
-              <span className="text-4xl font-black tracking-tighter leading-none">PDJ</span>
-              <span className="text-[10px] tracking-[0.2em] uppercase font-bold mt-1 text-white/80">Trade Connect</span>
+            <div className="flex flex-col justify-center min-w-0">
+              <span className="font-bold text-xl sm:text-2xl tracking-tight font-clash leading-tight truncate text-white">
+                PDJ <span className="tracking-wider"> TRADE</span> CONNECT
+              </span>
+              <h5 className="block text-xs sm:text-sm mt-0.5 opacity-90 leading-tight truncate font-jakarta font-medium text-white">
+                Connecting Global Market with Quality
+              </h5>
             </div>
             <div className="h-12 w-px bg-white/20 hidden sm:block"></div>
             <p className="text-white/80 text-[13px] font-light max-w-xs hidden sm:block leading-snug">
@@ -229,23 +231,23 @@ const Footer = () => {
 
       <div className="w-full h-px bg-white/10 mb-6 max-w-[110rem] mx-auto opacity-50"></div>
 
-      {/* Footer Copyright */}
-      <div className="max-w-[110rem] mx-auto px-6 md:px-10 relative z-20 w-full flex flex-col md:flex-row justify-between items-center gap-4 text-[11px] font-light text-white/50 tracking-widest">
-        <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-center sm:text-left">
-          <p className="uppercase">© 2024 PDJ TRADE CONNECT. ALL RIGHTS RESERVED.</p>
-          <span className="hidden sm:block">|</span>
-          <p className="uppercase cursor-pointer hover:text-white text-md transition-colors">MADE BY CODECLOVERS</p>
-        </div>
-        <div className="flex items-center gap-6 uppercase">
-          <Link to="/sitemap" className="hover:text-white transition-colors">Sitemap</Link>
-          <span className="hidden sm:block">|</span>
-          <Link to="/careers" className="hover:text-white transition-colors">Careers</Link>
-          <span className="hidden sm:block">|</span>
-          <Link to="/contact" className="hover:text-white transition-colors">Contact Us</Link>
-        </div>
-      </div>
+  {/* Footer Copyright */ }
+  <div className="max-w-[110rem] mx-auto px-6 md:px-10 relative z-20 w-full flex flex-col md:flex-row justify-between items-center gap-4 text-[11px] font-light text-white/50 tracking-widest">
+    <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-center sm:text-left">
+      <p className="uppercase">© 2024 PDJ TRADE CONNECT. ALL RIGHTS RESERVED.</p>
+      <span className="hidden sm:block">|</span>
+      <p className="uppercase cursor-pointer hover:text-white text-md transition-colors">MADE BY CODECLOVERS</p>
+    </div>
+    <div className="flex items-center gap-6 uppercase">
+      <Link to="/sitemap" className="hover:text-white transition-colors">Sitemap</Link>
+      <span className="hidden sm:block">|</span>
+      <Link to="/careers" className="hover:text-white transition-colors">Careers</Link>
+      <span className="hidden sm:block">|</span>
+      <Link to="/contact" className="hover:text-white transition-colors">Contact Us</Link>
+    </div>
+  </div>
 
-    </footer>
+    </footer >
   );
 };
 

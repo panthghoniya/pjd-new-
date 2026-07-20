@@ -7,7 +7,7 @@ import { countryData } from '../../utils/countryCodes';
 
 const ContactForm = () => {
   const ref = useScrollAnimation();
-  const [searchParams] = useSearchParams();
+  const [searchParams, setSearchParams] = useSearchParams();
 
   // Pre-fill from product inquiry query params
   const productFromUrl = searchParams.get('product') || '';
@@ -22,7 +22,7 @@ const ContactForm = () => {
   const [mobile, setMobile] = useState('');
   const [message, setMessage] = useState(
     productFromUrl
-      ? `I am interested in the following product:\n\nProduct: ${productFromUrl}\nSKU: ${skuFromUrl}\nRequired Weight/Packaging: ${weightFromUrl}\n\nPlease provide a quote and further details.`
+      ? `I am interested in the following product:\n\nProduct: ${productFromUrl}\nRequired Weight/Packaging: ${weightFromUrl}\n\nPlease provide a quote and further details.`
       : ''
   );
   const countryDropdownRef = useRef(null);
@@ -48,6 +48,13 @@ ${message || 'N/A'}`;
 
     const encodedMessage = encodeURIComponent(formattedMessage);
     window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, '_blank');
+    
+    // Clear form fields and URL parameters after sending
+    setName('');
+    setEmail('');
+    setMobile('');
+    setMessage('');
+    setSearchParams({}); // Clear product query params
   };
 
   // Auto-scroll to form when arriving from product inquiry

@@ -75,11 +75,10 @@ const ProductListing = () => {
                                     <button
                                         key={cat.value}
                                         onClick={() => { setSelectedCategory(cat.value); setMobileFilterOpen(false); }}
-                                        className={`px-4 py-2 rounded-full text-sm font-semibold border-2 transition-all duration-200 ${
-                                            selectedCategory === cat.value
+                                        className={`px-4 py-2 rounded-full text-sm font-semibold border-2 transition-all duration-200 ${selectedCategory === cat.value
                                                 ? 'bg-brand-dark text-white border-brand-dark'
                                                 : 'border-brand-dark/15 text-brand-dark/70 hover:border-brand-accent hover:text-brand-accent'
-                                        }`}
+                                            }`}
                                     >
                                         {cat.label}
                                         <span className={`ml-1.5 text-xs ${selectedCategory === cat.value ? 'text-white/70' : 'text-brand-dark/40'}`}>
@@ -132,26 +131,23 @@ const ProductListing = () => {
                                             <button
                                                 key={cat.value}
                                                 onClick={() => setSelectedCategory(cat.value)}
-                                                className={`w-full flex items-center justify-between px-4 py-3 rounded-xl text-left transition-all duration-200 group ${
-                                                    isActive
+                                                className={`w-full flex items-center justify-between px-4 py-3 rounded-xl text-left transition-all duration-200 group ${isActive
                                                         ? 'bg-brand-dark text-white shadow-md'
                                                         : 'text-brand-dark/70 hover:bg-brand-dark/5 hover:text-brand-dark'
-                                                }`}
+                                                    }`}
                                             >
                                                 <div className="flex items-center gap-3">
                                                     {/* Dot indicator */}
-                                                    <span className={`w-2 h-2 rounded-full flex-shrink-0 transition-all duration-200 ${
-                                                        isActive ? 'bg-white' : 'bg-brand-dark/20 group-hover:bg-brand-accent'
-                                                    }`} />
+                                                    <span className={`w-2 h-2 rounded-full flex-shrink-0 transition-all duration-200 ${isActive ? 'bg-white' : 'bg-brand-dark/20 group-hover:bg-brand-accent'
+                                                        }`} />
                                                     <span className={`text-sm font-semibold leading-snug ${isActive ? 'text-white' : ''}`}>
                                                         {cat.label}
                                                     </span>
                                                 </div>
-                                                <span className={`text-xs font-bold px-2 py-0.5 rounded-full flex-shrink-0 transition-all duration-200 ${
-                                                    isActive
+                                                <span className={`text-xs font-bold px-2 py-0.5 rounded-full flex-shrink-0 transition-all duration-200 ${isActive
                                                         ? 'bg-white/20 text-white'
                                                         : 'bg-brand-dark/8 text-brand-dark/50 group-hover:bg-brand-accent/10 group-hover:text-brand-accent'
-                                                }`}>
+                                                    }`}>
                                                     {count}
                                                 </span>
                                             </button>
@@ -201,11 +197,11 @@ const ProductListing = () => {
                                 {filteredProducts.map((product) => (
                                     <Link to={`/product/${product.id}`} key={product.id} className="group flex flex-col relative">
                                         {/* Badge */}
-                                        {product.badge && (
+                                        {/* {product.badge && (
                                             <div className="absolute top-4 left-4 z-10 px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-xs font-bold text-brand-dark shadow-sm border border-brand-dark/10">
                                                 {product.badge}
                                             </div>
-                                        )}
+                                        )} */}
                                         {/* Card Image */}
                                         <div className="relative bg-brand-dark/5 rounded-[2rem] aspect-[4/5] flex items-center justify-center overflow-hidden transition-all duration-500 group-hover:shadow-[0_20px_40px_rgba(0,0,0,0.07)] group-hover:bg-white mb-5">
                                             <img
@@ -233,7 +229,7 @@ const ProductListing = () => {
                     </div>
 
                     {/* Promotional Banner */}
-                    <div className="mt-24 md:mt-32 relative bg-[#3B5A51] rounded-[2.5rem] overflow-hidden flex flex-col md:flex-row items-center justify-between p-10 md:p-16 lg:p-20 shadow-2xl">
+                    {/* <div className="mt-24 md:mt-32 relative bg-[#3B5A51] rounded-[2.5rem] overflow-hidden flex flex-col md:flex-row items-center justify-between p-10 md:p-16 lg:p-20 shadow-2xl">
                         <div className="relative z-10 md:w-1/2 text-center md:text-left">
                             <h2 className="text-4xl md:text-5xl font-heading font-black text-white mb-6 leading-tight">
                                 Stay Updated,<br />
@@ -260,7 +256,7 @@ const ProductListing = () => {
                                 className="w-full h-full object-contain object-center"
                             />
                         </div>
-                    </div>
+                    </div> */}
 
                 </div>
             </div>

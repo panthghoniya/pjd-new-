@@ -70,9 +70,9 @@ const Customization = () => {
       document.body.style.touchAction = '';
       document.documentElement.style.overflow = '';
     }
-    
+
     // Cleanup on unmount
-    return () => { 
+    return () => {
       document.body.style.overflow = '';
       document.body.style.touchAction = '';
       document.documentElement.style.overflow = '';
@@ -282,14 +282,13 @@ const Customization = () => {
                           {RETAIL_PACK_OPTIONS.map((item, idx) => (
                             <div
                               key={item.name}
-                              className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${
-                                idx === activeRetailIndex ? 'opacity-100 z-10' : 'opacity-0 z-0'
-                              }`}
+                              className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${idx === activeRetailIndex ? 'opacity-100 z-10' : 'opacity-0 z-0'
+                                }`}
                             >
-                              <img 
-                                src={item.image} 
-                                alt={item.name} 
-                                className="w-full h-full object-cover" 
+                              <img
+                                src={item.image}
+                                alt={item.name}
+                                className="w-full h-full object-cover"
                               />
                             </div>
                           ))}
@@ -329,9 +328,8 @@ const Customization = () => {
                                 e.stopPropagation();
                                 setActiveRetailIndex(idx);
                               }}
-                              className={`w-1.5 h-1.5 md:w-2 md:h-2 rounded-full transition-all duration-300 ${
-                                idx === activeRetailIndex ? 'bg-brand-accent w-4 md:w-5' : 'bg-white/40 hover:bg-white/60'
-                              }`}
+                              className={`w-1.5 h-1.5 md:w-2 md:h-2 rounded-full transition-all duration-300 ${idx === activeRetailIndex ? 'bg-brand-accent w-4 md:w-5' : 'bg-white/40 hover:bg-white/60'
+                                }`}
                             />
                           ))}
                         </div>
@@ -341,26 +339,25 @@ const Customization = () => {
                       <div className="p-6 md:p-8 flex flex-col flex-grow">
                         <h3 className="font-heading font-bold text-white text-2xl tracking-wide mb-3 group-hover:text-brand-accent transition-colors">Retail Packaging</h3>
                         <p className="text-white/70 text-sm leading-relaxed mb-4">
-                          Consumer-ready retail packaging solutions for domestic and international markets.
+                          Consumer-ready retail packaging solutions for domestic and
+                          international <br/> markets.
                         </p>
-                        
+
                         <ul className="space-y-1.5 mt-auto border-t border-white/10 pt-4">
                           {RETAIL_PACK_OPTIONS.map((item, idx) => (
-                            <li 
-                              key={item.name} 
+                            <li
+                              key={item.name}
                               onClick={(e) => {
                                 e.stopPropagation();
                                 setActiveRetailIndex(idx);
                               }}
-                              className={`flex items-center gap-2 text-xs md:text-sm font-semibold cursor-pointer transition-all duration-300 ${
-                                idx === activeRetailIndex 
-                                  ? 'text-brand-accent translate-x-1.5 scale-105' 
+                              className={`flex items-center gap-2 text-xs md:text-sm font-semibold cursor-pointer transition-all duration-300 ${idx === activeRetailIndex
+                                  ? 'text-brand-accent translate-x-1.5 scale-105'
                                   : 'text-white/80 hover:text-white hover:translate-x-1'
-                              }`}
+                                }`}
                             >
-                              <span className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${
-                                idx === activeRetailIndex ? 'bg-brand-accent scale-125' : 'bg-white/40'
-                              }`}></span>
+                              <span className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${idx === activeRetailIndex ? 'bg-brand-accent scale-125' : 'bg-white/40'
+                                }`}></span>
                               {item.name}
                             </li>
                           ))}

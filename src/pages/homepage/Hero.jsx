@@ -88,7 +88,7 @@ const Hero = () => {
 
         {/* Main Title */}
         <h1
-          className="w-full text-left tracking-[0.06em] sm:tracking-[0.1em] md:tracking-[0.03em] text-white font-clash font-bold mb-6 md:mb-8 animate-in fade-in slide-in-from-left-12 duration-1000"
+          className="w-full text-left tracking-[0.02em] sm:tracking-[0.04em] md:tracking-normal text-white font-clash font-black mb-6 md:mb-8 animate-in fade-in slide-in-from-left-12 duration-1000"
           style={{ fontSize: 'clamp(2.5rem, 9.5vw, 8.5rem)', lineHeight: 1.0 }}
         >
           PDJ TRADE <br />

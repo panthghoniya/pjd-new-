@@ -17,6 +17,9 @@ const ContactForm = () => {
   const [isCountryOpen, setIsCountryOpen] = useState(false);
   const [countrySearchQuery, setCountrySearchQuery] = useState('');
   const [selectedCountry, setSelectedCountry] = useState(countryData.find(c => c.name === 'India') || null);
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [mobile, setMobile] = useState('');
   const [message, setMessage] = useState(
     productFromUrl
       ? `I am interested in the following product:\n\nProduct: ${productFromUrl}\nSKU: ${skuFromUrl}\nRequired Weight/Packaging: ${weightFromUrl}\n\nPlease provide a quote and further details.`
@@ -28,6 +31,24 @@ const ContactForm = () => {
     country.name.toLowerCase().includes(countrySearchQuery.toLowerCase()) ||
     country.dialCode.includes(countrySearchQuery)
   );
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const whatsappNumber = '919687474747'; // Indian number with country code 91
+    
+    const formattedMessage = `*New Inquiry via Website*
+
+*Name:* ${name || 'N/A'}
+*Email:* ${email || 'N/A'}
+*Country:* ${selectedCountry ? selectedCountry.name + ' (' + selectedCountry.dialCode + ')' : 'N/A'}
+*Mobile:* ${mobile || 'N/A'}
+
+*Message:*
+${message || 'N/A'}`;
+
+    const encodedMessage = encodeURIComponent(formattedMessage);
+    window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, '_blank');
+  };
 
   // Auto-scroll to form when arriving from product inquiry
   useEffect(() => {
@@ -73,11 +94,13 @@ const ContactForm = () => {
               </span>
             </h2>
 
-            <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-1 gap-6">
                 <input 
                   type="text" 
                   placeholder="Your Name" 
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
                   className="w-full bg-brand-dark/5 border border-brand-dark/20 rounded-xl px-6 py-4 text-brand-dark placeholder:text-brand-dark/50 focus:outline-none focus:border-brand-accent focus:bg-brand-dark/10 transition-all duration-300 font-light"
                 />
               </div>
@@ -143,6 +166,8 @@ const ContactForm = () => {
                   <input 
                     type="tel" 
                     placeholder="Mobile Number" 
+                    value={mobile}
+                    onChange={(e) => setMobile(e.target.value)}
                     className="bg-transparent border-none outline-none w-full text-brand-dark placeholder:text-brand-dark/50 font-light"
                   />
                 </div>
@@ -152,6 +177,8 @@ const ContactForm = () => {
                 <input 
                   type="email" 
                   placeholder="Email Address" 
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   className="w-full bg-brand-dark/5 border border-brand-dark/20 rounded-xl px-6 py-4 text-brand-dark placeholder:text-brand-dark/50 focus:outline-none focus:border-brand-accent focus:bg-brand-dark/10 transition-all duration-300 font-light"
                 />
               </div>
@@ -181,7 +208,7 @@ const ContactForm = () => {
                 ></textarea>
               </div>
 
-              <button className="group mt-4 bg-brand-accent hover:bg-brand-teal text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 flex items-center gap-3 hover:shadow-[0_0_20px_rgba(91,162,152,0.4)]">
+              <button type="submit" className="group mt-4 bg-brand-accent hover:bg-brand-teal text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 flex items-center gap-3 hover:shadow-[0_0_20px_rgba(91,162,152,0.4)]">
                 Message Us
                 <Send className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
               </button>

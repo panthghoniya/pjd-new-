@@ -163,13 +163,13 @@ const Innerproduct = () => {
               </div>
 
               <div className="flex items-center gap-2 mb-4 text-brand-dark/60 font-medium text-sm md:text-base">
-                <span className="uppercase tracking-widest text-xs font-bold text-brand-dark">SKU:</span>
-                <span>{product.sku}</span>
+                {/* <span className="uppercase tracking-widest text-xs font-bold text-brand-dark">SKU:</span>
+                <span>{product.sku}</span> */}
               </div>
 
               {/* Tagline */}
               <p className="text-brand-dark/70 leading-relaxed mb-6 md:mb-8 text-sm sm:text-base md:text-lg">
-                {product.tagline}
+                {product.description}
               </p>
 
               {/* Weight Options */}
@@ -342,27 +342,7 @@ const Innerproduct = () => {
                                 </td>
                               </tr>
                             ))}
-                            {/* Applications Row */}
-                            {product.applications && product.applications.length > 0 && (
-                              <tr className={`hover:bg-brand-background/30 transition-colors ${Object.keys(product.additionalInfo).length % 2 === 0 ? 'bg-white' : 'bg-brand-background/10'}`}>
-                                <th className="py-5 px-6 font-bold text-brand-dark text-sm md:text-base align-top border-r border-brand-dark/10">
-                                  <div className="flex items-center gap-4">
-                                    <Settings className="w-5 h-5 text-brand-dark opacity-70" />
-                                    <span>Applications</span>
-                                  </div>
-                                </th>
-                                <td className="py-5 px-6 align-middle">
-                                  <div className="flex flex-wrap gap-3">
-                                    {product.applications.map((app, idx) => (
-                                      <span key={idx} className="flex items-center gap-2 px-4 py-2 bg-brand-background/50 border border-brand-dark/15 rounded-lg text-xs md:text-sm font-semibold text-brand-dark">
-                                        {getAppIcon(app)}
-                                        {app}
-                                      </span>
-                                    ))}
-                                  </div>
-                                </td>
-                              </tr>
-                            )}
+
                           </tbody>
                         </table>
                       </div>

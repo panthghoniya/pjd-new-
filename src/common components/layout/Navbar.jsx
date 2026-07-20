@@ -156,7 +156,7 @@ const Navbar = () => {
               <span className={`font-bold text-[13px] sm:text-base md:text-lg xl:text-xl tracking-tight font-clash transition-colors duration-300 leading-tight truncate ${isSolid || isMobileMenuOpen ? 'text-brand-dark' : 'text-white'}`}>
                 PDJ <span className="tracking-wider"> TRADE</span> CONNECT
               </span>
-              <h5 className={`block text-[8px] sm:text-[10px] md:text-[11px] xl:text-xs mt-0.5 transition-colors duration-300 opacity-90 leading-tight truncate font-jakarta font-medium ${isSolid || isMobileMenuOpen ? 'text-[#2D4F44]' : 'text-white'}`}>
+              <h5 className={`block text-[8px] sm:text-[10px] md:text-[11px] italic xl:text-xs mt-0.5 transition-colors duration-300 opacity-90 leading-tight truncate font-jakarta font-medium ${isSolid || isMobileMenuOpen ? 'text-[#2D4F44]' : 'text-white'}`}>
                 Connecting Global Market with Quality
               </h5>
             </div>

@@ -222,10 +222,7 @@ const IndustryWeServe = () => {
                 {/* Dark Gradient Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-85 group-hover/card:opacity-95 transition-opacity duration-500"></div>
 
-                {/* Big Transparent Number in Top Right */}
-                <span className="absolute top-6 right-8 font-clash font-bold text-5xl md:text-6xl text-white/10 group-hover/card:text-white/20 transition-colors duration-300 pointer-events-none">
-                  {item.id}
-                </span>
+
 
                 {/* Bottom Content Area */}
                 <div className="absolute bottom-0 left-0 w-full p-6 md:p-8 flex flex-col justify-end h-1/2 whitespace-normal">

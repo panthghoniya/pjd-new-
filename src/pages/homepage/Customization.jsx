@@ -258,8 +258,8 @@ const Customization = () => {
                       {/* Details Below Image */}
                       <div className="p-6 md:p-8 flex flex-col flex-grow">
                         <h3 className="font-heading font-bold text-white text-2xl tracking-wide mb-3 group-hover:text-brand-accent transition-colors">Bulk Packaging</h3>
-                        <p className="text-white/70 text-sm leading-relaxed mb-4">
-                          Multiple bulk packing options available based on customer requirements.
+                        <p className="text-white/70 text-sm leading-relaxed mb-4 justify-content">
+                          Multiple bulk packing options <br />available based on customer <br /> requirements.
                         </p>
                         <ul className="space-y-1.5 mt-auto border-t border-white/10 pt-4">
                           {['20 KG Bags', '25 KG Bags', '40 KG Bags', '50 KG Bags', '1.4 MT Jumbo Bags'].map(item => (
@@ -339,8 +339,7 @@ const Customization = () => {
                       <div className="p-6 md:p-8 flex flex-col flex-grow">
                         <h3 className="font-heading font-bold text-white text-2xl tracking-wide mb-3 group-hover:text-brand-accent transition-colors">Retail Packaging</h3>
                         <p className="text-white/70 text-sm leading-relaxed mb-4">
-                          Consumer-ready retail packaging solutions for domestic and
-                          international <br/> markets.
+                          Consumer-ready retail packaging solutions for domestic and international markets.
                         </p>
 
                         <ul className="space-y-1.5 mt-auto border-t border-white/10 pt-4">
@@ -352,8 +351,8 @@ const Customization = () => {
                                 setActiveRetailIndex(idx);
                               }}
                               className={`flex items-center gap-2 text-xs md:text-sm font-semibold cursor-pointer transition-all duration-300 ${idx === activeRetailIndex
-                                  ? 'text-brand-accent translate-x-1.5 scale-105'
-                                  : 'text-white/80 hover:text-white hover:translate-x-1'
+                                ? 'text-brand-accent translate-x-1.5 scale-105'
+                                : 'text-white/80 hover:text-white hover:translate-x-1'
                                 }`}
                             >
                               <span className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${idx === activeRetailIndex ? 'bg-brand-accent scale-125' : 'bg-white/40'
@@ -379,7 +378,7 @@ const Customization = () => {
                       {/* Details Below Image */}
                       <div className="p-6 md:p-8 flex flex-col flex-grow">
                         <h3 className="font-heading font-bold text-white text-2xl tracking-wide mb-3 group-hover:text-brand-accent transition-colors">Custom Branding</h3>
-                        <p className="text-white/70 text-sm leading-relaxed mb-4">
+                        <p className="text-white/70 text-sm leading-relaxed mb-4 justify-content">
                           We provide customized packaging with your artwork, branding, design, and private labels as per market requirements.
                         </p>
                         <ul className="space-y-1.5 mt-auto border-t border-white/10 pt-4">

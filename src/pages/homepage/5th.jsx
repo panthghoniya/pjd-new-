@@ -62,14 +62,14 @@ const Manufacturer = () => {
         const totalTranslate = track.scrollWidth - window.innerWidth;
 
         gsap.to(track, {
-            x: -totalTranslate,
+            x: () => -(track.scrollWidth - window.innerWidth),
             ease: "none",
             scrollTrigger: {
                 trigger: container,
                 pin: true,
                 scrub: 1, // Smooth scrub
                 start: "top top",
-                end: () => `+=${totalTranslate}`, // Pin duration matches translation distance
+                end: () => `+=${track.scrollWidth - window.innerWidth}`, // Pin duration matches translation distance
                 invalidateOnRefresh: true, // Recalculate on window resize
             }
         });
@@ -112,15 +112,15 @@ const Manufacturer = () => {
                             <div className="absolute inset-0 bg-black/60 group-hover:bg-black/45 transition-colors duration-500" />
                         </div>
 
-                        <div className="absolute bottom-0 left-0 p-24 w-full bg-gradient-to-t from-black/95 via-black/50 to-transparent pt-40">
-                            <div className="border-l-4 border-brand-accent pl-8">
-                                <span className="text-brand-accent font-bold tracking-[0.2em] text-lg uppercase mb-2 block">0{item.id}</span>
-                                <h3 className="text-6xl font-heading font-bold text-white mb-6 uppercase tracking-[0.2rem]">{item.title}</h3>
-                                <p className="text-white/90 text-xl max-w-2xl leading-relaxed mb-8">{item.description}</p>
-                                <div className="flex flex-row flex-nowrap gap-x-4 lg:gap-x-8 gap-y-4 w-full">
+                        <div className="absolute bottom-0 left-0 p-12 lg:p-16 w-full bg-gradient-to-t from-black/95 via-black/60 to-transparent pt-32">
+                            <div className="border-l-4 border-brand-accent pl-6 lg:pl-8">
+                                <span className="text-brand-accent font-bold tracking-[0.2em] text-base lg:text-lg uppercase mb-2 block">0{item.id}</span>
+                                <h3 className="text-4xl xl:text-5xl font-heading font-bold text-white mb-4 lg:mb-6 uppercase tracking-[0.1rem] lg:tracking-[0.2rem]">{item.title}</h3>
+                                <p className="text-white/90 text-lg lg:text-xl max-w-2xl leading-relaxed mb-6 lg:mb-8">{item.description}</p>
+                                <div className="flex flex-row flex-nowrap gap-x-3 lg:gap-x-6 gap-y-4 w-full">
                                     {item.highlights.map(pt => (
-                                        <div key={pt} className="flex items-center gap-3 text-white text-base lg:text-lg font-jakarta font-bold whitespace-nowrap">
-                                            <div className="w-6 h-6 rounded-full bg-brand-accent/25 text-brand-accent flex items-center justify-center flex-shrink-0 text-xs font-black">
+                                        <div key={pt} className="flex items-center gap-2 lg:gap-2.5 text-white text-xs lg:text-sm font-jakarta font-bold whitespace-nowrap">
+                                            <div className="w-4 h-4 lg:w-5 lg:h-5 rounded-full bg-brand-accent/25 text-brand-accent flex items-center justify-center flex-shrink-0 text-[9px] lg:text-[10px] font-black">
                                                 ✓
                                             </div>
                                             <span>{pt}</span>

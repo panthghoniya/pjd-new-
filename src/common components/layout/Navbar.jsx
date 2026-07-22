@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import logo from '../../assets/logo.png';
+import { logo } from '../../assets/images';
 import { Menu, X, Globe, ChevronDown, Check } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 
@@ -277,7 +277,7 @@ const Navbar = () => {
         <Link
           to="/contact#contact-form"
           onClick={() => setIsMobileMenuOpen(false)}
-          className="mx-6 mt-auto mb-10 text-center py-4 rounded-xl font-bold font-jakarta bg-brand-accent text-brand-dark hover:bg-brand-dark hover:text-white transition-all duration-300 animate-in fade-in slide-in-from-bottom-8 delay-700"
+          className="mx-6 mt-auto mb-10 w-[80%] max-w-[280px] text-center py-4 rounded-xl font-bold font-jakarta bg-brand-accent text-brand-dark hover:bg-brand-dark hover:text-white transition-all duration-300 animate-in fade-in slide-in-from-bottom-8 delay-700"
         >
           Get in Touch
         </Link>

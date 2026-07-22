@@ -258,10 +258,12 @@ const Customization = () => {
                       {/* Details Below Image */}
                       <div className="p-6 md:p-8 flex flex-col flex-grow">
                         <h3 className="font-heading font-bold text-white text-2xl tracking-wide mb-3 group-hover:text-brand-accent transition-colors">Bulk Packaging</h3>
-                        <p className="text-white/70 text-sm leading-relaxed mb-4 justify-content">
-                          Multiple bulk packing options <br />available based on customer <br /> requirements.
-                        </p>
-                        <ul className="space-y-1.5 mt-auto border-t border-white/10 pt-4">
+                        <div className="min-h-[80px] lg:min-h-[96px] mb-4">
+                          <p className="text-white/70 text-sm leading-relaxed text-justify">
+                           Flexible bulk packaging solutions tailored to industrial and export requirements with multiple packing options available.
+                          </p>
+                        </div>
+                        <ul className="space-y-1.5 border-t border-white/10 pt-4">
                           {['20 KG Bags', '25 KG Bags', '40 KG Bags', '50 KG Bags', '1.4 MT Jumbo Bags'].map(item => (
                             <li key={item} className="flex items-center gap-2 text-white/80 text-xs md:text-sm font-semibold">
                               <span className="w-1.5 h-1.5 rounded-full bg-brand-accent"></span>
@@ -338,11 +340,13 @@ const Customization = () => {
                       {/* Details Below Image */}
                       <div className="p-6 md:p-8 flex flex-col flex-grow">
                         <h3 className="font-heading font-bold text-white text-2xl tracking-wide mb-3 group-hover:text-brand-accent transition-colors">Retail Packaging</h3>
-                        <p className="text-white/70 text-sm leading-relaxed mb-4">
-                          Consumer-ready retail packaging solutions for domestic and international markets.
-                        </p>
+                        <div className="min-h-[80px] lg:min-h-[96px] mb-4">
+                          <p className="text-white/70 text-sm leading-relaxed text-justify">
+                     Consumer-ready retail packaging designed for domestic and international markets with attractive, secure packaging options.
+                          </p>
+                        </div>
 
-                        <ul className="space-y-1.5 mt-auto border-t border-white/10 pt-4">
+                        <ul className="space-y-1.5 border-t border-white/10 pt-4">
                           {RETAIL_PACK_OPTIONS.map((item, idx) => (
                             <li
                               key={item.name}
@@ -378,10 +382,12 @@ const Customization = () => {
                       {/* Details Below Image */}
                       <div className="p-6 md:p-8 flex flex-col flex-grow">
                         <h3 className="font-heading font-bold text-white text-2xl tracking-wide mb-3 group-hover:text-brand-accent transition-colors">Custom Branding</h3>
-                        <p className="text-white/70 text-sm leading-relaxed mb-4 justify-content">
-                          We provide customized packaging with your artwork, branding, design, and private labels as per market requirements.
-                        </p>
-                        <ul className="space-y-1.5 mt-auto border-t border-white/10 pt-4">
+                        <div className="min-h-[80px] lg:min-h-[96px] mb-4">
+                          <p className="text-white/70 text-sm leading-relaxed text-justify">
+                          Private label and custom branding solutions designed to strengthen your brand identity in global markets.
+                          </p>
+                        </div>
+                        <ul className="space-y-1.5 border-t border-white/10 pt-4">
                           {['Custom Artwork', 'Private Label', 'Brand Printing', 'Export Ready Packaging'].map(item => (
                             <li key={item} className="flex items-center gap-2 text-white/80 text-xs md:text-sm font-semibold">
                               <span className="w-1.5 h-1.5 rounded-full bg-brand-accent"></span>

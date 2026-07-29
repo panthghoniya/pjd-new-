@@ -12,44 +12,6 @@ const productsData = productsArray.reduce((acc, p) => {
   return acc;
 }, {});
 
-const PackagingVisualizer = ({ weight }) => {
-  if (!weight) return null;
-  const isJumbo = weight.toLowerCase().includes('custom') || weight.includes('mt') || weight.includes('bulk');
-  
-  return (
-    <div className="mt-6 p-6 bg-white border border-brand-dark/10 rounded-2xl flex flex-col items-center justify-center shadow-sm animate-in fade-in zoom-in-95 duration-300">
-      {isJumbo ? (
-        <svg viewBox="0 0 100 100" className="w-24 h-24 md:w-32 md:h-32 drop-shadow-md">
-          {/* Jumbo Bag graphic */}
-          <path d="M 15 25 L 85 25 L 90 95 L 10 95 Z" fill="#f8fafc" stroke="#cbd5e1" strokeWidth="2"/>
-          <path d="M 15 25 Q 50 10 85 25" fill="none" stroke="#cbd5e1" strokeWidth="2"/>
-          {/* Handles */}
-          <path d="M 25 25 L 20 10 M 35 25 L 40 10" stroke="#5ba298" strokeWidth="2" fill="none"/>
-          <path d="M 75 25 L 80 10 M 65 25 L 60 10" stroke="#5ba298" strokeWidth="2" fill="none"/>
-          {/* Label */}
-          <rect x="30" y="45" width="40" height="25" rx="2" fill="#e2e8f0" stroke="#cbd5e1" strokeWidth="1"/>
-          <text x="50" y="61" textAnchor="middle" fill="#0f172a" fontSize="12" fontWeight="bold">BULK</text>
-        </svg>
-      ) : (
-        <svg viewBox="0 0 100 120" className="w-24 h-24 md:w-32 md:h-32 drop-shadow-md">
-          {/* Sack graphic */}
-          <path d="M 25 15 Q 50 5 75 15 C 90 35 85 95 80 110 Q 50 115 20 110 C 15 95 10 35 25 15 Z" fill="#f8fafc" stroke="#cbd5e1" strokeWidth="2"/>
-          {/* Stitching */}
-          <path d="M 30 20 L 70 20" stroke="#94a3b8" strokeWidth="2" strokeDasharray="3 3"/>
-          {/* Center Circle */}
-          <circle cx="50" cy="55" r="22" fill="#e2e8f0" />
-          <text x="50" y="61" textAnchor="middle" fill="#0f172a" fontSize="16" fontWeight="bold">{weight.replace(' kg', '').replace(' g', '')}</text>
-          <text x="50" y="95" textAnchor="middle" fill="#475569" fontSize="10" fontWeight="bold" className="uppercase">PDJ</text>
-        </svg>
-      )}
-      <div className="mt-4 text-center">
-        <h5 className="font-bold text-brand-dark text-lg">{weight}</h5>
-        <p className="text-[10px] text-brand-accent uppercase tracking-widest font-bold mt-1">Packaging Selected</p>
-      </div>
-    </div>
-  );
-};
-
 const Innerproduct = () => {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -219,8 +181,8 @@ const Innerproduct = () => {
                       key={weight}
                       onClick={() => setSelectedWeight(weight)}
                       className={`px-6 py-2.5 md:px-8 md:py-3 rounded-full text-xs md:text-sm font-bold transition-all duration-300 border-2 ${selectedWeight === weight
-                          ? 'bg-brand-dark text-white border-brand-dark shadow-md scale-105'
-                          : 'bg-transparent text-brand-dark/70 border-brand-dark/20 hover:border-brand-accent hover:text-brand-accent'
+                        ? 'bg-brand-dark text-white border-brand-dark shadow-md scale-105'
+                        : 'bg-transparent text-brand-dark/70 border-brand-dark/20 hover:border-brand-accent hover:text-brand-accent'
                         }`}
                     >
                       {weight}
@@ -245,8 +207,6 @@ const Innerproduct = () => {
                   </div>
                 )}
 
-                {/* Dynamic Packaging Visualizer */}
-                <PackagingVisualizer weight={selectedWeight === "Custom Bulk" && customWeight ? `${customWeight} kg` : selectedWeight} />
               </div>
 
               {/* Inquiry Action */}
@@ -261,8 +221,8 @@ const Innerproduct = () => {
                   onClick={handleShare}
                   title={copied ? 'Link Copied!' : 'Copy product link'}
                   className={`relative w-14 h-14 md:w-16 md:h-16 flex items-center justify-center rounded-full border-2 transition-all duration-300 flex-shrink-0 ${copied
-                      ? 'border-brand-accent bg-brand-accent text-white scale-110'
-                      : 'border-brand-dark/20 text-brand-dark/50 hover:text-brand-accent hover:border-brand-accent hover:bg-brand-accent/5'
+                    ? 'border-brand-accent bg-brand-accent text-white scale-110'
+                    : 'border-brand-dark/20 text-brand-dark/50 hover:text-brand-accent hover:border-brand-accent hover:bg-brand-accent/5'
                     }`}
                 >
                   {copied ? <Check className="w-5 h-5" /> : <Share2 className="w-5 h-5" />}
@@ -329,11 +289,11 @@ const Innerproduct = () => {
                         <Layers className="w-5 h-5 text-brand-accent" />
                         Applications
                       </h3>
-                      <div className="flex flex-wrap gap-2">
+                      <div className="grid grid-cols-2 md:grid-cols-3 gap-2 sm:gap-3 w-full">
                         {product.applications.map((app, idx) => (
-                          <span key={idx} className="px-4 py-2 bg-brand-dark/5 rounded-full text-sm font-medium text-brand-dark border border-brand-dark/10">
+                          <div key={idx} className="px-2 py-2 sm:px-4 sm:py-2.5 bg-brand-dark/5 rounded-xl text-xs sm:text-sm font-medium text-brand-dark border border-brand-dark/10 flex items-center justify-center text-center h-full">
                             {app}
-                          </span>
+                          </div>
                         ))}
                       </div>
                     </div>
@@ -415,7 +375,7 @@ const Innerproduct = () => {
               >
                 View All Products
                 <span className="w-7 h-7 rounded-full border border-brand-dark/20 flex items-center justify-center group-hover:bg-brand-accent group-hover:border-brand-accent transition-all duration-300">
-                  <svg className="w-3.5 h-3.5 group-hover:text-white transition-colors" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7"/></svg>
+                  <svg className="w-3.5 h-3.5 group-hover:text-white transition-colors" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" /></svg>
                 </span>
               </Link>
             </div>
@@ -452,7 +412,7 @@ const Innerproduct = () => {
                       <div className="absolute bottom-3 left-0 right-0 flex justify-center opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300">
                         <span className="flex items-center gap-1.5 px-4 py-1.5 bg-white rounded-full text-xs font-bold text-brand-dark shadow-md">
                           View Details
-                          <svg className="w-3 h-3" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7"/></svg>
+                          <svg className="w-3 h-3" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" /></svg>
                         </span>
                       </div>
                     </div>

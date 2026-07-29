@@ -134,7 +134,7 @@ const Navbar = () => {
     <>
 
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isSolid || isMobileMenuOpen
+        className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ${isSolid || isMobileMenuOpen
             ? 'bg-brand-background/95 backdrop-blur-md border-b border-brand-dark/5 shadow-[0_10px_40px_rgba(0,0,0,0.08)] py-3'
             : 'bg-transparent py-5 md:py-6'
           }`}
@@ -253,7 +253,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed inset-0 z-40 bg-brand-background transition-all duration-500 ease-in-out flex flex-col items-center justify-center space-y-8 lg:hidden overflow-hidden ${isMobileMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full pointer-events-none'
+        className={`fixed inset-0 z-[90] bg-brand-background transition-all duration-500 ease-in-out flex flex-col items-center justify-center space-y-8 lg:hidden overflow-hidden ${isMobileMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full pointer-events-none'
           }`}
       >
         <div className="flex flex-col gap-6 pt-4">
@@ -277,7 +277,7 @@ const Navbar = () => {
         <Link
           to="/contact#contact-form"
           onClick={() => setIsMobileMenuOpen(false)}
-          className="mx-6 mt-auto mb-10 w-[80%] max-w-[280px] text-center py-4 rounded-xl font-bold font-jakarta bg-brand-accent text-brand-dark hover:bg-brand-dark hover:text-white transition-all duration-300 animate-in fade-in slide-in-from-bottom-8 delay-700"
+          className="mx-auto mt-auto mb-10 w-fit px-8 py-3 rounded-xl font-bold font-jakarta text-sm bg-brand-accent text-brand-dark hover:bg-brand-dark hover:text-white transition-all duration-300 animate-in fade-in slide-in-from-bottom-8 delay-700"
         >
           Get in Touch
         </Link>

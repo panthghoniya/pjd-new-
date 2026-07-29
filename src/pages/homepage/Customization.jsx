@@ -208,7 +208,7 @@ const Customization = () => {
                     Enhance your salt with necessary additives based on your regional, dietary, or industrial requirements.
                   </p>
                   <ul className="space-y-3">
-                    {['Iodization (15-100 ppm)', 'Anti-Caking Agent (PFC)', 'Free-Flowing Agents', 'Mineral Fortification'].map(t => (
+                    {['Iodization (15-100 ppm)', 'Anti-Caking Agent ', 'Free-Flowing Agents', 'Mineral Fortification'].map(t => (
                       <li key={t} className="flex items-start gap-3 text-sm text-brand-dark/80 font-medium">
                         <CheckCircle2 className="w-5 h-5 text-brand-dark flex-shrink-0" />
                         <span>{t}</span>
@@ -235,9 +235,9 @@ const Customization = () => {
                       </p>
                     </div>
                     <div className="flex-shrink-0 self-start md:self-auto">
-                      <span className="inline-block px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-brand-accent/20 text-brand-accent border border-brand-accent/30 font-semibold text-[10px] md:text-sm">
+                      {/* <span className="inline-block px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-brand-accent/20 text-brand-accent border border-brand-accent/30 font-semibold text-[10px] md:text-sm">
                         OEM & Private Label Available
-                      </span>
+                      </span> */}
                     </div>
                   </div>
 

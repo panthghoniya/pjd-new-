@@ -117,13 +117,13 @@ const Manufacturer = () => {
                                 <span className="text-brand-accent font-bold tracking-[0.2em] text-base lg:text-lg uppercase mb-2 block">0{item.id}</span>
                                 <h3 className="text-4xl xl:text-5xl font-heading font-bold text-white mb-4 lg:mb-6 uppercase tracking-[0.1rem] lg:tracking-[0.2rem]">{item.title}</h3>
                                 <p className="text-white/90 text-lg lg:text-xl max-w-2xl leading-relaxed mb-6 lg:mb-8">{item.description}</p>
-                                <div className="flex flex-row flex-nowrap gap-x-3 lg:gap-x-6 gap-y-4 w-full">
+                                <div className="grid grid-cols-2 gap-x-4 gap-y-4 lg:flex lg:flex-row lg:flex-nowrap lg:gap-x-6 w-full">
                                     {item.highlights.map(pt => (
-                                        <div key={pt} className="flex items-center gap-2 lg:gap-2.5 text-white text-xs lg:text-sm font-jakarta font-bold whitespace-nowrap">
+                                        <div key={pt} className="flex items-center gap-2 lg:gap-2.5 text-white text-xs lg:text-sm font-jakarta font-bold">
                                             <div className="w-4 h-4 lg:w-5 lg:h-5 rounded-full bg-brand-accent/25 text-brand-accent flex items-center justify-center flex-shrink-0 text-[9px] lg:text-[10px] font-black">
                                                 ✓
                                             </div>
-                                            <span>{pt}</span>
+                                            <span className="whitespace-nowrap">{pt}</span>
                                         </div>
                                     ))}
                                 </div>
@@ -152,11 +152,11 @@ const Manufacturer = () => {
                             <span className="text-brand-accent font-bold mb-1 block">0{item.id}</span>
                             <h3 className="text-2xl font-heading font-bold text-white mb-2">{item.title}</h3>
                             <p className="text-white/80 text-xs leading-relaxed mb-4">{item.description}</p>
-                            <div className="flex flex-row flex-wrap gap-x-4 gap-y-2">
+                            <div className="grid grid-cols-2 gap-x-2 gap-y-3 w-full pr-4">
                                 {item.highlights.map(pt => (
-                                    <div key={pt} className="flex items-center gap-1.5 text-white/95 text-[10px] font-jakarta font-semibold">
-                                        <span className="w-1 h-1 rounded-full bg-brand-accent flex-shrink-0"></span>
-                                        <span>{pt}</span>
+                                    <div key={pt} className="flex items-center gap-1.5 text-white/95 text-[10px] sm:text-xs font-jakarta font-semibold">
+                                        <span className="w-1.5 h-1.5 rounded-full bg-brand-accent flex-shrink-0"></span>
+                                        <span className="leading-tight">{pt}</span>
                                     </div>
                                 ))}
                             </div>

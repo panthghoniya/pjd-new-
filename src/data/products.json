@@ -7,7 +7,7 @@
     "sku": "SKU-ICS-001",
     "rating": 4.9,
     "reviews": 120,
-   "description": "Our Iodized Low Hardness Crystal Salt is specially processed to maintain low calcium and magnesium content while ensuring high purity and hygiene. Enriched with iodine, it is ideal for food consumption and food processing applications that require superior quality and low hardness. We offer customized iodine levels, grain sizes, and packaging solutions to meet specific customer and market requirements.",
+    "description": "Our Iodized Low Hardness Crystal Salt is specially processed to maintain low calcium and magnesium content while ensuring high purity and hygiene. Enriched with iodine, it is ideal for food consumption and food processing applications that require superior quality and low hardness. We offer customized iodine levels, grain sizes, and packaging solutions to meet specific customer and market requirements.",
     "keyFeatures": [
       "Suitable for Food Consumption",
       "Hygienically Processed",
@@ -28,10 +28,10 @@
       "Wholesale & Export Supply"
     ],
     "images": [
-      "/images/products/salt_mint.jpg",
-      "/images/products/salt_scoop.jpg",
+      "/images/products/iodized_crystal_salt.jpg",
+      "/images/products/coarse_salt.jpg",
       "/images/products/salt_dark_bowl.jpg",
-      "/images/products/salt_spa.jpg"
+      "/images/products/salt_scoop.jpg"
     ]
   },
   {
@@ -65,10 +65,10 @@
       "Export Supply"
     ],
     "images": [
+      "/images/products/triple_refined_free_flow_iodized_salt.jpg",
+      "/images/products/low_hardness_free_flow_iodized_salt.jpg",
       "/images/products/salt_scoop.jpg",
-      "/images/products/salt_mint.jpg",
-      "/images/products/salt_dark_bowl.jpg",
-      "/images/products/salt_spa.jpg"
+      "/images/products/salt_mint.jpg"
     ]
   },
   {
@@ -101,9 +101,9 @@
       "Wholesale & Export Supply"
     ],
     "images": [
+      "/images/products/low_hardness_free_flow_iodized_salt.jpg",
+      "/images/products/triple_refined_free_flow_iodized_salt.jpg",
       "/images/products/salt_mint.jpg",
-      "/images/products/salt_spa.jpg",
-      "/images/products/salt_dark_bowl.jpg",
       "/images/products/salt_scoop.jpg"
     ]
   },
@@ -140,10 +140,10 @@
       "Wholesale & Export Supply"
     ],
     "images": [
+      "/images/products/low_sodium_salt.png",
       "/images/products/salt_spa.jpg",
       "/images/products/salt_mint.jpg",
-      "/images/products/salt_scoop.jpg",
-      "/images/products/salt_dark_bowl.jpg"
+      "/images/products/salt_scoop.jpg"
     ]
   },
   {
@@ -176,10 +176,10 @@
       "Industrial Processing & Manufacturing"
     ],
     "images": [
+      "/images/products/coarse_salt.jpg",
+      "/images/products/iodized_crystal_salt.jpg",
       "/images/products/salt_dark_bowl.jpg",
-      "/images/products/salt_scoop.jpg",
-      "/images/products/salt_mint.jpg",
-      "/images/products/salt_spa.jpg"
+      "/images/products/salt_scoop.jpg"
     ]
   },
   {
@@ -212,10 +212,10 @@
       "Wholesale & Export Supply"
     ],
     "images": [
+      "/images/products/low_hardness_free_flow_iodized_salt.jpg",
+      "/images/products/triple_refined_free_flow_iodized_salt.jpg",
       "/images/products/salt_mint.jpg",
-      "/images/products/salt_dark_bowl.jpg",
-      "/images/products/salt_scoop.jpg",
-      "/images/products/salt_spa.jpg"
+      "/images/products/salt_scoop.jpg"
     ]
   },
   {
@@ -248,10 +248,10 @@
       "Industrial Processing"
     ],
     "images": [
+      "/images/products/super_fine_salt.jpg",
+      "/images/products/low_hardness_pure_salt.png",
       "/images/products/salt_scoop.jpg",
-      "/images/products/salt_dark_bowl.jpg",
-      "/images/products/salt_mint.jpg",
-      "/images/products/salt_spa.jpg"
+      "/images/products/salt_mint.jpg"
     ]
   },
   {
@@ -283,10 +283,10 @@
       "Industrial Processing"
     ],
     "images": [
+      "/images/products/low_hardness_pure_salt.png",
+      "/images/products/super_fine_salt.jpg",
       "/images/products/salt_dark_bowl.jpg",
-      "/images/products/salt_scoop.jpg",
-      "/images/products/salt_mint.jpg",
-      "/images/products/salt_spa.jpg"
+      "/images/products/salt_scoop.jpg"
     ]
   },
   {
@@ -318,9 +318,9 @@
       "Commercial & Industrial Water Softeners"
     ],
     "images": [
+      "/images/products/tablet_salt.jpg",
       "/images/products/salt_spa.jpg",
       "/images/products/salt_dark_bowl.jpg",
-      "/images/products/salt_mint.jpg",
       "/images/products/salt_scoop.jpg"
     ]
   }

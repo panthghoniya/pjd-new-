@@ -1,6 +1,5 @@
 import React, { useRef } from 'react';
 import { ArrowRight } from 'lucide-react';
-import { manProcessing as manprocessing, manPurify as manpurify, manWithSalt as manwithsalt } from '../../assets/images';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
@@ -17,7 +16,7 @@ const Manufacturer = () => {
             id: 1,
             title: "Massive Production Capacity",
             description: "Built to handle bulk export requirements with consistent quality and uninterrupted supply.",
-            image: manprocessing,
+            image: "/images/production/massive_production_capacity.png",
             highlights: [
                 "1000+ MT Daily Output",
                 "Automated Processing",
@@ -29,7 +28,7 @@ const Manufacturer = () => {
             id: 2,
             title: "Modern Refining Process",
             description: "Our advanced processing system ensures purity, free-flowing texture, and export-grade quality.",
-            image: manwithsalt,
+            image: "/images/production/modern_refining_process.png",
             highlights: [
                 "Multi-Stage Refining",
                 "Uniform Grain Size",
@@ -41,7 +40,7 @@ const Manufacturer = () => {
             id: 3,
             title: "Export Ready Infrastructure",
             description: "Efficient packaging and logistics infrastructure for timely global deliveries.",
-            image: manpurify,
+            image: "/images/production/export_ready_infrastructure.png",
             highlights: [
                 "Bulk Packaging Solutions",
                 "Container Loading Facility",

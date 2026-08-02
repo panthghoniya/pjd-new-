@@ -61,16 +61,16 @@ const Mmm = () => {
           <div className="grid grid-cols-2 grid-rows-2 gap-4 md:gap-6 h-[400px] sm:h-[500px] lg:h-[700px] w-full">
             <div data-animate="fade-right" data-delay="200" className="col-span-2 row-span-1 lg:col-span-1 lg:row-span-2 overflow-hidden rounded-[2rem] shadow-xl group hover-lift">
               <img
-                src="https://i.pinimg.com/736x/dd/01/db/dd01db78fcce2971550061292bcdf9a5.jpg"
-                alt="Premium Salt"
+                src="/images/service/service_overview.png"
+                alt="Service Overview"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
             </div>
 
             <div data-animate="fade-right" data-delay="350" className="col-span-1 row-span-1 lg:col-span-1 lg:row-span-1 overflow-hidden rounded-[2rem] shadow-lg group hover-lift">
               <img
-                src="https://i.pinimg.com/736x/77/e7/78/77e778f887020a47b72aad1a9c424850.jpg"
-                alt="Salt Details"
+                src="/images/service/service_overview_2.png"
+                alt="Service Overview 2"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
             </div>

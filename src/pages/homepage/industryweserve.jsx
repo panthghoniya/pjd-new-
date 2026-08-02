@@ -6,44 +6,44 @@ const industriesData = [
   {
     id: '01',
     name: 'Food Industry',
-    // description: 'High-grade, pure salt solutions for food preservation, seasoning, and processing compliance.',
-    image: 'https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&q=80&w=800',
+    description: 'High-grade, pure salt solutions for food preservation, seasoning, and processing compliance.',
+    image: 'https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&q=80&w=1000',
   },
   {
     id: '02',
     name: 'Pharmaceutical',
-    // description: 'Ultra-pure grade sodium chloride manufactured under strict standards for medical use.',
-    image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&q=80&w=800',
+    description: 'Ultra-pure grade sodium chloride manufactured under strict standards for medical use.',
+    image: 'https://images.unsplash.com/photo-1532187643603-ba119ca4109e?auto=format&fit=crop&q=80&w=1000',
   },
   {
     id: '03',
     name: 'Water Treatment',
-    // description: 'Coarse salt crystals optimized for water softening systems and industrial filtration.',
-    image: 'https://images.unsplash.com/photo-1581093588401-fbb62a02f120?auto=format&fit=crop&q=80&w=800',
+    description: 'Coarse salt crystals optimized for water softening systems and industrial filtration.',
+    image: 'https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&q=80&w=1000',
   },
   {
     id: '04',
     name: 'Chemical Industry',
-    // description: 'Essential raw materials for chlor-alkali production and chemical synthesis.',
-    image: 'https://images.unsplash.com/photo-1532187643603-ba119ca4109e?auto=format&fit=crop&q=80&w=800',
+    description: 'Essential raw materials for chlor-alkali production and chemical synthesis.',
+    image: 'https://images.unsplash.com/photo-1581093588401-fbb62a02f120?auto=format&fit=crop&q=80&w=1000',
   },
   {
     id: '05',
     name: 'Animal Feed',
-    // description: 'Mineral-fortified salt grades critical for livestock health and feed manufacturing.',
-    image: 'https://images.unsplash.com/photo-1516467508483-a7212febe31a?auto=format&fit=crop&q=80&w=800',
+    description: 'Mineral-fortified salt grades critical for livestock health and feed manufacturing.',
+    image: 'https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&q=80&w=1000',
   },
   {
     id: '06',
     name: 'Fishery & Preservation',
-    // description: 'Specialized curing and preserving salt for the marine food sector and cold storage.',
-    image: 'https://images.unsplash.com/photo-1534482421-64566f976cfa?auto=format&fit=crop&q=80&w=800',
+    description: 'Specialized curing and preserving salt for the marine food sector and cold storage.',
+    image: 'https://images.unsplash.com/photo-1534482421-64566f976cfa?auto=format&fit=crop&q=80&w=1000',
   },
   {
     id: '07',
     name: 'Textile & Dyeing',
-    // description: 'High-solubility dyeing salt facilitating even color fixing in fabric processing.',
-    image: 'https://images.unsplash.com/photo-1524295988897-b13b63a29d3b?auto=format&fit=crop&q=80&w=800',
+    description: 'High-solubility dyeing salt facilitating even color fixing in fabric processing.',
+    image: 'https://images.unsplash.com/photo-1604176354204-9268737828e4?auto=format&fit=crop&q=80&w=1000',
   }
 ];
 

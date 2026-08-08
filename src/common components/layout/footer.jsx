@@ -132,12 +132,20 @@ const Footer = () => {
                   <p className="text-white/80 font-medium tracking-wide group-hover:text-white transition-colors text-[15px]">+91-96874 24747</p>
                 </div>
 
-                {/* Email */}
-                <a href="mailto:support@pdjtrade.com" className="flex items-center gap-4 group">
+                {/* Email - Info */}
+                <a href="mailto:info@pdjtradeconnect.com" className="flex items-center gap-4 group">
                   <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0 transition-colors group-hover:border-brand-accent/50 group-hover:bg-white/10">
                     <Mail className="w-4 h-4 text-white/70 group-hover:text-brand-accent transition-colors" />
                   </div>
-                  <p className="text-white/80 font-medium tracking-wide group-hover:text-white transition-colors text-[15px]">support@pdjtrade.com</p>
+                  <p className="text-white/80 font-medium tracking-wide group-hover:text-white transition-colors text-[15px]">info@pdjtradeconnect.com</p>
+                </a>
+
+                {/* Email - Support */}
+                <a href="mailto:support@pdjtradeconnect.com" className="flex items-center gap-4 group">
+                  <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0 transition-colors group-hover:border-brand-accent/50 group-hover:bg-white/10 mt-2">
+                    <Mail className="w-4 h-4 text-white/70 group-hover:text-brand-accent transition-colors" />
+                  </div>
+                  <p className="text-white/80 font-medium tracking-wide group-hover:text-white transition-colors text-[15px] mt-2">support@pdjtradeconnect.com</p>
                 </a>
 
                 {/* Address */}

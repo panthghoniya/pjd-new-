@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowUpRight } from 'lucide-react';
 import useScrollAnimation from '../../hooks/useScrollAnimation';
+import serviceOverview3 from '../../assets/HomePage/Service Overview(1).png';
 
 const Mmm = () => {
   const ref = useScrollAnimation();
@@ -77,8 +78,8 @@ const Mmm = () => {
 
             <div data-animate="fade-right" data-delay="500" className="col-span-1 row-span-1 lg:col-span-1 lg:row-span-1 overflow-hidden rounded-[2rem] shadow-lg group hover-lift">
               <img
-                src="https://i.pinimg.com/736x/f7/74/33/f77433b84d4273a3cbe393f57117edc1.jpg"
-                alt="Salt Harvesting"
+                src={serviceOverview3}
+                alt="Service Overview 3"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
             </div>

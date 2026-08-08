@@ -3,6 +3,20 @@ import { Settings, Package, Droplet, Scale, X, CheckCircle2, ChevronLeft, Chevro
 import useScrollAnimation from '../../hooks/useScrollAnimation';
 import { logo } from '../../assets/images';
 
+// Import local images for Bulk Packaging
+import bulkPack1 from '../../assets/HomePage/Bulk Packaging.jpeg';
+import bulkPack2 from '../../assets/HomePage/Bulk Packaging  (1).jpeg';
+import bulkPack3 from '../../assets/HomePage/Bulk Packaging (2).jpeg';
+import bulkPack4 from '../../assets/HomePage/Bulk Packaging .jpeg';
+import bulkPack5 from '../../assets/HomePage/Bulk Packaaging.jpeg';
+
+// Import local images for Retail Packaging and Custom Branding
+import retailPack1 from '../../assets/HomePage/Retail Packaging .png';
+import retailPack2 from '../../assets/HomePage/Retail Packaging(1kg).png';
+import retailPack3 from '../../assets/HomePage/Retail Packagingg.png';
+import retailPack4 from '../../assets/HomePage/Reatil Packaging(bottle).jpg';
+import customBrandingImg from '../../assets/HomePage/custonm.png';
+
 // ============================================================================
 // CONFIGURATION: IMAGE & LOGO PATHS
 // ============================================================================
@@ -13,27 +27,50 @@ import { logo } from '../../assets/images';
 const RETAIL_PACK_OPTIONS = [
   {
     name: '500 Gram Packs',
-    image: 'https://i1-e.pinimg.com/736x/1e/b0/1c/1eb01cf1404c1906e55393cc84c60cdb.jpg',
+    image: retailPack1,
     desc: 'Premium 500g pouch packaging with high-barrier protection to prevent moisture.'
   },
   {
     name: '1 KG Packs',
-    image: 'https://i.pinimg.com/736x/b2/1c/26/b21c26b1ee2055c96b9fa1953f059353.jpg',
+    image: retailPack2,
     desc: 'Standard 1 Kg stand-up pouches and pillow bags, ideal for supermarkets and retail stores.'
   },
   {
     name: 'Standard Canister Packing',
-    image: 'https://i.pinimg.com/736x/78/2d/44/782d443c724829b1145ae1ef6a3c0d59.jpg',
+    image: retailPack3,
     desc: 'Elegant tabletop salt shaker canisters with easy-to-use rotary sifting caps.'
   },
   {
     name: 'Plastic Bottle Packing',
-    image: 'https://i.pinimg.com/736x/35/68/93/35689389e8b2fc7ae9aec8d4cfbe02f8.jpg',
+    image: retailPack4,
     desc: 'Durable PET bottles and grinders with secure seals, perfect for premium table salt grades.'
   }
 ];
-const WOVEN_BAGS_IMG = "https://i1-e.pinimg.com/736x/02/45/66/02456640978067f5aceeb150f9fad56d.jpg";
-const FIBC_JUMBO_IMG = "https://i1-e.pinimg.com/736x/51/6f/32/516f325e5b7b15ebf4c4148f0d24c329.jpg";
+
+const BULK_PACK_OPTIONS = [
+  {
+    name: 'Bulk Pack Option 1',
+    image: bulkPack1,
+  },
+  {
+    name: 'Bulk Pack Option 2',
+    image: bulkPack2,
+  },
+  {
+    name: 'Bulk Pack Option 3',
+    image: bulkPack3,
+  },
+  {
+    name: 'Bulk Pack Option 4',
+    image: bulkPack4,
+  },
+  {
+    name: 'Bulk Pack Option 5',
+    image: bulkPack5,
+  }
+];
+
+const FIBC_JUMBO_IMG = customBrandingImg;
 
 // Add your logo image path here to replace the box icon in the OEM section
 const OEM_LOGO_IMG = logo; // Example: "https://your-domain.com/logo.png"
@@ -50,13 +87,20 @@ const Customization = () => {
   const ref = useScrollAnimation();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [activeRetailIndex, setActiveRetailIndex] = useState(0);
+  const [activeBulkIndex, setActiveBulkIndex] = useState(0);
 
-  // Auto-play retail packaging slides every 5 seconds
+  // Auto-play retail and bulk packaging slides every 5 seconds
   useEffect(() => {
-    const interval = setInterval(() => {
+    const retailInterval = setInterval(() => {
       setActiveRetailIndex((prev) => (prev + 1) % RETAIL_PACK_OPTIONS.length);
     }, 5000);
-    return () => clearInterval(interval);
+    const bulkInterval = setInterval(() => {
+      setActiveBulkIndex((prev) => (prev + 1) % BULK_PACK_OPTIONS.length);
+    }, 5000);
+    return () => {
+      clearInterval(retailInterval);
+      clearInterval(bulkInterval);
+    };
   }, []);
 
   // Prevent background scrolling when modal is open
@@ -244,14 +288,63 @@ const Customization = () => {
                   {/* Packaging Types Grid - Image Top, Details Below */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-8 md:mb-10">
 
-                    {/* Pack 1 - Bulk Packaging */}
+                    {/* Pack 1 - Bulk Packaging Carousel */}
                     <div className="group flex flex-col bg-brand-black/40 rounded-[2rem] overflow-hidden border border-white/10 hover:border-brand-accent/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-brand-accent/20">
 
-                      {/* Image */}
-                      <div className="w-full h-48 sm:h-56 md:h-72 relative overflow-hidden bg-white/5">
-                        <img src={WOVEN_BAGS_IMG} alt="Bulk Packaging" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-                        <div className="absolute top-3 right-3 md:top-4 md:right-4 bg-brand-black/60 backdrop-blur-md px-3 py-1 md:px-4 md:py-1.5 rounded-full border border-white/10">
-                          <span className="text-brand-accent text-[10px] md:text-xs font-bold uppercase tracking-wider">Bulk Packaging</span>
+                      {/* Image Container with Carousel Controls */}
+                      <div className="w-full h-64 sm:h-72 md:h-96 relative overflow-hidden bg-white group/carousel">
+                        {/* Slide Images Container */}
+                        <div className="w-full h-full relative">
+                          {BULK_PACK_OPTIONS.map((item, idx) => (
+                            <div
+                              key={item.name}
+                              className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${idx === activeBulkIndex ? 'opacity-100 z-10' : 'opacity-0 z-0'
+                                }`}
+                            >
+                              <img
+                                src={item.image}
+                                alt={item.name}
+                                className="w-full h-full object-cover"
+                              />
+                            </div>
+                          ))}
+                        </div>
+
+                        {/* Top Tag Removed as requested */}
+
+                        {/* Navigation Arrows */}
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setActiveBulkIndex((prev) => (prev === 0 ? BULK_PACK_OPTIONS.length - 1 : prev - 1));
+                          }}
+                          className="absolute left-3 top-1/2 -translate-y-1/2 bg-brand-black/60 hover:bg-brand-accent text-white p-2 rounded-full border border-white/10 transition-colors z-20 opacity-0 group-hover/carousel:opacity-100"
+                        >
+                          <ChevronLeft className="w-4 h-4 md:w-5 md:h-5" />
+                        </button>
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setActiveBulkIndex((prev) => (prev + 1) % BULK_PACK_OPTIONS.length);
+                          }}
+                          className="absolute right-3 top-1/2 -translate-y-1/2 bg-brand-black/60 hover:bg-brand-accent text-white p-2 rounded-full border border-white/10 transition-colors z-20 opacity-0 group-hover/carousel:opacity-100"
+                        >
+                          <ChevronRight className="w-4 h-4 md:w-5 md:h-5" />
+                        </button>
+
+                        {/* Indicator Dots */}
+                        <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-20">
+                          {BULK_PACK_OPTIONS.map((_, idx) => (
+                            <button
+                              key={idx}
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                setActiveBulkIndex(idx);
+                              }}
+                              className={`w-1.5 h-1.5 md:w-2 md:h-2 rounded-full transition-all duration-300 ${idx === activeBulkIndex ? 'bg-brand-accent w-4 md:w-5' : 'bg-white/40 hover:bg-white/60'
+                                }`}
+                            />
+                          ))}
                         </div>
                       </div>
 
@@ -260,13 +353,24 @@ const Customization = () => {
                         <h3 className="font-heading font-bold text-white text-2xl tracking-wide mb-3 group-hover:text-brand-accent transition-colors">Bulk Packaging</h3>
                         <div className="min-h-[80px] lg:min-h-[96px] mb-4">
                           <p className="text-white/70 text-sm leading-relaxed text-justify">
-                           Flexible bulk packaging solutions tailored to industrial and export requirements with multiple packing options available.
+                            Flexible bulk packaging solutions tailored to industrial and export requirements with multiple packing options available.
                           </p>
                         </div>
                         <ul className="space-y-1.5 border-t border-white/10 pt-4">
-                          {['20 KG Bags', '25 KG Bags', '40 KG Bags', '50 KG Bags', '1.4 MT Jumbo Bags'].map(item => (
-                            <li key={item} className="flex items-center gap-2 text-white/80 text-xs md:text-sm font-semibold">
-                              <span className="w-1.5 h-1.5 rounded-full bg-brand-accent"></span>
+                          {['20 KG Bags', '25 KG Bags', '40 KG Bags', '50 KG Bags', '1.4 MT Jumbo Bags'].map((item, idx) => (
+                            <li
+                              key={item}
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                if (idx < BULK_PACK_OPTIONS.length) setActiveBulkIndex(idx);
+                              }}
+                              className={`flex items-center gap-2 text-xs md:text-sm font-semibold cursor-pointer transition-all duration-300 ${idx === activeBulkIndex && idx < BULK_PACK_OPTIONS.length
+                                ? 'text-brand-accent translate-x-1.5 scale-105'
+                                : 'text-white/80 hover:text-white hover:translate-x-1'
+                                }`}
+                            >
+                              <span className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${idx === activeBulkIndex && idx < BULK_PACK_OPTIONS.length ? 'bg-brand-accent scale-125' : 'bg-white/40'
+                                }`}></span>
                               {item}
                             </li>
                           ))}
@@ -278,7 +382,7 @@ const Customization = () => {
                     <div className="group flex flex-col bg-brand-black/40 rounded-[2rem] overflow-hidden border border-white/10 hover:border-brand-accent/50 transition-all duration-500 hover:shadow-2xl hover:shadow-brand-accent/20">
 
                       {/* Image Container with Carousel Controls */}
-                      <div className="w-full h-48 sm:h-56 md:h-72 relative overflow-hidden bg-white/5 group/carousel">
+                      <div className="w-full h-64 sm:h-72 md:h-96 relative overflow-hidden bg-white group/carousel">
                         {/* Slide Images Container */}
                         <div className="w-full h-full relative">
                           {RETAIL_PACK_OPTIONS.map((item, idx) => (
@@ -296,10 +400,7 @@ const Customization = () => {
                           ))}
                         </div>
 
-                        {/* Top Tag */}
-                        <div className="absolute top-3 right-3 md:top-4 md:right-4 bg-brand-black/60 backdrop-blur-md px-3 py-1 md:px-4 md:py-1.5 rounded-full border border-white/10 z-20">
-                          <span className="text-brand-accent text-[10px] md:text-xs font-bold uppercase tracking-wider">Retail Packaging</span>
-                        </div>
+                        {/* Top Tag Removed as requested */}
 
                         {/* Navigation Arrows */}
                         <button
@@ -342,7 +443,7 @@ const Customization = () => {
                         <h3 className="font-heading font-bold text-white text-2xl tracking-wide mb-3 group-hover:text-brand-accent transition-colors">Retail Packaging</h3>
                         <div className="min-h-[80px] lg:min-h-[96px] mb-4">
                           <p className="text-white/70 text-sm leading-relaxed text-justify">
-                     Consumer-ready retail packaging designed for domestic and international markets with attractive, secure packaging options.
+                            Consumer-ready retail packaging designed for domestic and international markets with attractive, secure packaging options.
                           </p>
                         </div>
 
@@ -372,11 +473,9 @@ const Customization = () => {
                     <div className="group flex flex-col bg-brand-black/40 rounded-[2rem] overflow-hidden border border-white/10 hover:border-brand-accent/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-brand-accent/20">
 
                       {/* Image */}
-                      <div className="w-full h-48 sm:h-56 md:h-72 relative overflow-hidden bg-white/5">
-                        <img src={FIBC_JUMBO_IMG} alt="Custom Branding" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-                        <div className="absolute top-3 right-3 md:top-4 md:right-4 bg-brand-black/60 backdrop-blur-md px-3 py-1 md:px-4 md:py-1.5 rounded-full border border-white/10">
-                          <span className="text-brand-accent text-[10px] md:text-xs font-bold uppercase tracking-wider">Custom Branding</span>
-                        </div>
+                      <div className="w-full h-64 sm:h-72 md:h-96 relative overflow-hidden bg-white">
+                        <img src={customBrandingImg} alt="Custom Branding" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                        {/* Top Tag Removed as requested */}
                       </div>
 
                       {/* Details Below Image */}
@@ -384,7 +483,7 @@ const Customization = () => {
                         <h3 className="font-heading font-bold text-white text-2xl tracking-wide mb-3 group-hover:text-brand-accent transition-colors">Custom Branding</h3>
                         <div className="min-h-[80px] lg:min-h-[96px] mb-4">
                           <p className="text-white/70 text-sm leading-relaxed text-justify">
-                          Private label and custom branding solutions designed to strengthen your brand identity in global markets.
+                            Private label and custom branding solutions designed to strengthen your brand identity in global markets.
                           </p>
                         </div>
                         <ul className="space-y-1.5 border-t border-white/10 pt-4">

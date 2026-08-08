@@ -123,7 +123,7 @@ const TermsConditions = () => {
               </p>
               <div className="mt-6 bg-brand-background/50 p-6 rounded-xl border border-brand-dark/5">
                 <p className="text-brand-dark/80 text-base md:text-lg mb-2"><strong>Company Name:</strong> PDJ Trade Connect</p>
-                <p className="text-brand-dark/80 text-base md:text-lg mb-2"><strong>Email Address:</strong> support@pdjtrade.com</p>
+                <p className="text-brand-dark/80 text-base md:text-lg mb-2"><strong>Email Address:</strong> info@pdjtradeconnect.com, support@pdjtradeconnect.com</p>
                 <p className="text-brand-dark/80 text-base md:text-lg mb-2"><strong>Phone Number:</strong> +91 9687474747</p>
                 <p className="text-brand-dark/80 text-base md:text-lg"><strong>Postal Address:</strong> Plot NO. 129, Sector 12B, Gandhidham, Kachchh, Gujarat 370201, India</p>
               </div>

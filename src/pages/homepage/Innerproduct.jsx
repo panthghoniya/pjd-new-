@@ -36,12 +36,22 @@ const Innerproduct = () => {
   };
 
   const [activeImage, setActiveImage] = useState(product.images[0]);
-  const [selectedWeight, setSelectedWeight] = useState("1 kg");
   const [customWeight, setCustomWeight] = useState("");
   const [activeTab, setActiveTab] = useState("Overview");
   const [copied, setCopied] = useState(false);
 
-  const weights = ["500 g", "1 kg", "5 kg", "25 kg", "Custom Bulk"];
+  let weights = [];
+  if (product.category === "Food Grade Salt") {
+    weights = ["500 gram", "1kg", "20kg", "25kg", "40kg", "50kg", "1.4MT Jumbo Bag", "Custom Bulk"];
+  } else if (product.category === "Industrial Grade Salt") {
+    weights = ["20kg", "25kg", "40kg", "50kg", "1.4MT Jumbo Bag", "Custom Bulk"];
+  } else if (product.category === "Tablet Salt") {
+    weights = ["25kg", "Custom Bulk"];
+  } else {
+    weights = ["500 g", "1 kg", "25 kg", "Custom Bulk"];
+  }
+
+  const [selectedWeight, setSelectedWeight] = useState(weights[0]);
 
   const handleInquiry = () => {
     const finalWeight = selectedWeight === "Custom Bulk"
@@ -73,7 +83,20 @@ const Innerproduct = () => {
     window.scrollTo(0, 0);
     setActiveImage(product.images[0]);
     setActiveTab("Overview");
-  }, [id]);
+    
+    // Also reset weight when navigating between products to ensure valid selection
+    let initialWeights = [];
+    if (product.category === "Food Grade Salt") {
+      initialWeights = ["500 gram", "1kg", "20kg", "25kg", "40kg", "50kg", "1.4MT Jumbo Bag", "Custom Bulk"];
+    } else if (product.category === "Industrial Grade Salt") {
+      initialWeights = ["20kg", "25kg", "40kg", "50kg", "1.4MT Jumbo Bag", "Custom Bulk"];
+    } else if (product.category === "Tablet Salt") {
+      initialWeights = ["25kg", "Custom Bulk"];
+    } else {
+      initialWeights = ["500 g", "1 kg", "25 kg", "Custom Bulk"];
+    }
+    setSelectedWeight(initialWeights[0]);
+  }, [id, product.category]);
 
   // Parse packaging options string into array
   const parsePackagingOptions = (str) => {

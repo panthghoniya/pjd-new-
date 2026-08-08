@@ -22,11 +22,11 @@ const ContactInfoBanner = () => {
                 <Mail className="w-8 h-8 text-brand-accent relative z-10" strokeWidth={1.5} />
               </div>
               <h3 className="text-xl font-bold text-white mb-6 tracking-wide uppercase">Email Us</h3>
-              <a href="mailto:support@pdjtrade.com" className="text-white/80 hover:text-brand-accent transition-colors font-medium text-[15px] mb-3 relative inline-block after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[1px] after:bg-brand-accent hover:after:w-full after:transition-all after:duration-300">
-                support@pdjtrade.com
+              <a href="mailto:support@pdjtradeconnect.com" className="text-white/80 hover:text-brand-accent transition-colors font-medium text-[15px] mb-3 relative inline-block after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[1px] after:bg-brand-accent hover:after:w-full after:transition-all after:duration-300">
+                support@pdjtradeconnect.com
               </a>
-              <a href="mailto:info@pdjtrade.com" className="text-white/50 hover:text-brand-accent transition-colors font-medium text-[15px] relative inline-block after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[1px] after:bg-brand-accent hover:after:w-full after:transition-all after:duration-300">
-                info@pdjtrade.com
+              <a href="mailto:info@pdjtradeconnect.com" className="text-white/50 hover:text-brand-accent transition-colors font-medium text-[15px] relative inline-block after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[1px] after:bg-brand-accent hover:after:w-full after:transition-all after:duration-300">
+                info@pdjtradeconnect.com
               </a>
             </div>
           </div> */}
@@ -88,9 +88,12 @@ const ContactInfoBanner = () => {
             <p className="text-gray-500 group-hover:text-white/90 transition-colors duration-300 text-[15px] mb-2 font-medium">
               +91 96874 74747
             </p>
-            <p className="text-gray-500 group-hover:text-white/90 transition-colors duration-300 text-[15px] font-medium">
-              info@pdjtrade.com
-            </p>
+            <a href="mailto:info@pdjtradeconnect.com" className="text-gray-500 group-hover:text-white/90 transition-colors duration-300 text-[15px] mb-2 font-medium block">
+              info@pdjtradeconnect.com
+            </a>
+            <a href="mailto:support@pdjtradeconnect.com" className="text-gray-500 group-hover:text-white/90 transition-colors duration-300 text-[15px] font-medium block">
+              support@pdjtradeconnect.com
+            </a>
           </div>
 
           {/* Visit Us Card */}

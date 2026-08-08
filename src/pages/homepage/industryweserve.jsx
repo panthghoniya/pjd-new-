@@ -2,12 +2,18 @@ import React, { useRef, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import useScrollAnimation from '../../hooks/useScrollAnimation';
 
+import chemImg from '../../assets/HomePage/Chemical Industry.png';
+import textileImg from '../../assets/HomePage/Textile and Dyeing.png';
+import foodImg from '../../assets/HomePage/Food Industry .jpg';
+import waterImg from '../../assets/HomePage/Water treatment .jpg';
+import animalImg from '../../assets/HomePage/Animal Feed.jpg';
+
 const industriesData = [
   {
     id: '01',
     name: 'Food Industry',
     description: 'High-grade, pure salt solutions for food preservation, seasoning, and processing compliance.',
-    image: 'https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&q=80&w=1000',
+    image: foodImg,
   },
   {
     id: '02',
@@ -19,31 +25,25 @@ const industriesData = [
     id: '03',
     name: 'Water Treatment',
     description: 'Coarse salt crystals optimized for water softening systems and industrial filtration.',
-    image: 'https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&q=80&w=1000',
+    image: waterImg,
   },
   {
     id: '04',
     name: 'Chemical Industry',
     description: 'Essential raw materials for chlor-alkali production and chemical synthesis.',
-    image: 'https://images.unsplash.com/photo-1581093588401-fbb62a02f120?auto=format&fit=crop&q=80&w=1000',
+    image: chemImg,
   },
   {
     id: '05',
     name: 'Animal Feed',
     description: 'Mineral-fortified salt grades critical for livestock health and feed manufacturing.',
-    image: 'https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&q=80&w=1000',
-  },
-  {
-    id: '06',
-    name: 'Fishery & Preservation',
-    description: 'Specialized curing and preserving salt for the marine food sector and cold storage.',
-    image: 'https://images.unsplash.com/photo-1534482421-64566f976cfa?auto=format&fit=crop&q=80&w=1000',
+    image: animalImg,
   },
   {
     id: '07',
     name: 'Textile & Dyeing',
     description: 'High-solubility dyeing salt facilitating even color fixing in fabric processing.',
-    image: 'https://images.unsplash.com/photo-1604176354204-9268737828e4?auto=format&fit=crop&q=80&w=1000',
+    image: textileImg,
   }
 ];
 

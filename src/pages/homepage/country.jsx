@@ -4,14 +4,29 @@ import useScrollAnimation from '../../hooks/useScrollAnimation';
 // Uses flagcdn.com — free, no API key, always works
 // Format: https://flagcdn.com/w80/ae.png  (ae = ISO 2-letter code, lowercase)
 const countriesData = [
-  { id: 1,  name: 'Vietnam',      code: 'vn', bg: 'bg-white',      text: 'text-brand-dark' },
-  { id: 2,  name: 'Malaysia',     code: 'my', bg: 'bg-white',      text: 'text-brand-accent' },
-  { id: 3,  name: 'UAE',          code: 'ae', bg: 'bg-white',      text: 'text-brand-dark' },
-  { id: 4,  name: 'Mozambique',   code: 'mz', bg: 'bg-white',      text: 'text-brand-accent' },
-  { id: 5,  name: 'Malawi',       code: 'mw', bg: 'bg-white',      text: 'text-brand-dark' },
-  { id: 7,  name: 'Qatar',        code: 'qa', bg: 'bg-white',      text: 'text-brand-accent' },
-  { id: 6,  name: 'Sierra Leone', code: 'sl', bg: 'bg-white',      text: 'text-brand-dark' },
-  { id: 8,  name: 'Bahrain',      code: 'bh', bg: 'bg-white',      text: 'text-brand-dark' },
+  { id: 1, name: 'Malaysia', code: 'my', bg: 'bg-white', text: 'text-brand-dark' },
+  { id: 2, name: 'Vietnam', code: 'vn', bg: 'bg-white', text: 'text-brand-accent' },
+  { id: 3, name: 'Indonesia', code: 'id', bg: 'bg-white', text: 'text-brand-dark' },
+  { id: 4, name: 'Thailand', code: 'th', bg: 'bg-white', text: 'text-brand-accent' },
+  { id: 5, name: 'Philippines', code: 'ph', bg: 'bg-white', text: 'text-brand-dark' },
+  { id: 6, name: 'Singapore', code: 'sg', bg: 'bg-white', text: 'text-brand-accent' },
+  { id: 7, name: 'UAE', code: 'ae', bg: 'bg-white', text: 'text-brand-dark' },
+  { id: 8, name: 'Oman', code: 'om', bg: 'bg-white', text: 'text-brand-accent' },
+  { id: 9, name: 'Saudi Arabia', code: 'sa', bg: 'bg-white', text: 'text-brand-dark' },
+  { id: 10, name: 'Qatar', code: 'qa', bg: 'bg-white', text: 'text-brand-accent' },
+  { id: 11, name: 'Kuwait', code: 'kw', bg: 'bg-white', text: 'text-brand-dark' },
+  { id: 12, name: 'Bahrain', code: 'bh', bg: 'bg-white', text: 'text-brand-accent' },
+  { id: 13, name: 'Kenya', code: 'ke', bg: 'bg-white', text: 'text-brand-dark' },
+  { id: 14, name: 'Tanzania', code: 'tz', bg: 'bg-white', text: 'text-brand-accent' },
+  { id: 15, name: 'South Africa', code: 'za', bg: 'bg-white', text: 'text-brand-dark' },
+  { id: 16, name: 'Ghana', code: 'gh', bg: 'bg-white', text: 'text-brand-accent' },
+  { id: 17, name: 'Mozambique', code: 'mz', bg: 'bg-white', text: 'text-brand-dark' },
+  { id: 18, name: 'Senegal', code: 'sn', bg: 'bg-white', text: 'text-brand-accent' },
+  { id: 19, name: 'Madagascar', code: 'mg', bg: 'bg-white', text: 'text-brand-dark' },
+  { id: 20, name: 'Mauritius', code: 'mu', bg: 'bg-white', text: 'text-brand-accent' },
+  { id: 21, name: 'Seychelles', code: 'sc', bg: 'bg-white', text: 'text-brand-dark' },
+  { id: 22, name: 'Australia', code: 'au', bg: 'bg-white', text: 'text-brand-accent' },
+  { id: 23, name: 'Fiji', code: 'fj', bg: 'bg-white', text: 'text-brand-dark' },
 ];
 
 // Triple the list for seamless marquee loop
@@ -67,7 +82,7 @@ const LogoSection = () => {
           100% { transform: translateX(-33.3333%); }
         }
         .animate-marquee {
-          animation: marquee 25s linear infinite;
+          animation: marquee 60s linear infinite;
           will-change: transform;
         }
         .group:hover .animate-marquee {

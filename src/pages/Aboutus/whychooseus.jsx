@@ -9,25 +9,29 @@ const ProcessSteps = [
     id: "01",
     title: "HALAL, ISO & FSSAI Certified Company",
     // description: "We source the finest raw salt directly from pristine natural salt pans.",
-    image: certImg
+    image: certImg,
+    imagePosition: "object-center"
   },
   {
     id: "02",
     title: "Strict Quality Testing Before Export",
     // description: "State-of-the-art washing and refining processes ensure maximum purity.",
-    image: testImg
+    image: testImg,
+    imagePosition: "object-left"
   },
   {
     id: "03",
     title: "Proper Handling & Safe Export Packaging",
     // description: "Rigorous testing protocols guarantee compliance with global export standards.",
-    image: packImg
+    image: packImg,
+    imagePosition: "object-center"
   },
   {
     id: "04",
     title: "Located Near Kandla & Mundra Ports for Efficient Export Logistics",
     // description: "Customized packaging and efficient shipping to clients worldwide.",
-    image: portImg
+    image: portImg,
+    imagePosition: "object-center"
   }
 ];
 
@@ -61,7 +65,7 @@ export default function WhyChooseUs() {
                   <img
                     src={step.image}
                     alt={step.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    className={`w-full h-full object-cover ${step.imagePosition || 'object-center'} group-hover:scale-110 transition-transform duration-700`}
                   />
                 </div>
 

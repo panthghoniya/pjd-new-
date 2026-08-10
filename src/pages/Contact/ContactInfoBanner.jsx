@@ -88,6 +88,9 @@ const ContactInfoBanner = () => {
             <p className="text-gray-500 group-hover:text-white/90 transition-colors duration-300 text-[15px] mb-2 font-medium">
               +91 96874 74747
             </p>
+            <p className="text-gray-500 group-hover:text-white/90 transition-colors duration-300 text-[15px] mb-2 font-medium">
+              +91-96874 24747
+            </p>
           </div>
 
           {/* Email Card */}
@@ -114,11 +117,14 @@ const ContactInfoBanner = () => {
             <h3 className="text-sm font-bold text-[#1a365d] group-hover:text-white transition-colors duration-300 tracking-widest uppercase mb-6">
               Visit Us
             </h3>
-            <p className="text-gray-500 group-hover:text-white/90 transition-colors duration-300 text-[15px] mb-2 font-medium">
-              Plot NO. 129, Sector 12B
+            <p className="text-gray-500 group-hover:text-white/90 transition-colors duration-300 text-[15px] mb-1 font-medium">
+              Sector No - 12B, Plot No. 129,
+            </p>
+            <p className="text-gray-500 group-hover:text-white/90 transition-colors duration-300 text-[15px] mb-1 font-medium">
+              Gandhidham, Kachchh,
             </p>
             <p className="text-gray-500 group-hover:text-white/90 transition-colors duration-300 text-[15px] font-medium">
-              Gandhidham, Kachchh, Gujarat
+              Gujarat - 370201, India
             </p>
           </div>
 

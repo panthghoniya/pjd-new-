@@ -72,7 +72,7 @@ const Mentor = () => {
                 <div className="flex justify-center items-center gap-4">
                   <a href="#" className="w-10 h-10 rounded-full border-2 border-[#2D4F44]/10 flex items-center justify-center text-[#2D4F44] hover:bg-[#5BA298] hover:border-[#5BA298] hover:text-white transition-all"><FacebookIcon /></a>
                   <a href="#" className="w-10 h-10 rounded-full border-2 border-[#2D4F44]/10 flex items-center justify-center text-[#2D4F44] hover:bg-[#5BA298] hover:border-[#5BA298] hover:text-white transition-all"><TwitterIcon /></a>
-                  <a href="#" className="w-10 h-10 rounded-full border-2 border-[#2D4F44]/10 flex items-center justify-center text-[#2D4F44] hover:bg-[#5BA298] hover:border-[#5BA298] hover:text-white transition-all"><LinkedinIcon /></a>
+                  <a href="https://linkedin.com/in/YOUR_LINKEDIN_PROFILE" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border-2 border-[#2D4F44]/10 flex items-center justify-center text-[#2D4F44] hover:bg-[#5BA298] hover:border-[#5BA298] hover:text-white transition-all"><LinkedinIcon /></a>
                 </div>
               </div>
             </div>
@@ -80,9 +80,19 @@ const Mentor = () => {
             {/* RIGHT & BOTTOM: Wrapping Biography Text */}
             <div className="w-full lg:w-7/12 text-[#2D4F44]/80 text-[15px] md:text-lg leading-relaxed font-jakarta flex flex-col justify-center">
               
-              <h3 className="text-3xl md:text-4xl lg:text-5xl font-heading font-black text-[#2D4F44] mb-2 leading-tight mt-4 sm:mt-0">
-                Mr. Aayush Jain
-              </h3>
+              <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-2 mt-4 sm:mt-0">
+                <h3 className="text-3xl md:text-4xl lg:text-5xl font-heading font-black text-[#2D4F44] leading-tight">
+                  Mr. Aayush Jain
+                </h3>
+                <a 
+                  href="https://linkedin.com/in/YOUR_LINKEDIN_PROFILE" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="hidden sm:flex items-center gap-2 px-4 py-2 bg-[#F3F6F8] hover:bg-[#EAEFF2] text-[#0A66C2] rounded-full transition-all border border-[#0A66C2]/20 shadow-sm text-sm font-bold"
+                >
+                  <LinkedinIcon /> LinkedIn
+                </a>
+              </div>
               <p className="text-[#5BA298] font-bold tracking-[0.2em] uppercase text-sm mb-5 flex items-center gap-3">
                 Founder & Director 
                 <span className="hidden sm:inline-flex items-center gap-1 text-[#2D4F44]/60 text-xs normal-case tracking-normal">

@@ -134,9 +134,12 @@ const Navbar = () => {
     <>
 
       <nav
-        className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ${isSolid || isMobileMenuOpen
-            ? 'bg-brand-background/95 backdrop-blur-md border-b border-brand-dark/5 shadow-[0_10px_40px_rgba(0,0,0,0.08)] py-3'
-            : 'bg-transparent py-5 md:py-6'
+        className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ${
+          isMobileMenuOpen 
+            ? 'bg-brand-dark backdrop-blur-xl border-b border-white/10 py-3'
+            : isSolid 
+              ? 'bg-brand-background/95 backdrop-blur-md border-b border-brand-dark/5 shadow-[0_10px_40px_rgba(0,0,0,0.08)] py-3'
+              : 'bg-transparent py-5 md:py-6'
           }`}
       >
         <div className="max-w-[110rem] mx-auto px-6 md:px-10 flex justify-between items-center">
@@ -145,6 +148,7 @@ const Navbar = () => {
           <Link 
             to="/"
             onClick={() => {
+              setIsMobileMenuOpen(false);
               if (location.pathname === '/') {
                 window.scrollTo({ top: 0, behavior: 'smooth' });
               }
@@ -153,10 +157,10 @@ const Navbar = () => {
           >
             <img src={logo} alt="PDJ Trade Connect" className="h-[40px] md:h-[48px] lg:h-[55px] xl:h-[65px] w-auto object-contain transition-all duration-300 flex-shrink-0" />
             <div className="flex flex-col justify-center min-w-0">
-              <span className={`font-bold text-[13px] sm:text-base md:text-lg xl:text-xl tracking-tight font-clash transition-colors duration-300 leading-tight truncate ${isSolid || isMobileMenuOpen ? 'text-brand-dark' : 'text-white'}`}>
+              <span className={`font-bold text-[13px] sm:text-base md:text-lg xl:text-xl tracking-tight font-clash transition-colors duration-300 leading-tight truncate ${isMobileMenuOpen ? 'text-white' : (isSolid ? 'text-brand-dark' : 'text-white')}`}>
                 PDJ <span className="tracking-wider"> TRADE</span> CONNECT
               </span>
-              <h5 className={`block text-[8px] sm:text-[10px] md:text-[11px] italic xl:text-xs mt-0.5 transition-colors duration-300 opacity-90 leading-tight truncate font-jakarta font-medium ${isSolid || isMobileMenuOpen ? 'text-[#2D4F44]' : 'text-white'}`}>
+              <h5 className={`block text-[8px] sm:text-[10px] md:text-[11px] italic xl:text-xs mt-0.5 transition-colors duration-300 opacity-90 leading-tight truncate font-jakarta font-medium ${isMobileMenuOpen ? 'text-white/80' : (isSolid ? 'text-[#2D4F44]' : 'text-white')}`}>
                 Connecting Global Market with Quality
               </h5>
             </div>
@@ -243,7 +247,7 @@ const Navbar = () => {
           <div className="lg:hidden flex items-center relative z-50">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className={`p-2 focus:outline-none transition-colors duration-300 ${isSolid || isMobileMenuOpen ? 'text-brand-dark' : 'text-white'}`}
+              className={`p-2 focus:outline-none transition-colors duration-300 ${isMobileMenuOpen ? 'text-white' : (isSolid ? 'text-brand-dark' : 'text-white')}`}
             >
               {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
@@ -253,15 +257,22 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed inset-0 z-[90] bg-brand-background transition-all duration-500 ease-in-out flex flex-col items-center justify-center space-y-8 lg:hidden overflow-hidden ${isMobileMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full pointer-events-none'
-          }`}
+        className={`fixed inset-0 z-[90] bg-brand-dark transition-all duration-700 ease-[cubic-bezier(0.77,0,0.175,1)] flex flex-col justify-between lg:hidden overflow-hidden ${
+          isMobileMenuOpen ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-full pointer-events-none'
+        }`}
       >
-        <div className="flex flex-col gap-6 pt-4">
+        <div className="flex flex-col pt-28 px-8 sm:px-12 gap-0 overflow-y-auto">
           {navLinks.map(({ label, to }, idx) => (
-            <div key={label} className="animate-in fade-in slide-in-from-right-8 duration-500" style={{ animationDelay: `${200 + idx * 100}ms` }}>
+            <div 
+              key={label} 
+              className={`border-b border-white/10 py-5 transition-all duration-700 transform ${
+                isMobileMenuOpen ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'
+              }`} 
+              style={{ transitionDelay: `${150 + idx * 100}ms` }}
+            >
               <Link
                 to={to}
-                className="text-3xl font-clash font-bold text-brand-dark hover:text-brand-accent transition-colors"
+                className="text-3xl sm:text-4xl font-heading font-black text-white hover:text-brand-accent transition-colors flex items-center justify-between group"
                 onClick={() => {
                   setIsMobileMenuOpen(false);
                   if (location.pathname === to) {
@@ -270,17 +281,37 @@ const Navbar = () => {
                 }}
               >
                 {label}
+                <span className="opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 text-brand-accent">
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" /></svg>
+                </span>
               </Link>
             </div>
           ))}
         </div>
-        <Link
-          to="/contact#contact-form"
-          onClick={() => setIsMobileMenuOpen(false)}
-          className="mx-auto mt-auto mb-10 w-fit px-8 py-3 rounded-xl font-bold font-jakarta text-sm bg-brand-accent text-brand-dark hover:bg-brand-dark hover:text-white transition-all duration-300 animate-in fade-in slide-in-from-bottom-8 delay-700"
+
+        {/* Bottom Contact Section */}
+        <div 
+          className={`px-8 sm:px-12 pb-10 pt-6 transition-all duration-1000 transform ${
+            isMobileMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
+          }`}
+          style={{ transitionDelay: '600ms' }}
         >
-          Get in Touch
-        </Link>
+          <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-1.5">
+              <p className="text-white/40 text-[11px] font-bold uppercase tracking-widest">Connect with us</p>
+              <a href="mailto:info@pdjtradeconnect.com" className="text-white/90 font-medium hover:text-brand-accent transition-colors block text-sm">info@pdjtradeconnect.com</a>
+              <a href="tel:+919687474747" className="text-white/90 font-medium hover:text-brand-accent transition-colors block text-sm">+91 96874 74747</a>
+            </div>
+            
+            <Link
+              to="/contact#contact-form"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="mt-2 flex items-center justify-center w-full px-8 py-4 rounded-xl font-bold text-sm bg-brand-accent text-brand-dark hover:bg-white hover:text-brand-dark transition-all duration-300 shadow-[0_4px_14px_rgba(91,162,152,0.4)]"
+            >
+              Get in Touch
+            </Link>
+          </div>
+        </div>
       </div>
     </>
   );

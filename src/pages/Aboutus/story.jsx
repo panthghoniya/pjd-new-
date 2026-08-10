@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { manWithSalt as saltImg } from '../../assets/images';
+import saltImg from '../../assets/HomePage/Modern Refining Process.png';
 
 export default function Story() {
   const starRef = useRef(null);

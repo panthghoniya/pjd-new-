@@ -77,17 +77,27 @@ const ContactInfoBanner = () => {
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           
-          {/* Contact Info Card */}
+          {/* Phone Card */}
           <div className="group bg-white hover:bg-[#1c2a25] rounded-sm p-10 flex flex-col items-center text-center shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-100 hover:border-[#1c2a25] hover:shadow-xl transition-all duration-300">
             <div className="mb-6 transform group-hover:scale-110 transition-transform duration-300">
               <Phone className="w-8 h-8 text-[#1a365d] group-hover:text-white transition-colors duration-300 stroke-1" />
             </div>
             <h3 className="text-sm font-bold text-[#1a365d] group-hover:text-white transition-colors duration-300 tracking-widest uppercase mb-6">
-              Contact Info
+              Call Us
             </h3>
             <p className="text-gray-500 group-hover:text-white/90 transition-colors duration-300 text-[15px] mb-2 font-medium">
               +91 96874 74747
             </p>
+          </div>
+
+          {/* Email Card */}
+          <div className="group bg-white hover:bg-[#1c2a25] rounded-sm p-10 flex flex-col items-center text-center shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-100 hover:border-[#1c2a25] hover:shadow-xl transition-all duration-300">
+            <div className="mb-6 transform group-hover:scale-110 transition-transform duration-300">
+              <Mail className="w-8 h-8 text-[#1a365d] group-hover:text-white transition-colors duration-300 stroke-1" />
+            </div>
+            <h3 className="text-sm font-bold text-[#1a365d] group-hover:text-white transition-colors duration-300 tracking-widest uppercase mb-6">
+              Email Us
+            </h3>
             <a href="mailto:info@pdjtradeconnect.com" className="text-gray-500 group-hover:text-white/90 transition-colors duration-300 text-[15px] mb-2 font-medium block">
               info@pdjtradeconnect.com
             </a>
@@ -109,25 +119,6 @@ const ContactInfoBanner = () => {
             </p>
             <p className="text-gray-500 group-hover:text-white/90 transition-colors duration-300 text-[15px] font-medium">
               Gandhidham, Kachchh, Gujarat
-            </p>
-          </div>
-
-          {/* Working Hours Card */}
-          <div className="group bg-white hover:bg-[#1c2a25] rounded-sm p-10 flex flex-col items-center text-center shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-100 hover:border-[#1c2a25] hover:shadow-xl transition-all duration-300">
-            <div className="mb-6 transform group-hover:scale-110 transition-transform duration-300">
-              <Clock className="w-8 h-8 text-[#1a365d] group-hover:text-white transition-colors duration-300 stroke-1" />
-            </div>
-            <h3 className="text-sm font-bold text-[#1a365d] group-hover:text-white transition-colors duration-300 tracking-widest uppercase mb-6">
-              Working Hours
-            </h3>
-            <p className="text-gray-500 group-hover:text-white/90 transition-colors duration-300 text-[15px] mb-2 font-medium">
-              Monday - Saturday
-            </p>
-            <p className="text-gray-500 group-hover:text-white/90 transition-colors duration-300 text-[15px] mb-2 font-medium">
-              8:30 AM - 6:30 PM
-            </p>
-            <p className="text-gray-500 group-hover:text-white/90 transition-colors duration-300 text-[15px] font-medium">
-              Sunday: Closed
             </p>
           </div>
 

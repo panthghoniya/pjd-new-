@@ -1,30 +1,33 @@
 import React from 'react';
-import { factory as img1, manWithSalt as img2 } from '../../assets/images';
+import certImg from '../../assets/HomePage/Halal ISO and Fssai.png';
+import testImg from '../../assets/HomePage/Strict Quality Testing (About us).png';
+import packImg from '../../assets/HomePage/Safe Packaging .png';
+import portImg from '../../assets/HomePage/Kandla and Mundra Port (About us).png';
 
 const ProcessSteps = [
   {
     id: "01",
     title: "HALAL, ISO & FSSAI Certified Company",
     // description: "We source the finest raw salt directly from pristine natural salt pans.",
-    image: img2
+    image: certImg
   },
   {
     id: "02",
     title: "Strict Quality Testing Before Export",
     // description: "State-of-the-art washing and refining processes ensure maximum purity.",
-    image: img1
+    image: testImg
   },
   {
     id: "03",
     title: "Proper Handling & Safe Export Packaging",
     // description: "Rigorous testing protocols guarantee compliance with global export standards.",
-    image: img2
+    image: packImg
   },
   {
     id: "04",
     title: "Located Near Kandla & Mundra Ports for Efficient Export Logistics",
     // description: "Customized packaging and efficient shipping to clients worldwide.",
-    image: img1
+    image: portImg
   }
 ];
 

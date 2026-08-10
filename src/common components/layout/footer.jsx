@@ -61,9 +61,6 @@ const Footer = () => {
                   <a href="#" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/70 hover:bg-brand-accent hover:text-white hover:border-brand-accent hover:-translate-y-1 transition-all duration-300 shadow-lg">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-[18px] h-[18px]"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
                   </a>
-                  <a href="#" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/70 hover:bg-brand-accent hover:text-white hover:border-brand-accent hover:-translate-y-1 transition-all duration-300 shadow-lg">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-[18px] h-[18px]"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33 2.78 2.78 0 0 0 1.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
-                  </a>
                 </div>
               </div>
             </div>
@@ -114,7 +111,7 @@ const Footer = () => {
             <div data-animate="fade-left" data-delay="300" className="lg:col-span-3 lg:pl-8 lg:pt-0">
               <h3 className="text-sm font-bold mb-8 text-brand-accent tracking-[0.2em] uppercase">Connect With Us</h3>
 
-              <div className="flex flex-col gap-5 mb-8">
+              <div className="flex flex-col gap-4 mb-8">
 
                 {/* Phone 1 */}
                 <div className="flex items-center gap-4 group cursor-pointer">
@@ -142,10 +139,10 @@ const Footer = () => {
 
                 {/* Email - Support */}
                 <a href="mailto:support@pdjtradeconnect.com" className="flex items-center gap-4 group">
-                  <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0 transition-colors group-hover:border-brand-accent/50 group-hover:bg-white/10 mt-2">
+                  <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0 transition-colors group-hover:border-brand-accent/50 group-hover:bg-white/10">
                     <Mail className="w-4 h-4 text-white/70 group-hover:text-brand-accent transition-colors" />
                   </div>
-                  <p className="text-white/80 font-medium tracking-wide group-hover:text-white transition-colors text-[15px] mt-2">support@pdjtradeconnect.com</p>
+                  <p className="text-white/80 font-medium tracking-wide group-hover:text-white transition-colors text-[15px]">support@pdjtradeconnect.com</p>
                 </a>
 
                 {/* Address */}

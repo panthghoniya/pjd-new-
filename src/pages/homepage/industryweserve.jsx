@@ -5,8 +5,9 @@ import useScrollAnimation from '../../hooks/useScrollAnimation';
 import chemImg from '../../assets/HomePage/Chemical Industry.png';
 import textileImg from '../../assets/HomePage/Textile and Dyeing.png';
 import foodImg from '../../assets/HomePage/Food Industry .jpg';
-import waterImg from '../../assets/HomePage/Water treatment .jpg';
+import waterImg from '../../assets/HomePage/Water treatment.png';
 import animalImg from '../../assets/HomePage/Animal Feed.jpg';
+import pharmaImg from '../../assets/HomePage/Pharma.png';
 
 const industriesData = [
   {
@@ -19,7 +20,7 @@ const industriesData = [
     id: '02',
     name: 'Pharmaceutical',
     description: 'Ultra-pure grade sodium chloride manufactured under strict standards for medical use.',
-    image: 'https://images.unsplash.com/photo-1532187643603-ba119ca4109e?auto=format&fit=crop&q=80&w=1000',
+    image: pharmaImg,
   },
   {
     id: '03',

@@ -30,16 +30,19 @@ const CanvasImage = ({ src, containerClassName = "", canvasClassName = "" }) => 
 };
 
 // Dynamically import all images from the gallery folder
-const imageModules = import.meta.glob('../../assets/gallery/*.{png,jpg,jpeg}', { eager: true, import: 'default' });
-let photos = Object.values(imageModules).map((src, index) => {
-  const filename = src.split('/').pop().toLowerCase();
+const imageModules = import.meta.glob('../../assets/gallery/*.{png,jpg,jpeg,JPG,PNG,JPEG}', { eager: true, import: 'default' });
+
+// Extract original filenames using Object.keys() so Vercel's hashing doesn't break our filters
+let photos = Object.keys(imageModules).map((key, index) => {
+  const src = imageModules[key];
+  const filename = key.split('/').pop().toLowerCase();
   return {
     id: index + 1,
     name: `Gallery Image ${index + 1}`,
     image: src,
     filename
   };
-}).filter(p => decodeURIComponent(p.filename) !== 'custom branding .jpeg');
+}).filter(p => !decodeURIComponent(p.filename).includes('custom branding'));
 
 // Sort alphabetically to guarantee identical order on Windows (Local) and Linux (Vercel)
 photos.sort((a, b) => a.filename.localeCompare(b.filename));

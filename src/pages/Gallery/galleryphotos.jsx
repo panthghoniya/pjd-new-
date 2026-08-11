@@ -41,6 +41,9 @@ let photos = Object.values(imageModules).map((src, index) => {
   };
 }).filter(p => decodeURIComponent(p.filename) !== 'custom branding .jpeg');
 
+// Sort alphabetically to guarantee identical order on Windows (Local) and Linux (Vercel)
+photos.sort((a, b) => a.filename.localeCompare(b.filename));
+
 // Find exactly the blue factory image and the salt hand image
 const factoryIdx = photos.findIndex(p => decodeURIComponent(p.filename) === 'gallery.png');
 const saltIdx = photos.findIndex(p => decodeURIComponent(p.filename) === 'gallery2.jpeg');

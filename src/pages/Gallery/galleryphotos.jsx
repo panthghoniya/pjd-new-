@@ -52,7 +52,11 @@ if (factoryIdx !== -1 && saltIdx !== -1) {
   photos[saltIdx] = temp;
 }
 
-
+// Move the first image (which is currently the logo) to the very end of the gallery
+if (photos.length > 0) {
+  const firstItem = photos.shift();
+  photos.push(firstItem);
+}
 
 const GalleryPhotos = () => {
   const [selectedImg, setSelectedImg] = useState(null);

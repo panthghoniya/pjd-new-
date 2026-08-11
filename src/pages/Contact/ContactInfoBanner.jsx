@@ -115,7 +115,7 @@ const ContactInfoBanner = () => {
               <MapPin className="w-8 h-8 text-[#1a365d] group-hover:text-white transition-colors duration-300 stroke-1" />
             </div>
             <h3 className="text-sm font-bold text-[#1a365d] group-hover:text-white transition-colors duration-300 tracking-widest uppercase mb-6">
-              Visit Us
+              Head Office
             </h3>
             <p className="text-gray-500 group-hover:text-white/90 transition-colors duration-300 text-[15px] mb-1 font-medium">
               Sector No - 12B, Plot No. 129,

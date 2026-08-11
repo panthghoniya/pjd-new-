@@ -80,7 +80,11 @@ const Footer = () => {
                   { label: 'Contact Us', to: '/contact' }
                 ].map((link) => (
                   <li key={link.label}>
-                    <Link to={link.to} className="text-white/60 hover:text-white hover:translate-x-1 inline-block transition-all duration-300 font-light text-lg">
+                    <Link 
+                      to={link.to} 
+                      onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                      className="text-white/60 hover:text-white hover:translate-x-1 inline-block transition-all duration-300 font-light text-lg"
+                    >
                       {link.label}
                     </Link>
                   </li>
@@ -99,7 +103,15 @@ const Footer = () => {
                   { label: 'Support', to: '/contact' }
                 ].map((link) => (
                   <li key={link.label}>
-                    <Link to={link.to} className="text-white/60 hover:text-white hover:translate-x-1 inline-block transition-all duration-300 font-light text-lg">
+                    <Link 
+                      to={link.to} 
+                      onClick={() => {
+                        if (!link.to.includes('#')) {
+                          window.scrollTo({ top: 0, behavior: 'smooth' });
+                        }
+                      }}
+                      className="text-white/60 hover:text-white hover:translate-x-1 inline-block transition-all duration-300 font-light text-lg"
+                    >
                       {link.label}
                     </Link>
                   </li>

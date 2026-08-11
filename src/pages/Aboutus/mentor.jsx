@@ -101,10 +101,10 @@ const Mentor = () => {
               </p>
 
               {/* Highlight Quote */}
-              <div className="relative pl-6 md:pl-8 border-l-4 border-[#5BA298] py-2 mb-6 bg-[#5BA298]/[0.02]">
-                <Quote className="absolute -left-4 -top-3 w-8 h-8 text-[#5BA298]/20 rotate-180" />
+              <div className="flex items-start gap-4 py-4 px-5 md:px-6 mb-6 bg-[#5BA298]/[0.03] border-l-4 border-[#5BA298] rounded-r-lg">
+                <Quote className="w-8 h-8 md:w-10 md:h-10 text-[#5BA298]/50 flex-shrink-0 rotate-180 -mt-1.5" />
                 <p className="font-medium text-xl md:text-2xl text-[#2D4F44] leading-snug font-heading italic">
-                  "Every great enterprise begins with a story, and ours begins in the salt-rich landscape of Kutch, Gujarat."
+                  "Every great enterprise begins with a story, and ours begins in the salt-rich landscape of Kutch , Gujarat."
                 </p>
               </div>
 

@@ -39,7 +39,7 @@ export default function Story() {
 
             <div className="flex flex-col gap-6 text-[#2D4F44]/80 font-medium leading-relaxed text-sm md:text-base">
               <p>
-                Founded with a vision to deliver high-quality Indian salt to global markets, PDJ Trade Connect has grown into a trusted exporter of premium refined free-flowing iodized and industrial salts.
+                Founded with a vision to deliver high-quality Indian salt to global markets, PDJ TRADE CONNECT has grown into a trusted exporter of premium refined free-flowing iodized and industrial salts.
               </p>
               <p>
                 With deep roots in the salt industry and access to one of the world’s largest salt-producing regions in Gujarat, India, we are committed to supplying products that meet international quality standards and customer-specific requirements.

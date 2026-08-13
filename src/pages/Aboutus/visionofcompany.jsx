@@ -71,7 +71,7 @@ export default function VisionOfCompany() {
             <div className="mt-10 px-6 flex-1 flex flex-col items-center">
               <h3 className="text-xl md:text-2xl font-bold text-[#2D4F44] mb-5 uppercase tracking-[0.15em]">Values</h3>
               <p className="text-[#2D4F44]/75 text-sm leading-relaxed font-medium">
-                We believe that lasting business relationships are built on quality, integrity, reliability, and customer satisfaction. Every product we manufacture reflects our commitment to international standards, transparent practices, customized solutions, and timely deliveries.
+               We believe that lasting business relationships are built on quality, integrity, reliability, and customer satisfaction. Every product we manufacture and export reflects our commitment to international standards, transparent business practices, customized solutions, and timely deliveries. By consistently creating value for our customers, we strive to be a trusted partner in the global salt industry.
               </p>
             </div>
           </div>

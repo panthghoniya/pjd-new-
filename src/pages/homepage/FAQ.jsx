@@ -11,6 +11,10 @@ const faqs = [
     answer: "Yes. We offer customization in grain size, purity, iodine level, additives, and packaging to meet your specific requirements."
   },
   {
+    question: "Can you provide a salt sample before placing an order?",
+    answer: "Yes, we can provide a salt sample upon request. Customers who require a sample for quality evaluation or testing are welcome to contact us."
+  },
+  {
     question: "What packaging options do you provide?",
     answer: "We offer bulk packaging in 20 KG, 25 KG, 40 KG, 50 KG PP woven bags with inner liner, 1.4 MT jumbo bags, as well as retail packaging in 500 g, 1 kg, canisters, and plastic bottles."
   },
@@ -34,10 +38,6 @@ const faqs = [
     question: "Can you supply multiple products in one container?",
     answer: "Yes. Depending on the packaging and loading plan, we can supply different salt products in a single container."
   },
-  {
-    question: "Can you provide a salt sample before placing an order?",
-    answer: "Yes, we can provide a salt sample upon request. Customers who require a sample for quality evaluation or testing are welcome to contact us."
-  }
 ];
 
 export default function FAQ() {

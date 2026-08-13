@@ -19,18 +19,18 @@ const TermsConditions = () => {
 
       <div className="bg-brand-background min-h-screen pt-32 pb-24 font-sans text-brand-dark">
         <div className="container mx-auto px-6 md:px-10 lg:max-w-6xl">
-          
+
           <div className="text-center mb-16 animate-in fade-in slide-in-from-bottom-4 duration-700">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-heading mb-6 text-brand-dark">Terms & Conditions</h1>
             <p className="text-brand-dark/70 text-lg">Effective Date: July 1, 2026</p>
           </div>
 
           <div className="bg-white rounded-[2rem] p-8 md:p-14 lg:p-20 shadow-[0_15px_40px_rgba(45,79,68,0.06)] border border-brand-dark/10 space-y-10 md:space-y-14 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200">
-            
+
             <section>
               <h2 className="text-2xl md:text-3xl font-bold mb-5 text-brand-accent">1. Acceptance of Terms</h2>
               <p className="text-brand-dark/80 leading-relaxed text-base md:text-lg mb-4">
-                These Terms and Conditions ("Terms") govern your use of the PDJ Trade Connect website, and constitute a legally binding agreement between you ("Buyer", "Client", or "User") and PDJ Trade Connect ("Seller", "we", "us", or "our"). By accessing our website, requesting a quotation, or placing an order for our industrial and edible salt products, you agree to be bound by these Terms. 
+                These Terms and Conditions ("Terms") govern your use of the PDJ Trade Connect website, and constitute a legally binding agreement between you ("Buyer", "Client", or "User") and PDJ Trade Connect ("Seller", "we", "us", or "our"). By accessing our website, requesting a quotation, or placing an order for our industrial and edible salt products, you agree to be bound by these Terms.
               </p>
               <p className="text-brand-dark/80 leading-relaxed text-base md:text-lg">
                 If you are entering into this agreement on behalf of a company or other legal entity, you represent that you have the authority to bind such entity to these Terms. If you do not agree with these Terms, you must not use our services or purchase our products.
@@ -70,12 +70,9 @@ const TermsConditions = () => {
             <section>
               <h2 className="text-2xl md:text-3xl font-bold mb-5 text-brand-accent">5. Shipping, Delivery, and Risk of Loss</h2>
               <p className="text-brand-dark/80 leading-relaxed text-base md:text-lg mb-4">
-                We deliver globally based on standard Incoterms (e.g., FOB Mundra Port, CIF, CFR). The applicable Incoterm will be explicitly stated in the Sales Contract.
+               The transfer of risk from the Seller to the Buyer shall be determined by the applicable Incoterms® agreed between the parties. For CIF shipments, insurance shall be arranged in accordance with the applicable Incoterms® requirements. For CFR shipments, Buyers are responsible for arranging adequate marine cargo insurance.
               </p>
-              <ul className="list-disc pl-6 space-y-3 text-brand-dark/80 text-base md:text-lg">
-                <li><strong>Lead Times:</strong> Estimated dispatch times will be provided upon order confirmation. We strive to meet all deadlines; however, delays caused by shipping lines, port congestion, or customs are beyond our control and do not constitute a breach of contract.</li>
-                <li><strong>Risk of Loss:</strong> The transfer of risk from the Seller to the Buyer is determined by the agreed Incoterms. We highly recommend that Buyers secure adequate marine insurance for CIF/CFR shipments.</li>
-              </ul>
+              
             </section>
 
             <section>

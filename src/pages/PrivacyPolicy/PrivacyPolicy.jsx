@@ -45,7 +45,7 @@ const PrivacyPolicy = () => {
               <ul className="list-disc pl-6 space-y-3 text-brand-dark/80 text-base md:text-lg">
                 <li><strong>Identity Data:</strong> Includes first name, last name, username, title, and the name of the company or organization you represent.</li>
                 <li><strong>Contact Data:</strong> Includes billing address, delivery address, email address, telephone numbers, and business contact information.</li>
-                <li><strong>Financial Data:</strong> Includes bank account and payment card details required for processing bulk orders and export transactions.</li>
+                <li><strong>Financial Data:</strong> Includes bank account and payment details required for processing bulk orders and export transactions.</li>
                 <li><strong>Transaction Data:</strong> Includes details about payments to and from you, purchase history, order specifications (e.g., salt grade, iodine content, grain size, packaging), and logistics preferences.</li>
                 <li><strong>Technical Data:</strong> Includes internet protocol (IP) address, browser type and version, time zone setting, operating system, and platform used to access our website.</li>
                 <li><strong>Usage Data:</strong> Includes information about how you use our website, products, and services.</li>
@@ -130,13 +130,13 @@ const PrivacyPolicy = () => {
             <section>
               <h2 className="text-2xl md:text-3xl font-bold mb-5 text-brand-accent">10. Contact Details</h2>
               <p className="text-brand-dark/80 leading-relaxed text-base md:text-lg">
-                If you have any questions about this Privacy Policy, including any requests to exercise your legal rights, please contact our Data Privacy Manager using the details set out below:
+                If you have any questions about this Privacy Policy, including any requests to exercise your legal rights, please contact us using the details set out below:
               </p>
               <div className="mt-6 bg-brand-background/50 p-6 rounded-xl border border-brand-dark/5">
                 <p className="text-brand-dark/80 text-base md:text-lg mb-2"><strong>Company Name:</strong> PDJ Trade Connect</p>
                 <p className="text-brand-dark/80 text-base md:text-lg mb-2"><strong>Email Address:</strong> info@pdjtradeconnect.com, support@pdjtradeconnect.com</p>
                 <p className="text-brand-dark/80 text-base md:text-lg mb-2"><strong>Phone Number:</strong> +91 9687474747</p>
-                <p className="text-brand-dark/80 text-base md:text-lg"><strong>Postal Address:</strong> Plot NO. 129, Sector 12B, Gandhidham, Kachchh, Gujarat 370201, India</p>
+                <p className="text-brand-dark/80 text-base md:text-lg"><strong>Postal Address:</strong> Plot No. 129, Sector 12B, Gandhidham, Kachchh, Gujarat 370201, India</p>
               </div>
             </section>
 

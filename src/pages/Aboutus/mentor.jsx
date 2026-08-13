@@ -72,7 +72,7 @@ const Mentor = () => {
                 <div className="flex justify-center items-center gap-4">
                   <a href="#" className="w-10 h-10 rounded-full border-2 border-[#2D4F44]/10 flex items-center justify-center text-[#2D4F44] hover:bg-[#5BA298] hover:border-[#5BA298] hover:text-white transition-all"><FacebookIcon /></a>
                   <a href="#" className="w-10 h-10 rounded-full border-2 border-[#2D4F44]/10 flex items-center justify-center text-[#2D4F44] hover:bg-[#5BA298] hover:border-[#5BA298] hover:text-white transition-all"><TwitterIcon /></a>
-                  <a href="https://linkedin.com/in/YOUR_LINKEDIN_PROFILE" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border-2 border-[#2D4F44]/10 flex items-center justify-center text-[#2D4F44] hover:bg-[#5BA298] hover:border-[#5BA298] hover:text-white transition-all"><LinkedinIcon /></a>
+                  <a href="https://www.linkedin.com/in/aayush-jain-1717a7213/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border-2 border-[#2D4F44]/10 flex items-center justify-center text-[#2D4F44] hover:bg-[#5BA298] hover:border-[#5BA298] hover:text-white transition-all"><LinkedinIcon /></a>
                 </div>
               </div>
             </div>
@@ -85,7 +85,7 @@ const Mentor = () => {
                   Mr. Aayush Jain
                 </h3>
                 <a 
-                  href="https://linkedin.com/in/YOUR_LINKEDIN_PROFILE" 
+                  href="https://www.linkedin.com/in/aayush-jain-1717a7213/" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="hidden sm:flex items-center gap-2 px-4 py-2 bg-[#F3F6F8] hover:bg-[#EAEFF2] text-[#0A66C2] rounded-full transition-all border border-[#0A66C2]/20 shadow-sm text-sm font-bold"

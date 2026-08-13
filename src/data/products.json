@@ -7,6 +7,7 @@
     "sku": "SKU-ICS-001",
     "rating": 4.9,
     "reviews": 120,
+    "tagline": "Naturally crystalline and enriched with iodine, our iodized crystal salt delivers purity, taste, and nutritional value in every grain. Ideal for food processing, retail consumption, and everyday culinary applications.",
     "description": "Our Iodized Low Hardness Crystal Salt is specially processed to maintain low calcium and magnesium content while ensuring high purity and hygiene. Enriched with iodine, it is ideal for food consumption and food processing applications that require superior quality and low hardness. We offer customized iodine levels, grain sizes, and packaging solutions to meet specific customer and market requirements.",
     "keyFeatures": [
       "Suitable for Food Consumption",
@@ -212,7 +213,7 @@
       "Wholesale & Export Supply"
     ],
     "images": [
-      "/images/products/low_hardness_free_flow_iodized_salt.jpg",
+      "/images/products/non_iodine_non_silica_free_flow_salt.jpg",
       "/images/products/triple_refined_free_flow_iodized_salt.jpg",
       "/images/products/salt_mint.jpg",
       "/images/products/salt_scoop.jpg"
@@ -292,7 +293,7 @@
   {
     "id": 9,
     "name": "Tablet Salt",
-    "category": "Tablet Salt",
+    "category": "Industrial Grade Salt",
     "badge": "High Purity",
     "sku": "SKU-TS-009",
     "rating": 4.9,

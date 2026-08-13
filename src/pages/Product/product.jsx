@@ -10,8 +10,7 @@ import initialProducts from '../../data/products.json';
 const categories = [
     { label: 'All Products', value: 'All' },
     { label: 'Food Grade Salt', value: 'Food Grade Salt' },
-    { label: 'Industrial Grade Salt', value: 'Industrial Grade Salt' },
-    { label: 'Tablet Salt', value: 'Tablet Salt' },
+    { label: 'Industrial Grade Salt', value: 'Industrial Grade Salt' }
 ];
 
 const ProductListing = () => {

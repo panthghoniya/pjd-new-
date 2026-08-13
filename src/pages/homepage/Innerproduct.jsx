@@ -41,11 +41,13 @@ const Innerproduct = () => {
   const [copied, setCopied] = useState(false);
 
   let weights = [];
-  if (product.category === "Food Grade Salt") {
+  if (product.name === "Iodized Crystal Salt") {
+    weights = ["20kg", "25kg", "40kg", "50kg", "1.4MT Jumbo Bag", "Custom Bulk"];
+  } else if (product.category === "Food Grade Salt") {
     weights = ["500 gram", "1kg", "20kg", "25kg", "40kg", "50kg", "1.4MT Jumbo Bag", "Custom Bulk"];
   } else if (product.category === "Industrial Grade Salt") {
     weights = ["20kg", "25kg", "40kg", "50kg", "1.4MT Jumbo Bag", "Custom Bulk"];
-  } else if (product.category === "Tablet Salt") {
+  } else if (product.name === "Tablet Salt") {
     weights = ["25kg", "Custom Bulk"];
   } else {
     weights = ["500 g", "1 kg", "25 kg", "Custom Bulk"];
@@ -83,14 +85,16 @@ const Innerproduct = () => {
     window.scrollTo(0, 0);
     setActiveImage(product.images[0]);
     setActiveTab("Overview");
-    
+
     // Also reset weight when navigating between products to ensure valid selection
     let initialWeights = [];
-    if (product.category === "Food Grade Salt") {
+    if (product.name === "Iodized Crystal Salt") {
+      initialWeights = ["20kg", "25kg", "40kg", "50kg", "1.4MT Jumbo Bag", "Custom Bulk"];
+    } else if (product.category === "Food Grade Salt") {
       initialWeights = ["500 gram", "1kg", "20kg", "25kg", "40kg", "50kg", "1.4MT Jumbo Bag", "Custom Bulk"];
     } else if (product.category === "Industrial Grade Salt") {
       initialWeights = ["20kg", "25kg", "40kg", "50kg", "1.4MT Jumbo Bag", "Custom Bulk"];
-    } else if (product.category === "Tablet Salt") {
+    } else if (product.name === "Tablet Salt") {
       initialWeights = ["25kg", "Custom Bulk"];
     } else {
       initialWeights = ["500 g", "1 kg", "25 kg", "Custom Bulk"];
@@ -165,15 +169,21 @@ const Innerproduct = () => {
                 />
               </div>
               <div className="grid grid-cols-4 gap-3 md:gap-4">
-                {product.images.map((img, idx) => (
-                  <div
-                    key={idx}
-                    onClick={() => setActiveImage(img)}
-                    className={`aspect-square rounded-2xl overflow-hidden cursor-pointer border-2 transition-all duration-300 ${activeImage === img ? 'border-brand-dark shadow-md scale-105' : 'border-transparent hover:border-brand-accent/50 opacity-60 hover:opacity-100'}`}
-                  >
-                    <img src={img} alt={`Thumbnail ${idx}`} className="w-full h-full object-cover" />
-                  </div>
-                ))}
+                {Object.values(productsData)
+                  .filter(p => p.id !== Number(id))
+                  .slice(0, 4)
+                  .map((relatedProduct) => {
+                    const img = relatedProduct.images[0];
+                    return (
+                      <Link
+                        key={relatedProduct.id}
+                        to={`/product/${relatedProduct.id}`}
+                        className={`aspect-square rounded-2xl overflow-hidden border-2 border-transparent transition-all duration-300 opacity-80 hover:opacity-100 hover:border-brand-accent cursor-pointer hover:shadow-md hover:-translate-y-1`}
+                      >
+                        <img src={img} alt={relatedProduct.name} className="w-full h-full object-cover" />
+                      </Link>
+                    );
+                  })}
               </div>
             </div>
 
@@ -190,7 +200,12 @@ const Innerproduct = () => {
                 <span>{product.sku}</span> */}
               </div>
 
-              {/* Tagline */}
+              {/* Tagline & Description */}
+              {product.tagline && (
+                <p className="text-brand-dark/70 leading-relaxed mb-3 text-sm sm:text-base md:text-lg">
+                  {product.tagline}
+                </p>
+              )}
               <p className="text-brand-dark/70 leading-relaxed mb-6 md:mb-8 text-sm sm:text-base md:text-lg">
                 {product.description}
               </p>
@@ -284,7 +299,7 @@ const Innerproduct = () => {
               {activeTab === 'Overview' && (
                 <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
                   <p className="mb-6 md:mb-8 text-brand-dark/70 leading-relaxed">
-                    {product.Overview}
+                    {product.description}
                   </p>
 
                   {/* Key Features in Description */}
@@ -337,7 +352,7 @@ const Innerproduct = () => {
                         <table className="w-full text-left border-collapse">
                           <thead>
                             <tr className="bg-brand-black text-white">
-                              <th className="py-3 px-6 font-semibold text-[13px] tracking-widest uppercase w-1/3 md:w-1/4 border-r border-white/10">PARAMETER</th>
+                              <th className="py-3 px-6 font-semibold text-[13px] tracking-widest uppercase w-1/3 md:w-1/4 border-r border-white/10">PARAMETERS</th>
                               <th className="py-3 px-6 font-semibold text-[13px] tracking-widest uppercase">DETAILS</th>
                             </tr>
                           </thead>
@@ -424,12 +439,7 @@ const Innerproduct = () => {
                       {/* Dark gradient on hover */}
                       <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-[1.25rem]" />
 
-                      {/* Badge */}
-                      {relatedProduct.badge && (
-                        <div className="absolute top-3 left-3 px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-xs font-bold text-brand-dark shadow-sm">
-                          {relatedProduct.badge}
-                        </div>
-                      )}
+
 
                       {/* View Details pill on hover */}
                       <div className="absolute bottom-3 left-0 right-0 flex justify-center opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300">

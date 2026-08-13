@@ -299,7 +299,7 @@ const Innerproduct = () => {
               {activeTab === 'Overview' && (
                 <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
                   <p className="mb-6 md:mb-8 text-brand-dark/70 leading-relaxed">
-                    {product.description}
+                    {product.Overview}
                   </p>
 
                   {/* Key Features in Description */}
